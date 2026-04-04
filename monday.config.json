@@ -1,0 +1,68 @@
+{
+  "board": {
+    "id": 18407085310,
+    "name": "Hawaii Scout — BOTF SEO Implementation",
+    "account": "LSEO/Updryv",
+    "token_env_var": "MONDAY_LSEO_API_TOKEN",
+    "workspace": "updryv-team"
+  },
+  "columns": {
+    "name": "name",
+    "priority": "color_mm21c3x4",
+    "due_date": "date_mm218qme",
+    "category": "color_mm21v2bz",
+    "description": "long_text_mm21x327",
+    "data": "long_text_mm218qta",
+    "dependencies": "text_mm21eq5h",
+    "status": "status"
+  },
+  "groups": {
+    "phase1": {
+      "id": "topics",
+      "label": "Phase 1 — BOTF Foundation (Weeks 1-4)"
+    },
+    "phase2": {
+      "id": "group_mm21a77s",
+      "label": "Phase 2 — BOTF Optimization (Months 2-3)"
+    },
+    "phase3": {
+      "id": "group_mm2113pd",
+      "label": "Phase 3 — BOTF Scale (Months 3-6)"
+    },
+    "phase4": {
+      "id": "group_mm21hzbq",
+      "label": "Phase 4 — Revenue Optimization (Months 6-12)"
+    },
+    "phase5": {
+      "id": "group_mm214wxj",
+      "label": "Phase 5 — Market Dominance (Year 2)"
+    },
+    "ref_keywords": {
+      "id": "group_mm215evf",
+      "label": "Keywords & Research"
+    },
+    "ref_operators": {
+      "id": "group_mm21cm0w",
+      "label": "Operator Database"
+    },
+    "ref_templates": {
+      "id": "group_mm21wv4n",
+      "label": "Content Templates"
+    },
+    "ref_architecture": {
+      "id": "group_mm218ysk",
+      "label": "Site Architecture"
+    }
+  },
+  "sync": {
+    "source_of_truth": "PRD.md",
+    "direction": "PRD → Monday",
+    "prd_path": "~/Projects/HawaiiScout/PRD.md",
+    "notes": "Monday board is visual-only dashboard. PRD checkboxes drive status. Sync updates Monday status column when PRD ISC items are checked."
+  },
+  "status_mapping": {
+    "[ ]": "Not Started",
+    "[~]": "Working on it",
+    "[x]": "Done"
+  }
+}

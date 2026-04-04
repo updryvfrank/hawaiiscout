@@ -1,0 +1,89 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'Hawaii Scout — Unbiased reviews and comparisons for Hawaii tours and activities. Aggregated from TripAdvisor, Google, and Yelp.',
+  canonical = Astro.url.href,
+  ogImage = '/og-default.jpg',
+} = Astro.props;
+
+const siteName = 'Hawaii Scout';
+const fullTitle = Astro.url.pathname === '/' ? title : `${title}`;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary SEO — NO brand name in page title (Quaid Rule #1) -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Site header -->
+    <header class="border-b border-gray-100 bg-white sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+        <a href="/" class="font-bold text-ocean-700 text-lg tracking-tight">
+          Hawaii Scout
+        </a>
+        <nav class="hidden md:flex gap-6 text-sm text-gray-600">
+          <a href="/oahu/" class="hover:text-ocean-600">Oahu</a>
+          <a href="/maui/" class="hover:text-ocean-600">Maui</a>
+          <a href="/big-island/" class="hover:text-ocean-600">Big Island</a>
+          <a href="/kauai/" class="hover:text-ocean-600">Kauai</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Site footer -->
+    <footer class="border-t border-gray-100 mt-16 py-10 text-sm text-gray-500">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-4">
+        <p>© {new Date().getFullYear()} Hawaii Scout. Independent, unsponsored reviews.</p>
+        <nav class="flex gap-4">
+          <a href="/about/" class="hover:text-gray-700">About</a>
+          <a href="/methodology/" class="hover:text-gray-700">Methodology</a>
+          <a href="/contact/" class="hover:text-gray-700">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

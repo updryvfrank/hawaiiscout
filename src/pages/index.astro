@@ -1,0 +1,84 @@
+---
+import Base from '../layouts/Base.astro';
+import { operators, ISLANDS, ACTIVITIES } from '../lib/operators';
+
+// Featured operators by island for homepage
+const oahuOps = operators.filter(o => o.islands.includes('Oahu')).slice(0, 3);
+const mauiOps = operators.filter(o => o.islands.includes('Maui')).slice(0, 3);
+---
+<Base
+  title="Hawaii Tours & Activities — Unbiased Reviews & Comparisons"
+  description="Compare Hawaii tour operators side-by-side. Aggregated ratings from TripAdvisor, Google & Yelp. Independent reviews for snorkeling, helicopter, luau & more."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-ocean-900 to-ocean-700 text-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Find the Best Hawaii Tours
+      </h1>
+      <p class="text-xl text-ocean-100 mb-8">
+        Unbiased ratings from TripAdvisor, Google & Yelp — all in one place.
+        No booking platform bias. Just the data.
+      </p>
+    </div>
+  </section>
+
+  <!-- Browse by Island -->
+  <section class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold mb-8">Browse by Island</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {(['oahu', 'maui', 'big-island', 'kauai'] as const).map(island => (
+        <a
+          href={`/${island}/`}
+          class="block border border-gray-200 rounded-xl p-6 text-center hover:border-ocean-400 hover:shadow-sm transition-all"
+        >
+          <div class="text-3xl mb-2">🌺</div>
+          <div class="font-semibold capitalize">{island.replace('-', ' ')}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Browse by Activity -->
+  <section class="bg-gray-50 py-14 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8">Browse by Activity</h2>
+      <div class="flex flex-wrap gap-3">
+        {ACTIVITIES.map(activity => (
+          <a
+            href={`/best/${activity.toLowerCase().replace(/\s+/g, '-')}-hawaii/`}
+            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:border-ocean-400 hover:text-ocean-700 transition-all"
+          >
+            {activity}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Score -->
+  <section class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold mb-4">How We Score Operators</h2>
+    <p class="text-gray-600 max-w-2xl mb-8">
+      We aggregate ratings from TripAdvisor, Google, and Yelp into a single transparent score.
+      No operator pays us for placement. Rankings are purely data-driven.
+    </p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border border-gray-100 rounded-xl p-6">
+        <div class="text-2xl mb-3">📊</div>
+        <h3 class="font-semibold mb-2">Multi-Platform Ratings</h3>
+        <p class="text-sm text-gray-600">Aggregated from TripAdvisor, Google, and Yelp — not just one source.</p>
+      </div>
+      <div class="border border-gray-100 rounded-xl p-6">
+        <div class="text-2xl mb-3">🚫</div>
+        <h3 class="font-semibold mb-2">Zero Paid Placement</h3>
+        <p class="text-sm text-gray-600">No operator buys their ranking. Affiliate links exist but never affect scores.</p>
+      </div>
+      <div class="border border-gray-100 rounded-xl p-6">
+        <div class="text-2xl mb-3">🔄</div>
+        <h3 class="font-semibold mb-2">Updated Regularly</h3>
+        <p class="text-sm text-gray-600">Scores refresh from live review APIs. Prices updated monthly.</p>
+      </div>
+    </div>
+  </section>
+</Base>

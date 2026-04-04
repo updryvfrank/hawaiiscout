@@ -1,0 +1,48 @@
+---
+// Route: /[island]-faq/[question-slug]/
+// FAQ pages — 120 words, 2-3 BOTF internal links each (Quaid Rule: authority fuel)
+// These pages do NOT have affiliate CTAs — they exist to funnel PageRank to BOTF money pages.
+import Base from '../../layouts/Base.astro';
+
+// FAQ pages will be populated from PAA (People Also Ask) research in Phase 1, Step 4.
+// This template is the structure; content comes from a future FAQs data file.
+
+export function getStaticPaths() {
+  // Placeholder — real FAQs added in ISC-17 (PAA screenshot catalog) + ISC-18 (100+ FAQ pages)
+  const placeholders = [
+    { island: 'maui', slug: 'best-time-to-visit-maui', question: 'What is the best time to visit Maui?', answer: 'Placeholder — will be replaced with real 120-word answer from PAA research.' },
+    { island: 'oahu', slug: 'is-pearl-harbor-worth-it', question: 'Is Pearl Harbor worth visiting?', answer: 'Placeholder — will be replaced with real 120-word answer from PAA research.' },
+    { island: 'kauai', slug: 'best-snorkeling-kauai', question: 'Where is the best snorkeling in Kauai?', answer: 'Placeholder — will be replaced with real 120-word answer from PAA research.' },
+  ];
+  return placeholders.map(faq => ({
+    params: { island: faq.island, slug: faq.slug },
+    props: faq,
+  }));
+}
+
+const { island, slug, question, answer } = Astro.props;
+const islandLabel = island.charAt(0).toUpperCase() + island.slice(1);
+---
+<Base
+  title={question}
+  description={answer.slice(0, 155) + '...'}
+>
+  <div class="max-w-2xl mx-auto px-4 py-10">
+    <!-- No brand in title — just the exact PAA question (Quaid Rule #4) -->
+    <h1 class="text-2xl font-bold mb-6">{question}</h1>
+
+    <div class="prose prose-gray max-w-none">
+      <p>{answer}</p>
+    </div>
+
+    <!-- Authority funnel — 2-3 BOTF internal links (Quaid Rule #7) -->
+    <div class="mt-8 pt-6 border-t border-gray-100">
+      <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Our Top Picks</div>
+      <p class="text-sm text-gray-600">
+        Browse <a href={`/${island}/`} class="text-ocean-700 hover:underline">all {islandLabel} tours</a> or
+        compare operators directly:
+      </p>
+      <!-- Dynamic BOTF links will be added when real FAQ content is authored in ISC-18 -->
+    </div>
+  </div>
+</Base>

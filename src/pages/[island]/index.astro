@@ -1,0 +1,87 @@
+---
+// Route: /[island]/ — island hub page
+import Base from '../../layouts/Base.astro';
+import { operators, getOperatorsByIsland, toSlug, ACTIVITIES } from '../../lib/operators';
+
+export function getStaticPaths() {
+  const islands = [
+    { slug: 'oahu', label: 'Oahu', description: 'The Gathering Place — tours, luaus, Pearl Harbor and more.' },
+    { slug: 'maui', label: 'Maui', description: 'The Valley Isle — snorkeling, helicopters, Road to Hana.' },
+    { slug: 'big-island', label: 'Big Island', description: 'The Big Island — volcano tours, manta rays, Kona fishing.' },
+    { slug: 'kauai', label: 'Kauai', description: 'The Garden Isle — Na Pali Coast, ziplines, kayaking.' },
+    { slug: 'lanai', label: 'Lanai', description: 'Secluded island — snorkeling, Hulopo\'e Marine Reserve.' },
+  ];
+  return islands.map(({ slug, label, description }) => ({
+    params: { island: slug },
+    props: { slug, label, description },
+  }));
+}
+
+const { slug, label, description } = Astro.props;
+// Map URL slug to display name for operator lookup
+const islandName = slug === 'big-island' ? 'Big Island' : label;
+const islandOps = operators.filter(op =>
+  op.islands.map(i => i.toLowerCase()).includes(islandName.toLowerCase())
+);
+
+const pageTitle = `Best ${label} Tours & Activities — Top Operators Ranked (2026)`;
+const pageDesc = `Best tours in ${label}, Hawaii. Ranked by aggregated reviews from TripAdvisor, Google & Yelp. ${description}`;
+---
+<Base title={pageTitle} description={pageDesc}>
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-2">Best {label} Tours & Activities</h1>
+    <p class="text-gray-500 mb-8">{description}</p>
+
+    <!-- Activities available on this island -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Browse by Activity</h2>
+      <div class="flex flex-wrap gap-3">
+        {ACTIVITIES
+          .filter(activity =>
+            islandOps.some(op => op.activity === activity ||
+              (op.activities_secondary || []).includes(activity))
+          )
+          .map(activity => (
+            <a
+              href={`/best/${activity.toLowerCase().replace(/\s+/g, '-')}-${slug}/`}
+              class="px-4 py-2 bg-ocean-50 border border-ocean-200 rounded-full text-sm text-ocean-700 hover:bg-ocean-100 transition-colors"
+            >
+              {activity}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- All operators on this island -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">All {label} Operators</h2>
+      <div class="space-y-4">
+        {islandOps.map(op => (
+          <div class="border border-gray-200 rounded-xl p-5 hover:border-ocean-300 transition-colors">
+            <div class="flex justify-between items-start gap-4">
+              <div>
+                <a href={`/operators/${toSlug(op.name)}/`} class="font-semibold text-lg hover:text-ocean-700">
+                  {op.name}
+                </a>
+                <p class="text-sm text-gray-500">{op.activity} · ${op.price_low}–${op.price_high}</p>
+              </div>
+              <div class="flex gap-2 shrink-0">
+                <a href={`/operators/${toSlug(op.name)}/`}
+                  class="text-xs border border-ocean-400 text-ocean-700 px-3 py-1 rounded-full hover:bg-ocean-50">
+                  Review
+                </a>
+                {op.fareharbor === 'yes' && (
+                  <a href={op.website} target="_blank" rel="noopener noreferrer"
+                    class="text-xs bg-ocean-600 text-white px-3 py-1 rounded-full hover:bg-ocean-700">
+                    Book
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</Base>
