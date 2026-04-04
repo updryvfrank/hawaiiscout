@@ -118,6 +118,41 @@ const pageDesc = composite
       )}
     </section>
 
+    <!-- What reviewers say -->
+    {hasReviews && (() => {
+      const allReviews = [
+        ...(ta?.reviews ?? []).map((r: any) => ({ ...r, source: 'TripAdvisor' })),
+        ...(google?.reviews ?? []).map((r: any) => ({ ...r, source: 'Google' })),
+        ...(yelp?.reviews ?? []).map((r: any) => ({ ...r, source: 'Yelp' })),
+      ].filter(r => r.text).slice(0, 12);
+
+      return allReviews.length > 0 ? (
+        <section class="mb-10">
+          <h2 class="text-xl font-semibold mb-4">What Reviewers Say</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            {allReviews.map((r: any) => (
+              <div class="border border-gray-100 rounded-xl p-4 bg-gray-50/50">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-semibold text-gray-400 uppercase tracking-wide">{r.source}</span>
+                  {r.rating && (
+                    <span class="text-sm font-bold text-ocean-700">{'★'.repeat(Math.round(r.rating))}{'☆'.repeat(5 - Math.round(r.rating))}</span>
+                  )}
+                </div>
+                <p class="text-sm text-gray-700 leading-relaxed">{r.text}</p>
+                {(r.author || r.date) && (
+                  <p class="text-xs text-gray-400 mt-2">
+                    {r.author && <span>{r.author}</span>}
+                    {r.author && r.date && <span> · </span>}
+                    {r.date && <span>{r.date}</span>}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null;
+    })()}
+
     <!-- Pricing -->
     <section class="mb-10">
       <h2 class="text-xl font-semibold mb-4">Pricing</h2>

@@ -1,10 +1,11 @@
 /**
  * Hawaii Scout — Apify Review Aggregation Pipeline
  *
- * Fetches ratings from TripAdvisor, Google Maps, and Yelp for all 62 operators.
+ * Fetches ratings + actual reviews from TripAdvisor, Google Maps, and Yelp for all 62 operators.
  * Outputs: src/data/reviews.json (read by Astro at build time)
  *
  * Usage: npm run reviews
+ *        npm run reviews -- --force   (re-fetch all, ignore cache)
  *
  * Actors used:
  *   TripAdvisor: maxcopell/tripadvisor
@@ -20,19 +21,24 @@ import { dirname, join } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
-// Load env
 const APIFY_TOKEN = process.env.APIFY_TOKEN;
 if (!APIFY_TOKEN) {
-  console.error('❌ APIFY_TOKEN not set. Export it before running: export APIFY_TOKEN=your_token');
+  console.error('❌ APIFY_TOKEN not set. Run: source ~/.claude/.env');
   process.exit(1);
 }
 
+const FORCE = process.argv.includes('--force');
+const CONCURRENCY = 10;   // operators running simultaneously
+const MAX_REVIEWS = 20;   // reviews to fetch per platform per operator
+const ACTOR_TIMEOUT = 180; // seconds to wait per actor run
+
 const client = new ApifyClient({ token: APIFY_TOKEN });
 
-// Load operators
 const { operators } = JSON.parse(
   readFileSync(join(ROOT, 'src/data/operators.json'), 'utf8')
 );
+
+const outPath = join(ROOT, 'src/data/reviews.json');
 
 // --- Helpers ---
 
@@ -48,10 +54,8 @@ function islandToLocation(islands) {
 }
 
 function compositeScore(platforms) {
-  // Weighted: TripAdvisor 40%, Google 40%, Yelp 20%
   const weights = { tripadvisor: 0.4, google: 0.4, yelp: 0.2 };
-  let total = 0;
-  let weightSum = 0;
+  let total = 0, weightSum = 0;
   for (const [platform, weight] of Object.entries(weights)) {
     const data = platforms[platform];
     if (data?.rating) {
@@ -60,8 +64,17 @@ function compositeScore(platforms) {
     }
   }
   if (weightSum === 0) return null;
-  // Normalize to actual weights available
   return Math.round((total / weightSum) * 10) / 10;
+}
+
+function normalizeReviews(rawReviews, fields) {
+  if (!Array.isArray(rawReviews)) return [];
+  return rawReviews.slice(0, MAX_REVIEWS).map(r => ({
+    author: r[fields.author] ?? null,
+    rating: r[fields.rating] ?? null,
+    date: r[fields.date] ?? null,
+    text: (r[fields.text] ?? '').slice(0, 500), // cap at 500 chars per review
+  })).filter(r => r.text);
 }
 
 // --- Apify actor runners ---
@@ -71,16 +84,26 @@ async function fetchTripAdvisor(operator, location) {
     const run = await client.actor('maxcopell/tripadvisor').call({
       query: `${operator.name} ${location}`,
       maxItems: 1,
-    }, { waitSecs: 120 });
+      includeReviews: true,
+      maxReviews: MAX_REVIEWS,
+    }, { waitSecs: ACTOR_TIMEOUT });
 
     const { items } = await client.dataset(run.defaultDatasetId).listItems({ limit: 1 });
     if (!items.length) return null;
 
     const item = items[0];
+    const reviews = normalizeReviews(item.reviews ?? [], {
+      author: 'username',
+      rating: 'rating',
+      date: 'publishedDate',
+      text: 'text',
+    });
+
     return {
       rating: item.rating ?? null,
       reviewCount: item.numberOfReviews ?? null,
       url: item.url ?? null,
+      reviews,
     };
   } catch (err) {
     console.warn(`  ⚠️  TripAdvisor failed for ${operator.name}:`, err.message);
@@ -93,17 +116,26 @@ async function fetchGoogle(operator, location) {
     const run = await client.actor('compass/crawler-google-places').call({
       searchStringsArray: [`${operator.name} ${location}`],
       maxCrawledPlacesPerSearch: 1,
-      scrapeReviews: false,
-    }, { waitSecs: 120 });
+      scrapeReviews: true,
+      maxReviews: MAX_REVIEWS,
+    }, { waitSecs: ACTOR_TIMEOUT });
 
     const { items } = await client.dataset(run.defaultDatasetId).listItems({ limit: 1 });
     if (!items.length) return null;
 
     const item = items[0];
+    const reviews = normalizeReviews(item.reviews ?? [], {
+      author: 'name',
+      rating: 'stars',
+      date: 'publishAt',
+      text: 'text',
+    });
+
     return {
       rating: item.totalScore ?? null,
       reviewCount: item.reviewsCount ?? null,
       url: item.url ?? null,
+      reviews,
     };
   } catch (err) {
     console.warn(`  ⚠️  Google Maps failed for ${operator.name}:`, err.message);
@@ -117,17 +149,26 @@ async function fetchYelp(operator, location) {
       search: operator.name,
       searchLocation: location,
       maxItems: 1,
-      includeReviews: false,
-    }, { waitSecs: 120 });
+      includeReviews: true,
+      maxReviews: MAX_REVIEWS,
+    }, { waitSecs: ACTOR_TIMEOUT });
 
     const { items } = await client.dataset(run.defaultDatasetId).listItems({ limit: 1 });
     if (!items.length) return null;
 
     const item = items[0];
+    const reviews = normalizeReviews(item.reviews ?? [], {
+      author: 'reviewerName',
+      rating: 'rating',
+      date: 'date',
+      text: 'text',
+    });
+
     return {
       rating: item.aggregatedRating ?? null,
       reviewCount: item.reviewCount ?? null,
       url: item.url ?? null,
+      reviews,
     };
   } catch (err) {
     console.warn(`  ⚠️  Yelp failed for ${operator.name}:`, err.message);
@@ -137,7 +178,7 @@ async function fetchYelp(operator, location) {
 
 // --- Process one operator ---
 
-async function processOperator(operator) {
+async function processOperator(operator, results, saveProgress) {
   const location = islandToLocation(operator.islands);
   console.log(`\n[${operator.id}] ${operator.name} (${location})`);
 
@@ -149,65 +190,126 @@ async function processOperator(operator) {
 
   const platforms = { tripadvisor, google, yelp };
   const composite = compositeScore(platforms);
-
   const hasAnyData = tripadvisor || google || yelp;
+
+  const reviewCounts = {
+    ta: tripadvisor?.reviews?.length ?? 0,
+    google: google?.reviews?.length ?? 0,
+    yelp: yelp?.reviews?.length ?? 0,
+  };
+  const totalReviews = reviewCounts.ta + reviewCounts.google + reviewCounts.yelp;
+
   if (hasAnyData) {
-    console.log(`  ✅ TA: ${tripadvisor?.rating ?? '–'} (${tripadvisor?.reviewCount ?? 0} reviews) | Google: ${google?.rating ?? '–'} (${google?.reviewCount ?? 0}) | Yelp: ${yelp?.rating ?? '–'} (${yelp?.reviewCount ?? 0}) → Composite: ${composite ?? '–'}`);
+    console.log(
+      `  ✅ TA: ${tripadvisor?.rating ?? '–'} (${tripadvisor?.reviewCount ?? 0} | ${reviewCounts.ta} saved)` +
+      ` | Google: ${google?.rating ?? '–'} (${google?.reviewCount ?? 0} | ${reviewCounts.google} saved)` +
+      ` | Yelp: ${yelp?.rating ?? '–'} (${yelp?.reviewCount ?? 0} | ${reviewCounts.yelp} saved)` +
+      ` → ⭐ ${composite ?? '–'} (${totalReviews} reviews saved)`
+    );
   } else {
     console.log(`  ⚠️  No data found on any platform`);
   }
 
-  return {
+  const result = {
     id: operator.id,
     name: operator.name,
     updatedAt: new Date().toISOString(),
     composite,
     platforms,
   };
+
+  // Save immediately after each operator (safe with high concurrency)
+  results[operator.id] = result;
+  saveProgress(results);
+
+  return result;
 }
 
-// --- Main with concurrency limit ---
+// --- Semaphore for concurrency control ---
 
-async function processBatch(batch) {
-  return Promise.all(batch.map(op => processOperator(op)));
+function makeSemaphore(limit) {
+  let active = 0;
+  const queue = [];
+
+  function release() {
+    active--;
+    if (queue.length > 0) {
+      const next = queue.shift();
+      active++;
+      next();
+    }
+  }
+
+  return function acquire(fn) {
+    return new Promise((resolve, reject) => {
+      const run = () => {
+        Promise.resolve().then(fn).then(result => {
+          release();
+          resolve(result);
+        }).catch(err => {
+          release();
+          reject(err);
+        });
+      };
+      if (active < limit) {
+        active++;
+        run();
+      } else {
+        queue.push(run);
+      }
+    });
+  };
 }
+
+// --- Main ---
 
 async function main() {
-  const CONCURRENCY = 3; // 3 operators at a time — stays within Apify free tier
   const results = {};
 
-  // Load existing results to allow resuming
-  const outPath = join(ROOT, 'src/data/reviews.json');
+  // Load existing cache (resume support)
   try {
     const existing = JSON.parse(readFileSync(outPath, 'utf8'));
-    Object.assign(results, existing);
-    console.log(`Loaded ${Object.keys(existing).length} existing results — skipping already-fetched operators`);
+    if (!FORCE) Object.assign(results, existing);
+    const cached = Object.keys(existing).length;
+    if (cached) console.log(`Loaded ${cached} cached operators${FORCE ? ' (--force: ignoring cache)' : ''}`);
   } catch {
     console.log('No existing reviews.json — starting fresh');
   }
 
-  // Filter to operators not yet fetched (allows resuming)
   const pending = operators.filter(op => !results[op.id]);
+
   console.log(`\n🌺 Hawaii Scout Review Pipeline`);
-  console.log(`Total operators: ${operators.length} | Pending: ${pending.length} | Already fetched: ${operators.length - pending.length}`);
-  console.log(`Concurrency: ${CONCURRENCY} | Actors: TripAdvisor + Google Maps + Yelp\n`);
+  console.log(`Operators: ${operators.length} total | ${pending.length} pending | ${operators.length - pending.length} cached`);
+  console.log(`Concurrency: ${CONCURRENCY} | Reviews per platform: ${MAX_REVIEWS} | Actors: TA + Google + Yelp\n`);
 
-  for (let i = 0; i < pending.length; i += CONCURRENCY) {
-    const batch = pending.slice(i, i + CONCURRENCY);
-    console.log(`\n--- Batch ${Math.floor(i / CONCURRENCY) + 1}/${Math.ceil(pending.length / CONCURRENCY)} ---`);
-
-    const batchResults = await processBatch(batch);
-
-    for (const result of batchResults) {
-      results[result.id] = result;
-    }
-
-    // Write after each batch — safe to interrupt
-    writeFileSync(outPath, JSON.stringify(results, null, 2));
-    console.log(`\n💾 Saved progress (${Object.keys(results).length}/${operators.length} operators)`);
+  if (!pending.length) {
+    console.log('✅ All operators already cached. Run with --force to re-fetch.');
+    return;
   }
 
-  console.log(`\n✅ Pipeline complete. ${Object.keys(results).length} operators in reviews.json`);
+  // Thread-safe progress writer
+  let writing = false;
+  let pendingWrite = false;
+  function saveProgress(data) {
+    if (writing) { pendingWrite = true; return; }
+    writing = true;
+    writeFileSync(outPath, JSON.stringify(data, null, 2));
+    console.log(`  💾 Saved (${Object.keys(data).length}/${operators.length} operators)`);
+    writing = false;
+    if (pendingWrite) { pendingWrite = false; saveProgress(data); }
+  }
+
+  const acquire = makeSemaphore(CONCURRENCY);
+  const start = Date.now();
+
+  await Promise.all(
+    pending.map(op =>
+      acquire(() => processOperator(op, results, saveProgress))
+    )
+  );
+
+  const elapsed = ((Date.now() - start) / 1000 / 60).toFixed(1);
+  console.log(`\n✅ Pipeline complete in ${elapsed}min. ${Object.keys(results).length} operators in reviews.json`);
 }
 
 main().catch(err => {
