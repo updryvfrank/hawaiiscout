@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { operators, getOperatorBySlug, toSlug } from '../../lib/operators';
+import { operators, toSlug } from '../../lib/operators';
+import reviewsData from '../../data/reviews.json';
 
 export function getStaticPaths() {
   return operators.map(op => ({
@@ -10,47 +11,111 @@ export function getStaticPaths() {
 }
 
 const { operator } = Astro.props;
+
+// Load review data for this operator (null-safe)
+const reviews = (reviewsData as Record<string, any>)[operator.id] ?? null;
+const composite = reviews?.composite ?? null;
+const ta = reviews?.platforms?.tripadvisor ?? null;
+const google = reviews?.platforms?.google ?? null;
+const yelp = reviews?.platforms?.yelp ?? null;
+const hasReviews = ta || google || yelp;
+
 const pageTitle = `${operator.name} Reviews — What Reviewers Say (2026)`;
-const pageDesc = `${operator.name} reviews aggregated from TripAdvisor, Google & Yelp. Prices from $${operator.price_low}. ${operator.notes}`;
+const pageDesc = composite
+  ? `${operator.name} rated ${composite}/5 across TripAdvisor, Google & Yelp. Prices from $${operator.price_low}. ${operator.notes}`
+  : `${operator.name} reviews aggregated from TripAdvisor, Google & Yelp. Prices from $${operator.price_low}. ${operator.notes}`;
 ---
 <Base title={pageTitle} description={pageDesc}>
   <div class="max-w-4xl mx-auto px-4 py-10">
 
-    <!-- TLDR verdict -->
+    <!-- TLDR verdict + composite score -->
     <div class="bg-ocean-50 border border-ocean-200 rounded-xl p-6 mb-8">
-      <div class="text-sm font-semibold text-ocean-700 uppercase tracking-wide mb-1">TLDR Verdict</div>
-      <p class="text-gray-800">{operator.notes}</p>
-      {operator.fareharbor === 'yes' && (
-        <a
-          href="#book"
-          class="inline-block mt-4 bg-ocean-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-ocean-700 transition-colors"
-        >
-          Book Now — From ${operator.price_low}
-        </a>
-      )}
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm font-semibold text-ocean-700 uppercase tracking-wide mb-1">TLDR Verdict</div>
+          <p class="text-gray-800">{operator.notes}</p>
+          {operator.fareharbor === 'yes' && (
+            <a href="#book"
+              class="inline-block mt-4 bg-ocean-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-ocean-700 transition-colors">
+              Book Now — From ${operator.price_low}
+            </a>
+          )}
+        </div>
+        {composite && (
+          <div class="text-center shrink-0 bg-white rounded-xl border border-ocean-200 px-5 py-3">
+            <div class="text-4xl font-bold text-ocean-700">{composite}</div>
+            <div class="text-xs text-gray-500 mt-1">Composite Score</div>
+            <div class="text-xs text-gray-400">out of 5.0</div>
+          </div>
+        )}
+      </div>
     </div>
 
-    <!-- Operator details -->
     <h1 class="text-3xl font-bold mb-2">{operator.name} Reviews</h1>
     <p class="text-gray-500 mb-8">
       {operator.activity} · {operator.islands.join(', ')} · ${operator.price_low}–${operator.price_high}
     </p>
 
-    <!-- Review platforms -->
+    <!-- Review platform scores -->
     <section class="mb-10">
       <h2 class="text-xl font-semibold mb-4">Review Platform Scores</h2>
-      <div class="grid grid-cols-3 gap-4">
-        {operator.review_platforms.map(platform => (
-          <div class="border border-gray-200 rounded-lg p-4 text-center">
-            <div class="font-semibold text-sm text-gray-500 mb-1">{platform}</div>
-            <div class="text-2xl font-bold text-gray-400">–</div>
-            <div class="text-xs text-gray-400 mt-1">Data pending</div>
-          </div>
-        ))}
-      </div>
-      <p class="text-xs text-gray-400 mt-3">
-        * Live scores will populate once the review aggregation API pipeline is active (Phase 1, ISC-4).
-      </p>
+      {hasReviews ? (
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="text-left px-4 py-3 font-medium text-gray-500">Platform</th>
+                <th class="text-left px-4 py-3 font-medium text-gray-500">Rating</th>
+                <th class="text-left px-4 py-3 font-medium text-gray-500">Reviews</th>
+                <th class="text-left px-4 py-3 font-medium text-gray-500">Weight</th>
+                <th class="text-left px-4 py-3 font-medium text-gray-500">Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {ta && (
+                <tr>
+                  <td class="px-4 py-3 font-medium">TripAdvisor</td>
+                  <td class="px-4 py-3 font-bold text-ocean-700">{ta.rating ?? '–'}</td>
+                  <td class="px-4 py-3 text-gray-600">{ta.reviewCount?.toLocaleString() ?? '–'}</td>
+                  <td class="px-4 py-3 text-gray-400">40%</td>
+                  <td class="px-4 py-3">{ta.url ? <a href={ta.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View →</a> : '–'}</td>
+                </tr>
+              )}
+              {google && (
+                <tr class="bg-gray-50/50">
+                  <td class="px-4 py-3 font-medium">Google</td>
+                  <td class="px-4 py-3 font-bold text-ocean-700">{google.rating ?? '–'}</td>
+                  <td class="px-4 py-3 text-gray-600">{google.reviewCount?.toLocaleString() ?? '–'}</td>
+                  <td class="px-4 py-3 text-gray-400">40%</td>
+                  <td class="px-4 py-3">{google.url ? <a href={google.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View →</a> : '–'}</td>
+                </tr>
+              )}
+              {yelp && (
+                <tr>
+                  <td class="px-4 py-3 font-medium">Yelp</td>
+                  <td class="px-4 py-3 font-bold text-ocean-700">{yelp.rating ?? '–'}</td>
+                  <td class="px-4 py-3 text-gray-600">{yelp.reviewCount?.toLocaleString() ?? '–'}</td>
+                  <td class="px-4 py-3 text-gray-400">20%</td>
+                  <td class="px-4 py-3">{yelp.url ? <a href={yelp.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View →</a> : '–'}</td>
+                </tr>
+              )}
+              {composite && (
+                <tr class="bg-ocean-50 font-semibold">
+                  <td class="px-4 py-3">Composite Score</td>
+                  <td class="px-4 py-3 text-ocean-700 font-bold text-lg">{composite}</td>
+                  <td class="px-4 py-3 text-gray-500 text-xs" colspan="3">Weighted average (TA 40% + Google 40% + Yelp 20%)</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <div class="border border-dashed border-gray-200 rounded-xl p-8 text-center text-gray-400">
+          <div class="text-3xl mb-2">📊</div>
+          <p class="text-sm">Review data is being collected.</p>
+          <p class="text-xs mt-1">Check back soon — we aggregate from TripAdvisor, Google & Yelp.</p>
+        </div>
+      )}
     </section>
 
     <!-- Pricing -->
@@ -85,15 +150,17 @@ const pageDesc = `${operator.name} reviews aggregated from TripAdvisor, Google &
         <p class="text-gray-600 mb-4 text-sm">
           {operator.name} uses FareHarbor for booking. Click below to check availability and book.
         </p>
-        <a
-          href={operator.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block bg-ocean-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-ocean-700 transition-colors"
-        >
+        <a href={operator.website} target="_blank" rel="noopener noreferrer"
+          class="inline-block bg-ocean-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-ocean-700 transition-colors">
           Book {operator.name} →
         </a>
       </section>
+    )}
+
+    {reviews?.updatedAt && (
+      <p class="text-xs text-gray-400 mt-8">
+        Review data last updated: {new Date(reviews.updatedAt).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+      </p>
     )}
   </div>
 </Base>
