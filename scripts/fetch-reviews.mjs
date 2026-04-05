@@ -1,16 +1,17 @@
 /**
  * Hawaii Scout — Apify Review Aggregation Pipeline
  *
- * Fetches ratings + actual reviews from TripAdvisor, Google Maps, and Yelp for all 62 operators.
+ * Fetches ratings + actual reviews from TripAdvisor and Google Maps for all 62 operators.
  * Outputs: src/data/reviews.json (read by Astro at build time)
  *
  * Usage: npm run reviews
- *        npm run reviews -- --force   (re-fetch all, ignore cache)
+ *        npm run reviews -- --force      (re-fetch all, ignore cache)
+ *        npm run reviews -- --ta-only    (re-fetch TripAdvisor only, keep Google cached)
  *
  * Actors used:
- *   TripAdvisor: maxcopell/tripadvisor
+ *   TripAdvisor: thewolves/tripadvisor-reviews-scraper (requires tripadvisor_url in operators.json)
  *   Google Maps: compass/crawler-google-places
- *   Yelp:        epctex/yelp-scraper
+ *   Composite:   TA 50% + Google 50%
  */
 
 import { ApifyClient } from 'apify-client';
@@ -28,9 +29,12 @@ if (!APIFY_TOKEN) {
 }
 
 const FORCE = process.argv.includes('--force');
-const CONCURRENCY = 10;   // operators running simultaneously
+const TA_ONLY = process.argv.includes('--ta-only');
+const CONCURRENCY = 3;    // operators running simultaneously (limited by Apify 32GB memory cap)
 const MAX_REVIEWS = 20;   // reviews to fetch per platform per operator
 const ACTOR_TIMEOUT = 180; // seconds to wait per actor run
+const GOOGLE_MEMORY = 2048; // MB — default is 4096, halving saves budget
+const TA_MEMORY = 1024;     // MB — default is 2048, halving saves budget
 
 const client = new ApifyClient({ token: APIFY_TOKEN });
 
@@ -54,7 +58,8 @@ function islandToLocation(islands) {
 }
 
 function compositeScore(platforms) {
-  const weights = { tripadvisor: 0.4, google: 0.4, yelp: 0.2 };
+  // TripAdvisor 50% + Google 50% (Yelp removed)
+  const weights = { tripadvisor: 0.5, google: 0.5 };
   let total = 0, weightSum = 0;
   for (const [platform, weight] of Object.entries(weights)) {
     const data = platforms[platform];
@@ -79,30 +84,46 @@ function normalizeReviews(rawReviews, fields) {
 
 // --- Apify actor runners ---
 
-async function fetchTripAdvisor(operator, location) {
-  try {
-    const run = await client.actor('maxcopell/tripadvisor').call({
-      query: `${operator.name} ${location}`,
-      maxItems: 1,
-      includeReviews: true,
-      maxReviews: MAX_REVIEWS,
-    }, { waitSecs: ACTOR_TIMEOUT });
+function operatorGoogleQuery(operator) {
+  // "Business Name Hawaii" works better than "Business Name Honolulu, Hawaii"
+  // — avoids multi-location operators getting pinned to wrong city
+  return `${operator.name} Hawaii`;
+}
 
-    const { items } = await client.dataset(run.defaultDatasetId).listItems({ limit: 1 });
+async function fetchTripAdvisor(operator) {
+  // Requires tripadvisor_url field on operator (set in operators.json)
+  if (!operator.tripadvisor_url) return null;
+  try {
+    const run = await client.actor('thewolves/tripadvisor-reviews-scraper').call({
+      startUrls: [{ url: operator.tripadvisor_url }],
+      maxItems: 100,
+      languages: ['all'],
+      ratings: ['all'],
+    }, { waitSecs: ACTOR_TIMEOUT, memory: TA_MEMORY });
+
+    const { items } = await client.dataset(run.defaultDatasetId).listItems({ limit: 100 });
     if (!items.length) return null;
 
-    const item = items[0];
-    const reviews = normalizeReviews(item.reviews ?? [], {
-      author: 'username',
-      rating: 'rating',
-      date: 'publishedDate',
-      text: 'text',
-    });
+    // All items are individual reviews — extract rating + count from first item's location data
+    const first = items[0];
+    const reviews = items.slice(0, MAX_REVIEWS).map(r => ({
+      author: r.username ?? null,
+      rating: r.rating ?? null,
+      date: r.publishedDate ?? r.createdDate ?? null,
+      text: (r.text ?? '').slice(0, 500),
+    })).filter(r => r.text);
+
+    // The actor returns individual reviews — no aggregate rating in payload.
+    // Compute average from scraped reviews as approximation.
+    const ratings = items.map(r => r.rating).filter(r => typeof r === 'number');
+    const avgRating = ratings.length
+      ? Math.round((ratings.reduce((a, b) => a + b, 0) / ratings.length) * 10) / 10
+      : null;
 
     return {
-      rating: item.rating ?? null,
-      reviewCount: item.numberOfReviews ?? null,
-      url: item.url ?? null,
+      rating: avgRating,             // avg of scraped reviews (approx)
+      reviewCount: null,             // not available from this actor
+      url: operator.tripadvisor_url,
       reviews,
     };
   } catch (err) {
@@ -114,11 +135,11 @@ async function fetchTripAdvisor(operator, location) {
 async function fetchGoogle(operator, location) {
   try {
     const run = await client.actor('compass/crawler-google-places').call({
-      searchStringsArray: [`${operator.name} ${location}`],
+      searchStringsArray: [operatorGoogleQuery(operator)],
       maxCrawledPlacesPerSearch: 1,
       scrapeReviews: true,
       maxReviews: MAX_REVIEWS,
-    }, { waitSecs: ACTOR_TIMEOUT });
+    }, { waitSecs: ACTOR_TIMEOUT, memory: GOOGLE_MEMORY });
 
     const { items } = await client.dataset(run.defaultDatasetId).listItems({ limit: 1 });
     if (!items.length) return null;
@@ -143,68 +164,38 @@ async function fetchGoogle(operator, location) {
   }
 }
 
-async function fetchYelp(operator, location) {
-  try {
-    const run = await client.actor('epctex/yelp-scraper').call({
-      search: operator.name,
-      searchLocation: location,
-      maxItems: 1,
-      includeReviews: true,
-      maxReviews: MAX_REVIEWS,
-    }, { waitSecs: ACTOR_TIMEOUT });
-
-    const { items } = await client.dataset(run.defaultDatasetId).listItems({ limit: 1 });
-    if (!items.length) return null;
-
-    const item = items[0];
-    const reviews = normalizeReviews(item.reviews ?? [], {
-      author: 'reviewerName',
-      rating: 'rating',
-      date: 'date',
-      text: 'text',
-    });
-
-    return {
-      rating: item.aggregatedRating ?? null,
-      reviewCount: item.reviewCount ?? null,
-      url: item.url ?? null,
-      reviews,
-    };
-  } catch (err) {
-    console.warn(`  ⚠️  Yelp failed for ${operator.name}:`, err.message);
-    return null;
-  }
-}
-
 // --- Process one operator ---
 
 async function processOperator(operator, results, saveProgress) {
   const location = islandToLocation(operator.islands);
+  const existing = results[operator.id];
   console.log(`\n[${operator.id}] ${operator.name} (${location})`);
 
-  const [tripadvisor, google, yelp] = await Promise.all([
-    fetchTripAdvisor(operator, location),
-    fetchGoogle(operator, location),
-    fetchYelp(operator, location),
+  // In --ta-only mode: keep existing Google data cached, only re-fetch TripAdvisor
+  const [tripadvisor, google] = await Promise.all([
+    fetchTripAdvisor(operator),
+    TA_ONLY && existing?.platforms?.google ? Promise.resolve(existing.platforms.google) : fetchGoogle(operator, location),
   ]);
 
-  const platforms = { tripadvisor, google, yelp };
+  // Preserve existing platform data if new fetch returned null (null-safety)
+  const platforms = {
+    tripadvisor: tripadvisor ?? (TA_ONLY ? existing?.platforms?.tripadvisor ?? null : null),
+    google:      google      ?? existing?.platforms?.google ?? null,
+  };
   const composite = compositeScore(platforms);
-  const hasAnyData = tripadvisor || google || yelp;
+  const hasAnyData = tripadvisor || google;
 
   const reviewCounts = {
     ta: tripadvisor?.reviews?.length ?? 0,
     google: google?.reviews?.length ?? 0,
-    yelp: yelp?.reviews?.length ?? 0,
   };
-  const totalReviews = reviewCounts.ta + reviewCounts.google + reviewCounts.yelp;
+  const totalReviews = reviewCounts.ta + reviewCounts.google;
 
   if (hasAnyData) {
     console.log(
-      `  ✅ TA: ${tripadvisor?.rating ?? '–'} (${tripadvisor?.reviewCount ?? 0} | ${reviewCounts.ta} saved)` +
-      ` | Google: ${google?.rating ?? '–'} (${google?.reviewCount ?? 0} | ${reviewCounts.google} saved)` +
-      ` | Yelp: ${yelp?.rating ?? '–'} (${yelp?.reviewCount ?? 0} | ${reviewCounts.yelp} saved)` +
-      ` → ⭐ ${composite ?? '–'} (${totalReviews} reviews saved)`
+      `  ✅ TA: ${tripadvisor?.rating ?? '–'} (${reviewCounts.ta} saved)` +
+      ` | Google: ${google?.rating ?? '–'} (${google?.reviewCount ?? 0} reviews | ${reviewCounts.google} saved)` +
+      ` → ⭐ ${composite ?? '–'} (${totalReviews} total texts)`
     );
   } else {
     console.log(`  ⚠️  No data found on any platform`);
@@ -267,23 +258,27 @@ async function main() {
   const results = {};
 
   // Load existing cache (resume support)
+  let existingCache = {};
   try {
-    const existing = JSON.parse(readFileSync(outPath, 'utf8'));
-    if (!FORCE) Object.assign(results, existing);
-    const cached = Object.keys(existing).length;
-    if (cached) console.log(`Loaded ${cached} cached operators${FORCE ? ' (--force: ignoring cache)' : ''}`);
+    existingCache = JSON.parse(readFileSync(outPath, 'utf8'));
+    if (!FORCE) Object.assign(results, existingCache);
+    const cached = Object.keys(existingCache).length;
+    if (cached) console.log(`Loaded ${cached} cached operators${FORCE ? ' (--force: ignoring)' : TA_ONLY ? ' (--ta-only: refreshing TA only)' : ''}`);
   } catch {
     console.log('No existing reviews.json — starting fresh');
   }
 
-  const pending = operators.filter(op => !results[op.id]);
+  // --ta-only: re-process all operators that have a tripadvisor_url (Google stays cached)
+  const pending = TA_ONLY
+    ? operators.filter(op => op.tripadvisor_url)
+    : operators.filter(op => !results[op.id]);
 
   console.log(`\n🌺 Hawaii Scout Review Pipeline`);
-  console.log(`Operators: ${operators.length} total | ${pending.length} pending | ${operators.length - pending.length} cached`);
-  console.log(`Concurrency: ${CONCURRENCY} | Reviews per platform: ${MAX_REVIEWS} | Actors: TA + Google + Yelp\n`);
+  console.log(`Mode: ${FORCE ? 'FORCE' : TA_ONLY ? 'TA-ONLY' : 'NORMAL'} | Concurrency: ${CONCURRENCY} | TA maxItems: 100`);
+  console.log(`Operators: ${operators.length} total | ${pending.length} to process | Actors: TripAdvisor + Google\n`);
 
   if (!pending.length) {
-    console.log('✅ All operators already cached. Run with --force to re-fetch.');
+    console.log('✅ All operators already cached. Use --force to re-fetch or --ta-only to refresh TripAdvisor.');
     return;
   }
 

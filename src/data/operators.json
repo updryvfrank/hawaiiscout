@@ -3,45 +3,63 @@
     "total_active": 57,
     "total_closed": 5,
     "categories": 10,
-    "islands": ["Oahu", "Maui", "Big Island", "Kauai", "Lanai", "Molokai"],
+    "islands": [
+      "Oahu",
+      "Maui",
+      "Big Island",
+      "Kauai",
+      "Lanai",
+      "Molokai"
+    ],
     "fareharbor_confirmed": 22,
     "generated": "2026-04-04",
-    "source": "Web research via 5 parallel agents — operator sites, TripAdvisor, Google, Yelp"
+    "source": "Web research via 5 parallel agents \u2014 operator sites, TripAdvisor, Google, Yelp"
   },
   "closed_operators": [
     {
       "name": "Paradise Helicopters",
       "activity": "Helicopter",
-      "islands": ["Big Island", "Oahu"],
-      "reason": "Closed May 2024 — owner retirement after 25 years",
+      "islands": [
+        "Big Island",
+        "Oahu"
+      ],
+      "reason": "Closed May 2024 \u2014 owner retirement after 25 years",
       "source": "KITV, Hawaii News Now"
     },
     {
       "name": "Sunshine Helicopters",
       "activity": "Helicopter",
-      "islands": ["Maui"],
-      "reason": "Closed December 2024 — assets liquidated at auction",
+      "islands": [
+        "Maui"
+      ],
+      "reason": "Closed December 2024 \u2014 assets liquidated at auction",
       "source": "Auction listing"
     },
     {
       "name": "Feast at Lele",
       "activity": "Luau",
-      "islands": ["Maui"],
-      "reason": "Destroyed August 2023 Lahaina wildfires — no reopening date",
+      "islands": [
+        "Maui"
+      ],
+      "reason": "Destroyed August 2023 Lahaina wildfires \u2014 no reopening date",
       "source": "Multiple news sources"
     },
     {
       "name": "Paradise Cove Luau",
       "activity": "Luau",
-      "islands": ["Oahu"],
-      "reason": "Closed January 1, 2026 — $135M property redevelopment",
+      "islands": [
+        "Oahu"
+      ],
+      "reason": "Closed January 1, 2026 \u2014 $135M property redevelopment",
       "source": "Official announcement"
     },
     {
       "name": "Atlantis Adventures (Maui)",
       "activity": "Submarine",
-      "islands": ["Maui"],
-      "reason": "Temporarily closed — Lahaina Harbor wildfire damage, phased reopening Dec 2025, no sub restart date",
+      "islands": [
+        "Maui"
+      ],
+      "reason": "Temporarily closed \u2014 Lahaina Harbor wildfire damage, phased reopening Dec 2025, no sub restart date",
       "source": "Official site"
     }
   ],
@@ -50,751 +68,1213 @@
       "id": 1,
       "name": "Blue Hawaiian Helicopters",
       "activity": "Helicopter",
-      "islands": ["Oahu", "Maui", "Kauai", "Big Island"],
+      "islands": [
+        "Oahu",
+        "Maui",
+        "Kauai",
+        "Big Island"
+      ],
       "price_low": 379,
       "price_high": 719,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.bluehawaiian.com",
-      "notes": "Largest Hawaii helicopter operator since 1985. Only company on all 4 islands. Airbus EC130 T2 fleet. Custom booking system."
+      "notes": "Largest Hawaii helicopter operator since 1985. Only company on all 4 islands. Airbus EC130 T2 fleet. Custom booking system.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60631-d310063-Reviews-Blue_Hawaiian_Helicopter_Tours_Maui-Kahului_Maui_Hawaii.html"
     },
     {
       "id": 2,
       "name": "Maverick Helicopters",
       "activity": "Helicopter",
-      "islands": ["Maui", "Kauai"],
+      "islands": [
+        "Maui",
+        "Kauai"
+      ],
       "price_low": 229,
       "price_high": 469,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.maverickhelicopter.com",
-      "notes": "ECO-Star helicopters. Maui + Kauai. Hana Rainforest includes 30-min landing."
+      "notes": "ECO-Star helicopters. Maui + Kauai. Hana Rainforest includes 30-min landing.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60631-d7898858-Reviews-Maverick_Helicopters-Kahului_Maui_Hawaii.html"
     },
     {
       "id": 3,
       "name": "Jack Harter Helicopters",
       "activity": "Helicopter",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 169,
       "price_high": 399,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://helicopters-kauai.com",
-      "notes": "Originator of Kauai helicopter tours since 1962. Doors-off from $364-399."
+      "notes": "Originator of Kauai helicopter tours since 1962. Doors-off from $364-399.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60623-d526191-Reviews-Jack_Harter_Helicopters_Tours-Lihue_Kauai_Hawaii.html"
     },
     {
       "id": 4,
       "name": "Mauna Loa Helicopter Tours",
       "activity": "Helicopter",
-      "islands": ["Big Island", "Oahu", "Kauai"],
+      "islands": [
+        "Big Island",
+        "Oahu",
+        "Kauai"
+      ],
       "price_low": 229,
       "price_high": 639,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://maunaloahelicoptertours.com",
-      "notes": "Only Big Island operator flying exclusively private tours. Doors on/off at no extra cost."
+      "notes": "Only Big Island operator flying exclusively private tours. Doors on/off at no extra cost.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60623-d1918638-Reviews-Mauna_Loa_Helicopter_Tours-Lihue_Kauai_Hawaii.html"
     },
     {
       "id": 5,
       "name": "Rainbow Helicopters",
       "activity": "Helicopter",
-      "islands": ["Oahu", "Big Island"],
+      "islands": [
+        "Oahu",
+        "Big Island"
+      ],
       "price_low": 305,
       "price_high": 1180,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://rainbowhelicopters.com",
-      "notes": "Doors-off standard on every tour. Oahu + Kona. Up to 105-min Kilauea tour."
+      "notes": "Doors-off standard on every tour. Oahu + Kona. Up to 105-min Kilauea tour.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5986637-Reviews-Rainbow_Helicopters-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 6,
       "name": "Magnum Helicopters",
       "activity": "Helicopter",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 380,
       "price_high": 434,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://magnumhelicopters.com",
-      "notes": "Oahu's oldest helicopter company (1988). Iconic Hughes 500 from Magnum P.I. Exclusively doors-off."
+      "notes": "Oahu's oldest helicopter company (1988). Iconic Hughes 500 from Magnum P.I. Exclusively doors-off.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d7084400-Reviews-Magnum_Helicopters-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 7,
       "name": "Air Maui Helicopters",
       "activity": "Helicopter",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 330,
       "price_high": 480,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://airmaui.com",
-      "notes": "Only company offering doors-off helicopter tours on Maui. Replacement for closed Sunshine."
+      "notes": "Only company offering doors-off helicopter tours on Maui. Replacement for closed Sunshine.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60631-d562208-Reviews-Air_Maui_Helicopter_Tours-Kahului_Maui_Hawaii.html"
     },
     {
       "id": 8,
       "name": "Old Lahaina Luau",
       "activity": "Luau",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 230,
       "price_high": 230,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://oldlahainaluau.com",
-      "notes": "~$230/adult. Sells out months in advance. Lei greeting, premium open bar, 4-course dinner."
+      "notes": "~$230/adult. Sells out months in advance. Lei greeting, premium open bar, 4-course dinner.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60634-d104288-Reviews-Old_Lahaina_Luau-Lahaina_Maui_Hawaii.html"
     },
     {
       "id": 9,
       "name": "Chief's Luau",
       "activity": "Luau",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 130,
       "price_high": 220,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://chiefsluauhawaii.com",
-      "notes": "At Wet 'n' Wild Hawaii, Kapolei. Aloha Experience ~$130, Paradise Package ~$180+."
+      "notes": "At Wet 'n' Wild Hawaii, Kapolei. Aloha Experience ~$130, Paradise Package ~$180+.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60662-d3139142-Reviews-Chief_s_Luau-Waimanalo_Oahu_Hawaii.html"
     },
     {
       "id": 10,
       "name": "Polynesian Cultural Center",
       "activity": "Luau",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 95,
       "price_high": 294,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.polynesia.com",
-      "notes": "Full-day cultural experience + Ali'i Luau on North Shore. Includes HA: Breath of Life show."
+      "notes": "Full-day cultural experience + Ali'i Luau on North Shore. Includes HA: Breath of Life show.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60656-d1083842-Reviews-Polynesian_Cultural_Center-Laie_Oahu_Hawaii.html"
     },
     {
       "id": 11,
       "name": "Voyagers of the Pacific Luau",
       "activity": "Luau",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 169,
       "price_high": 228,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.konaluau.com",
-      "notes": "At Royal Kona Resort, Kailua-Kona. Oceanfront. Samoan fire dance finale."
+      "notes": "At Royal Kona Resort, Kailua-Kona. Oceanfront. Samoan fire dance finale.",
+      "tripadvisor_url": null
     },
     {
       "id": 12,
       "name": "Hawaiiloa Luau",
       "activity": "Luau",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 205,
       "price_high": 240,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.fairmont.com/orchid-hawaii/dining/hawaii-loa-luau/",
-      "notes": "At Fairmont Orchid, Kohala Coast. Every Saturday. Produced by Island Breeze Productions."
+      "notes": "At Fairmont Orchid, Kohala Coast. Every Saturday. Produced by Island Breeze Productions.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60623-d1748998-Reviews-Luau_Kalamaku_Kauai-Lihue_Kauai_Hawaii.html"
     },
     {
       "id": 13,
       "name": "Luau Kalamaku",
       "activity": "Luau",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 171,
       "price_high": 250,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.luaukalamaku.com",
-      "notes": "At Kilohana Plantation, Lihue. Theatrical story-driven show (Tahitian voyaging narrative)."
+      "notes": "At Kilohana Plantation, Lihue. Theatrical story-driven show (Tahitian voyaging narrative).",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60623-d1570043-Reviews-Smith_Family_Garden_Luau-Lihue_Kauai_Hawaii.html"
     },
     {
       "id": 14,
       "name": "Smith's Family Garden Luau",
       "activity": "Luau",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 105,
       "price_high": 150,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.smithskauai.com/garden-luau/",
-      "notes": "In 30-acre tropical garden, Wailua. Polynesian revue with 6 Pacific cultures."
+      "notes": "In 30-acre tropical garden, Wailua. Polynesian revue with 6 Pacific cultures.",
+      "tripadvisor_url": null
     },
     {
       "id": 15,
       "name": "Pride of Maui",
       "activity": "Snorkeling",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 115,
       "price_high": 241,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.prideofmaui.com",
-      "notes": "65-ft catamaran. Molokini Crater + Turtle Town. Waterslide, BBQ lunch, optional SNUBA."
+      "notes": "65-ft catamaran. Molokini Crater + Turtle Town. Waterslide, BBQ lunch, optional SNUBA.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60639-d526272-Reviews-Pride_of_Maui-Wailuku_Maui_Hawaii.html"
     },
     {
       "id": 16,
       "name": "Four Winds Maui",
       "activity": "Snorkeling",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 80,
       "price_high": 180,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.fourwindsmaui.com",
-      "notes": "Only Maui vessel with glass-bottom viewing room. Morning Molokini + afternoon Coral Gardens."
+      "notes": "Only Maui vessel with glass-bottom viewing room. Morning Molokini + afternoon Coral Gardens.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60639-d2294328-Reviews-Four_Winds_Molokini_Snorkeling_Tour-Wailuku_Maui_Hawaii.html"
     },
     {
       "id": 17,
       "name": "Trilogy Excursions",
       "activity": "Snorkeling",
-      "activities_secondary": ["Whale Watch"],
-      "islands": ["Maui", "Lanai"],
+      "activities_secondary": [
+        "Whale Watch"
+      ],
+      "islands": [
+        "Maui",
+        "Lanai"
+      ],
       "price_low": 160,
       "price_high": 250,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://sailtrilogy.com",
-      "notes": "Family-owned 50+ years. Exclusive Hulopo'e Marine Preserve (Lanai) access. Also whale watch."
+      "notes": "Family-owned 50+ years. Exclusive Hulopo'e Marine Preserve (Lanai) access. Also whale watch.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60634-d526289-Reviews-Trilogy_Excursions-Lahaina_Maui_Hawaii.html"
     },
     {
       "id": 18,
       "name": "Sail Maui",
       "activity": "Snorkeling",
-      "activities_secondary": ["Whale Watch"],
-      "islands": ["Maui"],
+      "activities_secondary": [
+        "Whale Watch"
+      ],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 90,
       "price_high": 200,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://sailmaui.com",
-      "notes": "Performance sailing catamarans (Paragon fleet). Snorkeling + whale watch (Dec-Mar)."
+      "notes": "Performance sailing catamarans (Paragon fleet). Snorkeling + whale watch (Dec-Mar).",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60634-d653404-Reviews-Sail_Maui-Lahaina_Maui_Hawaii.html"
     },
     {
       "id": 19,
       "name": "Fair Wind Cruises",
       "activity": "Snorkeling",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 117,
       "price_high": 167,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.fair-wind.com",
-      "notes": "50+ years in Kona. Kealakekua Bay (Captain Cook Monument). Also manta ray night snorkel."
+      "notes": "50+ years in Kona. Kealakekua Bay (Captain Cook Monument). Also manta ray night snorkel.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60872-d633938-Reviews-Fair_Wind_Big_Island_Ocean_Guides-Kailua_Kona_Island_of_Hawaii_Hawaii.html"
     },
     {
       "id": 20,
       "name": "Hawaii Nautical",
       "activity": "Snorkeling",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 80,
       "price_high": 150,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://hawaiinautical.com",
-      "notes": "Hawaii's largest family-operated ocean fleet. Turtle Canyon snorkel from Kewalo Basin."
+      "notes": "Hawaii's largest family-operated ocean fleet. Turtle Canyon snorkel from Kewalo Basin.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d16802069-Reviews-Hawaii_Nautical_Oahu-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 21,
       "name": "Capt Andy's Sailing Adventures",
       "activity": "Snorkeling",
-      "activities_secondary": ["Whale Watch"],
-      "islands": ["Kauai"],
+      "activities_secondary": [
+        "Whale Watch"
+      ],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 110,
       "price_high": 295,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.napali.com",
-      "notes": "Na Pali Coast specialist. Star Snorkel BBQ Sail + raft expeditions. Also whale watch (Dec-Apr)."
+      "notes": "Na Pali Coast specialist. Star Snorkel BBQ Sail + raft expeditions. Also whale watch (Dec-Apr).",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60610-d526180-Reviews-Capt_Andy_s-Eleele_Kauai_Hawaii.html"
     },
     {
       "id": 22,
       "name": "Blue Dolphin Charters",
       "activity": "Snorkeling",
-      "activities_secondary": ["Whale Watch"],
-      "islands": ["Kauai"],
+      "activities_secondary": [
+        "Whale Watch"
+      ],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 85,
       "price_high": 259,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://bluedolphinkauai.com",
-      "notes": "Two largest catamarans on Kauai (65-ft). Niihau + Na Pali Coast. Also whale watch (Dec-Mar)."
+      "notes": "Two largest catamarans on Kauai (65-ft). Niihau + Na Pali Coast. Also whale watch (Dec-Mar).",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60610-d1050799-Reviews-Blue_Dolphin_Charters-Eleele_Kauai_Hawaii.html"
     },
     {
       "id": 23,
       "name": "Pacific Whale Foundation",
       "activity": "Whale Watch",
-      "activities_secondary": ["Snorkeling"],
-      "islands": ["Maui"],
+      "activities_secondary": [
+        "Snorkeling"
+      ],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 90,
       "price_high": 170,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://pacwhale.com",
-      "notes": "Nonprofit research org. 97% sighting rate, whale guarantee. Also snorkeling ecotours."
+      "notes": "Nonprofit research org. 97% sighting rate, whale guarantee. Also snorkeling ecotours.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g815379-d519580-Reviews-PacWhale_Eco_Adventures-Maalaea_Maui_Hawaii.html"
     },
     {
       "id": 24,
       "name": "Ultimate Whale Watch",
       "activity": "Whale Watch",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 77,
       "price_high": 195,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://ultimatewhalewatch.com",
-      "notes": "Since 1982, ranked #1 Maui whale watch. Raft-style low-to-water vessels. Hydrophone."
+      "notes": "Since 1982, ranked #1 Maui whale watch. Raft-style low-to-water vessels. Hydrophone.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60634-d1129081-Reviews-Ultimate_Whale_Watch_Snorkel-Lahaina_Maui_Hawaii.html"
     },
     {
       "id": 25,
       "name": "Calypso Maui",
       "activity": "Whale Watch",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 55,
       "price_high": 60,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://calypsomaui.com",
-      "notes": "Maui's only triple-deck catamaran. Glass-bottom viewing. Most affordable whale watch."
+      "notes": "Maui's only triple-deck catamaran. Glass-bottom viewing. Most affordable whale watch.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60639-d12577255-Reviews-Calypso-Wailuku_Maui_Hawaii.html"
     },
     {
       "id": 26,
       "name": "Body Glove Cruises",
       "activity": "Whale Watch",
-      "activities_secondary": ["Snorkeling"],
-      "islands": ["Big Island"],
+      "activities_secondary": [
+        "Snorkeling"
+      ],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 99,
       "price_high": 140,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.bodyglovehawaii.com",
-      "notes": "2.5hr Kona whale watch with hydrophone. Also known for snorkeling/diving."
+      "notes": "2.5hr Kona whale watch with hydrophone. Also known for snorkeling/diving.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60872-d1533439-Reviews-Body_Glove_Cruises-Kailua_Kona_Island_of_Hawaii_Hawaii.html"
     },
     {
       "id": 27,
       "name": "Star of Honolulu",
       "activity": "Whale Watch",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 99,
       "price_high": 139,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://starofhonolulu.com",
-      "notes": "Hawaii's largest vessel. 4 decks + 60ft observation deck. ADA-compliant. Jan-Mar."
+      "notes": "Hawaii's largest vessel. 4 decks + 60ft observation deck. ADA-compliant. Jan-Mar.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d1136351-Reviews-Star_of_Honolulu_Dinner_and_Whale_Watch_Cruises-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 28,
       "name": "E Noa Tours",
       "activity": "Cultural",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 57,
       "price_high": 205,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.enoa.com",
-      "notes": "Oahu's largest Pearl Harbor and historical Honolulu tour operator. 5 Pearl Harbor packages."
+      "notes": "Oahu's largest Pearl Harbor and historical Honolulu tour operator. 5 Pearl Harbor packages.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d1727140-Reviews-E_Noa_Tours-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 29,
       "name": "Royal Star Hawaii",
       "activity": "Cultural",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 99,
       "price_high": 215,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://royalstarhawaii.com",
-      "notes": "Pearl Harbor specialist. Standard ($99), Deluxe ($124), Ultimate ($158). Free Waikiki transport."
+      "notes": "Pearl Harbor specialist. Standard ($99), Deluxe ($124), Ultimate ($158). Free Waikiki transport.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d2098635-Reviews-Royal_Star_Hawaii_Deluxe_Tours-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 30,
       "name": "Discover Hawaii Tours",
       "activity": "Cultural",
-      "islands": ["Oahu", "Maui", "Big Island", "Kauai"],
+      "islands": [
+        "Oahu",
+        "Maui",
+        "Big Island",
+        "Kauai"
+      ],
       "price_low": 49,
       "price_high": 250,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.discoverhawaiitours.com",
-      "notes": "Locally owned since 1995. 50+ daily Pearl Harbor departures. Multi-island day-trip packages."
+      "notes": "Locally owned since 1995. 50+ daily Pearl Harbor departures. Multi-island day-trip packages.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d1187085-Reviews-Discover_Hawaii_Tours-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 31,
       "name": "Go Tours Hawaii",
       "activity": "Cultural",
-      "islands": ["Oahu", "Maui"],
+      "islands": [
+        "Oahu",
+        "Maui"
+      ],
       "price_low": 99,
       "price_high": 250,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google"
+      ],
       "website": "https://gotourshawaii.com",
-      "notes": "100% locally-owned. Hidden Gems of Oahu cultural tours. Strong cultural storytelling."
+      "notes": "100% locally-owned. Hidden Gems of Oahu cultural tours. Strong cultural storytelling.",
+      "tripadvisor_url": null
     },
     {
       "id": 32,
       "name": "Kualoa Ranch",
       "activity": "Land Tours",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 50,
       "price_high": 150,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.kualoa.com",
-      "notes": "Jurassic Park filming location. ATV, horseback, zip, movie site tours. 4,000 acre ranch."
+      "notes": "Jurassic Park filming location. ATV, horseback, zip, movie site tours. 4,000 acre ranch.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60653-d108380-Reviews-Kualoa_Ranch-Kaneohe_Oahu_Hawaii.html"
     },
     {
       "id": 33,
       "name": "Coral Crater Adventure Park",
       "activity": "Land Tours",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 50,
       "price_high": 130,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.coralcrater.com",
-      "notes": "Zipline, ATV, free-fall jump, climbing wall. Near Ko Olina on Oahu's west side."
+      "notes": "Zipline, ATV, free-fall jump, climbing wall. Near Ko Olina on Oahu's west side.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60654-d11849707-Reviews-Coral_Crater_Adventure_Park-Kapolei_Oahu_Hawaii.html"
     },
     {
       "id": 34,
       "name": "Roberts Hawaii",
       "activity": "Land Tours",
-      "islands": ["Oahu", "Maui", "Big Island", "Kauai"],
+      "islands": [
+        "Oahu",
+        "Maui",
+        "Big Island",
+        "Kauai"
+      ],
       "price_low": 50,
       "price_high": 100,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.robertshawaii.com",
-      "notes": "Oldest tour company in Hawaii. Multi-island. Also airport shuttles and group transport."
+      "notes": "Oldest tour company in Hawaii. Multi-island. Also airport shuttles and group transport.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d3158395-Reviews-Roberts_Hawaii-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 35,
       "name": "Polynesian Adventure Tours",
       "activity": "Land Tours",
-      "islands": ["Oahu", "Maui", "Big Island", "Kauai"],
+      "islands": [
+        "Oahu",
+        "Maui",
+        "Big Island",
+        "Kauai"
+      ],
       "price_low": 50,
       "price_high": 90,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.polyad.com",
-      "notes": "Multi-island circle island and half-day tours. Budget-friendly."
+      "notes": "Multi-island circle island and half-day tours. Budget-friendly.",
+      "tripadvisor_url": null
     },
     {
       "id": 36,
       "name": "Kailani Tours Hawaii",
       "activity": "Land Tours",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 199,
       "price_high": 309,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.kailanitourshawaii.com",
-      "notes": "Big Island volcano specialist. National Park-certified guides. Kilauea, Black Sand Beach, Kona coffee."
+      "notes": "Big Island volcano specialist. National Park-certified guides. Kilauea, Black Sand Beach, Kona coffee.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60872-d4894481-Reviews-Kailani_Tours_Hawaii-Kailua_Kona_Island_of_Hawaii_Hawaii.html"
     },
     {
       "id": 37,
       "name": "Valley Isle Excursions",
       "activity": "Land Tours",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 216,
       "price_high": 280,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.tourmaui.com",
-      "notes": "Premier Road to Hana and Haleakala Sunrise operator. Includes Waianapanapa State Park admission."
+      "notes": "Premier Road to Hana and Haleakala Sunrise operator. Includes Waianapanapa State Park admission.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60639-d1118219-Reviews-Valley_Isle_Excursions-Wailuku_Maui_Hawaii.html"
     },
     {
       "id": 38,
       "name": "Temptation Tours",
       "activity": "Land Tours",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 212,
       "price_high": 319,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.temptationtours.com",
-      "notes": "Luxury Road to Hana. Limo-van fleet, max 8 guests. 30+ years. Breakfast + 3-course lunch."
+      "notes": "Luxury Road to Hana. Limo-van fleet, max 8 guests. 30+ years. Breakfast + 3-course lunch.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60631-d2218475-Reviews-Temptation_Tours-Kahului_Maui_Hawaii.html"
     },
     {
       "id": 39,
       "name": "Kohala Zipline",
       "activity": "Land Tours",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 220,
       "price_high": 345,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://kohalazipline.com",
-      "notes": "Only full canopy zipline on Hawaii Island. 8 lines, 6 sky bridges, rappel. Zip & Dip includes waterfall."
+      "notes": "Only full canopy zipline on Hawaii Island. 8 lines, 6 sky bridges, rappel. Zip & Dip includes waterfall.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60582-d2292644-Reviews-Kohala_Zipline-Hawi_Island_of_Hawaii_Hawaii.html"
     },
     {
       "id": 40,
       "name": "Kipu Ranch Adventures",
       "activity": "Land Tours",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 190,
       "price_high": 250,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://kiputours.com",
-      "notes": "Premier Kauai ATV/UTV operator. Jurassic Park filming locations. Operates Tue-Fri."
+      "notes": "Premier Kauai ATV/UTV operator. Jurassic Park filming locations. Operates Tue-Fri.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60623-d789969-Reviews-Kipu_Ranch_Adventures-Lihue_Kauai_Hawaii.html"
     },
     {
       "id": 41,
       "name": "Kauai Tour Guy",
       "activity": "Land Tours",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 95,
       "price_high": 250,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google"
+      ],
       "website": "https://kauaitourguy.com",
-      "notes": "Private-only Waimea Canyon and South/West Side tours. Your group only."
+      "notes": "Private-only Waimea Canyon and South/West Side tours. Your group only.",
+      "tripadvisor_url": null
     },
     {
       "id": 42,
       "name": "Atlantis Adventures (Waikiki)",
       "activity": "Submarine",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 75,
       "price_high": 168,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.atlantisadventures.com/waikiki",
-      "notes": "Hawaii's dominant submarine operator. 48-passenger sub, dives 100ft. Uses Rezgo booking."
+      "notes": "Hawaii's dominant submarine operator. 48-passenger sub, dives 100ft. Uses Rezgo booking.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d581506-Reviews-Atlantis_Submarines_Waikiki-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 43,
       "name": "Atlantis Adventures (Kona)",
       "activity": "Submarine",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 75,
       "price_high": 145,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.atlantisadventures.com/kona",
-      "notes": "Same brand as Waikiki. 48-passenger sub explores 25-acre coral reef. From King Kamehameha Hotel."
+      "notes": "Same brand as Waikiki. 48-passenger sub explores 25-acre coral reef. From King Kamehameha Hotel.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60872-d1459434-Reviews-Atlantis_Submarines_Kona-Kailua_Kona_Island_of_Hawaii_Hawaii.html"
     },
     {
       "id": 44,
       "name": "Island Water Sports Hawaii",
       "activity": "Submarine",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 95,
       "price_high": 193,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://islandwatersportshawaii.com/sub-scooter/",
-      "notes": "Submarine scooter (self-propelled electric underwater scooter), not traditional sub. Maunalua Bay."
+      "notes": "Submarine scooter (self-propelled electric underwater scooter), not traditional sub. Maunalua Bay.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d2091026-Reviews-Island_WaterSports_Hawaii-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 45,
       "name": "Magic Sportfishing",
       "activity": "Fishing",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 250,
       "price_high": 1775,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://magicsportfishing.com",
-      "notes": "50ft Pacifica sport-fisher yacht. Private + shared charters. Kewalo Basin, Honolulu."
+      "notes": "50ft Pacifica sport-fisher yacht. Private + shared charters. Kewalo Basin, Honolulu.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d2486958-Reviews-Magic_Sport_Fishing-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 46,
       "name": "Boom Boom Sportfishing",
       "activity": "Fishing",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 250,
       "price_high": 2100,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://boomboomsportfishing.com",
-      "notes": "50ft luxury sportfisher. Shared 4hr $250, private up to 12hr $2,100. Waianae Boat Harbor."
+      "notes": "50ft luxury sportfisher. Shared 4hr $250, private up to 12hr $2,100. Waianae Boat Harbor.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60661-d3199620-Reviews-Boom_Boom_Sportfishing-Waianae_Oahu_Hawaii.html"
     },
     {
       "id": 47,
       "name": "Strike Zone Maui",
       "activity": "Fishing",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 174,
       "price_high": 600,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.strikezonemaui.com",
-      "notes": "100+ years combined crew experience. Shared bottom fish + combo trips. Maalaea Harbor."
+      "notes": "100+ years combined crew experience. Shared bottom fish + combo trips. Maalaea Harbor.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60629-d1592779-Reviews-Strike_Zone_Sportfishing_Bottom_Fishing-Haiku_Maui_Hawaii.html"
     },
     {
       "id": 48,
       "name": "Finest Kind Sportfishing",
       "activity": "Fishing",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 250,
       "price_high": 1900,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://finestkindsportfishingmaui.com",
-      "notes": "Operating since 1972. 3 boats. Relocated to Maalaea post-Lahaina fire."
+      "notes": "Operating since 1972. 3 boats. Relocated to Maalaea post-Lahaina fire.",
+      "tripadvisor_url": null
     },
     {
       "id": 49,
       "name": "Humdinger Sportfishing",
       "activity": "Fishing",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 699,
       "price_high": 1485,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.humdingersportfishing.com",
-      "notes": "50+ years in Kona. Custom Rybovich tournament boat. Honokohau Harbor."
+      "notes": "50+ years in Kona. Custom Rybovich tournament boat. Honokohau Harbor.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60872-d2139585-Reviews-Humdinger_Sportfishing-Kailua_Kona_Island_of_Hawaii_Hawaii.html"
     },
     {
       "id": 50,
       "name": "High Noon Sportfishing",
       "activity": "Fishing",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 500,
       "price_high": 1500,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://fishingcharterskona.com",
-      "notes": "TripAdvisor Hall of Fame 10 consecutive years. Kona."
+      "notes": "TripAdvisor Hall of Fame 10 consecutive years. Kona.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60872-d1630403-Reviews-High_Noon_Sport_Fishing-Kailua_Kona_Island_of_Hawaii_Hawaii.html"
     },
     {
       "id": 51,
       "name": "Ohana Fishing Charters",
       "activity": "Fishing",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 155,
       "price_high": 1400,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://fishingcharterskauai.com",
-      "notes": "Family-owned since 2005. Shared and private 4-8hr charters."
+      "notes": "Family-owned since 2005. Shared and private 4-8hr charters.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60616-d1893341-Reviews-Ohana_Fishing_Charters-Kapaa_Kauai_Hawaii.html"
     },
     {
       "id": 52,
       "name": "Go Fish Kauai",
       "activity": "Fishing",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 183,
       "price_high": 1200,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.gofishkauai.com",
-      "notes": "Bertram 38 Convertible (41ft). Nawiliwili Harbor, Lihue."
+      "notes": "Bertram 38 Convertible (41ft). Nawiliwili Harbor, Lihue.",
+      "tripadvisor_url": null
     },
     {
       "id": 53,
       "name": "Hans Hedemann Surf School",
       "activity": "Surfing",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 75,
       "price_high": 400,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://hhsurf.com",
-      "notes": "Established Waikiki school. Locations in Waikiki, Kahala, North Shore. Private with Hans $400."
+      "notes": "Established Waikiki school. Locations in Waikiki, Kahala, North Shore. Private with Hans $400.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d1096631-Reviews-Hans_Hedemann_Surf_School-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 54,
       "name": "Jamie O'Brien School of Surf",
       "activity": "Surfing",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 85,
       "price_high": 209,
       "fareharbor": "unknown",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.jobschoolofsurf.com",
-      "notes": "Pro surfer Jamie O'Brien's branded school at Twin Fin Waikiki. 90-min lessons at Publics."
+      "notes": "Pro surfer Jamie O'Brien's branded school at Twin Fin Waikiki. 90-min lessons at Publics.",
+      "tripadvisor_url": null
     },
     {
       "id": 55,
       "name": "North Shore Oahu Surf School",
       "activity": "Surfing",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 100,
       "price_high": 225,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://northshoreoahusurf.com",
-      "notes": "North Shore at Chun's Reef. 100% stand-up guarantee. FareHarbor confirmed."
+      "notes": "North Shore at Chun's Reef. 100% stand-up guarantee. FareHarbor confirmed.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60647-d15110432-Reviews-North_Shore_Oahu_Surf_School-Haleiwa_Oahu_Hawaii.html"
     },
     {
       "id": 56,
       "name": "Royal Hawaiian Surf Academy",
       "activity": "Surfing",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 125,
       "price_high": 175,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://royalhawaiiansurfacademy.com",
-      "notes": "Hawaiian-owned, since 1998. 'Powered by FareHarbor' in footer."
+      "notes": "Hawaiian-owned, since 1998. 'Powered by FareHarbor' in footer.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60634-d1226680-Reviews-Royal_Hawaiian_Surf_Academy-Lahaina_Maui_Hawaii.html"
     },
     {
       "id": 57,
       "name": "Surf Club Maui",
       "activity": "Surfing",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 55,
       "price_high": 150,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://surfclubmaui.com",
-      "notes": "Family-run in Kihei, 30+ years. Also SUP and kids camps."
+      "notes": "Family-run in Kihei, 30+ years. Also SUP and kids camps.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60632-d3659686-Reviews-Surf_Club_Maui-Kihei_Maui_Hawaii.html"
     },
     {
       "id": 58,
       "name": "Secret Food Tours Honolulu",
       "activity": "Food Tours",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 100,
       "price_high": 100,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.secretfoodtours.com/honolulu/",
-      "notes": "International brand. 3-3.5hr Waikiki walking tour, 12 max. Malasadas, poke, shave ice."
+      "notes": "International brand. 3-3.5hr Waikiki walking tour, 12 max. Malasadas, poke, shave ice.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g29222-d33068507-Reviews-Secret_Food_Tours_Honolulu-Oahu_Hawaii.html"
     },
     {
       "id": 59,
       "name": "Hawaii Food Tours",
       "activity": "Food Tours",
-      "islands": ["Oahu"],
+      "islands": [
+        "Oahu"
+      ],
       "price_low": 129,
       "price_high": 139,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://hawaiifoodtours.com",
-      "notes": "Led by Matthew Gray. 'Hole-in-the-Wall Tour' 5hr minivan of Honolulu/Chinatown."
+      "notes": "Led by Matthew Gray. 'Hole-in-the-Wall Tour' 5hr minivan of Honolulu/Chinatown.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d670789-Reviews-Hawaii_Food_Tours-Honolulu_Oahu_Hawaii.html"
     },
     {
       "id": 60,
       "name": "Stardust Hawaii",
       "activity": "Food Tours",
-      "islands": ["Maui"],
+      "islands": [
+        "Maui"
+      ],
       "price_low": 190,
       "price_high": 190,
       "fareharbor": "no",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.stardusthawaii.com",
-      "notes": "Most popular food tour on Maui. Progressive meal, off-the-beaten-path spots. Hotel pickup."
+      "notes": "Most popular food tour on Maui. Progressive meal, off-the-beaten-path spots. Hotel pickup.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60634-d7343441-Reviews-Stardust_Hawaii-Lahaina_Maui_Hawaii.html"
     },
     {
       "id": 61,
       "name": "Tasting Kauai",
       "activity": "Food Tours",
-      "islands": ["Kauai"],
+      "islands": [
+        "Kauai"
+      ],
       "price_low": 114,
       "price_high": 114,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://www.tastingkauai.com",
-      "notes": "7 walking food tours across Kauai regions. All $114, 2.5-3hrs. FareHarbor confirmed."
+      "notes": "7 walking food tours across Kauai regions. All $114, 2.5-3hrs. FareHarbor confirmed.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60616-d6641583-Reviews-Tasting_Kauai_Food_Tours-Kapaa_Kauai_Hawaii.html"
     },
     {
       "id": 62,
       "name": "Kona Tasting Tours",
       "activity": "Food Tours",
-      "islands": ["Big Island"],
+      "islands": [
+        "Big Island"
+      ],
       "price_low": 129,
       "price_high": 149,
       "fareharbor": "yes",
-      "review_platforms": ["TripAdvisor", "Google", "Yelp"],
+      "review_platforms": [
+        "TripAdvisor",
+        "Google",
+        "Yelp"
+      ],
       "website": "https://konatastingtours.com",
-      "notes": "2.5hr walking tour on Ali'i Drive, Kona. 7 stops. FareHarbor confirmed."
+      "notes": "2.5hr walking tour on Ali'i Drive, Kona. 7 stops. FareHarbor confirmed.",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60872-d17812425-Reviews-Kona_Walking_Food_Tour-Kailua_Kona_Island_of_Hawaii_Hawaii.html"
     }
   ]
 }
