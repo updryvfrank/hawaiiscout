@@ -398,8 +398,8 @@ Homepage → Island Hubs (/oahu/, /maui/, /big-island/, /kauai/) → Activity Hu
 - [x] ISC-1: hawaiiscout.com registered, Astro deployed, HTTPS on Vercel/Cloudflare | DONE WHEN: Domain resolves, build pipeline works
 - [x] ISC-2: GSC + Bing Webmaster + Clarity + IndexNow configured | DEPS: ISC-1 | DONE WHEN: All 4 tools verified
 - [x] ISC-3: Operator database seeded with 50 operators | DONE WHEN: DB has 50 operators, all fields populated
-- [ ] ISC-4: Review aggregation API pipeline working (TA + Google + Yelp) | DEPS: ISC-3 | DONE WHEN: 3 APIs fetching + normalizing scores
-- [ ] ISC-5: Review data aggregated for top 50 operators | DEPS: ISC-4 | DONE WHEN: 50 operators scored from 2+ platforms
+- [x] ISC-4: Review aggregation API pipeline working (TA + Google + Yelp) | DEPS: ISC-3 | DONE WHEN: 3 APIs fetching + normalizing scores
+- [x] ISC-5: Review data aggregated for top 50 operators | DEPS: ISC-4 | DONE WHEN: 50 operators scored from 2+ platforms
 - [ ] ISC-6: FareHarbor affiliate program approved | DONE WHEN: Tracking links received + verified
 
 **Step 2: BOTF Money Page Blitz — Comparisons + Reviews**

@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { operators, toSlug } from '../../lib/operators';
-import reviewsData from '../../data/reviews.json';
+import { getReviews, getAllReviewTexts, stars } from '../../lib/reviews';
 
 export function getStaticPaths() {
   return operators.map(op => ({
@@ -12,18 +12,27 @@ export function getStaticPaths() {
 
 const { operator } = Astro.props;
 
-// Load review data for this operator (null-safe)
-const reviews = (reviewsData as Record<string, any>)[operator.id] ?? null;
+// Load review data via typed helper
+const reviews = getReviews(operator);
 const composite = reviews?.composite ?? null;
 const ta = reviews?.platforms?.tripadvisor ?? null;
 const google = reviews?.platforms?.google ?? null;
-const yelp = reviews?.platforms?.yelp ?? null;
-const hasReviews = ta || google || yelp;
+const allReviews = getAllReviewTexts(reviews, 12);
+const positiveReviews = allReviews.filter(r => r.rating != null && r.rating >= 4).slice(0, 3);
+const negativeReviews = allReviews.filter(r => r.rating != null && r.rating <= 3).slice(0, 2);
+
+// Find comparison pages involving this operator
+const compareOps = operators.filter(op =>
+  op.id !== operator.id &&
+  op.activity === operator.activity &&
+  op.islands.some(i => operator.islands.includes(i))
+).slice(0, 5);
+const hasReviews = !!(ta || google);
 
 const pageTitle = `${operator.name} Reviews — What Reviewers Say (2026)`;
 const pageDesc = composite
-  ? `${operator.name} rated ${composite}/5 across TripAdvisor, Google & Yelp. Prices from $${operator.price_low}. ${operator.notes}`
-  : `${operator.name} reviews aggregated from TripAdvisor, Google & Yelp. Prices from $${operator.price_low}. ${operator.notes}`;
+  ? `${operator.name} rated ${composite}/5 across TripAdvisor and Google. Prices from $${operator.price_low}. ${operator.notes}`
+  : `${operator.name} reviews aggregated from TripAdvisor and Google. Prices from $${operator.price_low}. ${operator.notes}`;
 ---
 <Base title={pageTitle} description={pageDesc}>
   <div class="max-w-4xl mx-auto px-4 py-10">
@@ -52,14 +61,18 @@ const pageDesc = composite
     </div>
 
     <h1 class="text-3xl font-bold mb-2">{operator.name} Reviews</h1>
-    <p class="text-gray-500 mb-8">
-      {operator.activity} · {operator.islands.join(', ')} · ${operator.price_low}–${operator.price_high}
-    </p>
+    <!-- Quick Facts strip -->
+    <div class="flex flex-wrap gap-x-8 gap-y-3 mb-8 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm">
+      <div><span class="text-gray-400 text-xs uppercase tracking-wide block">Activity</span><span class="font-medium">{operator.activity}</span></div>
+      <div><span class="text-gray-400 text-xs uppercase tracking-wide block">Islands</span><span class="font-medium">{operator.islands.join(', ')}</span></div>
+      <div><span class="text-gray-400 text-xs uppercase tracking-wide block">Price Range</span><span class="font-medium">${operator.price_low}–${operator.price_high}</span></div>
+      <div><span class="text-gray-400 text-xs uppercase tracking-wide block">Online Booking</span><span class="font-medium">{operator.fareharbor === 'yes' ? 'FareHarbor' : 'Via website'}</span></div>
+    </div>
 
     <!-- Review platform scores -->
     <section class="mb-10">
       <h2 class="text-xl font-semibold mb-4">Review Platform Scores</h2>
-      {hasReviews ? (
+      {hasReviews && (
         <div class="border border-gray-200 rounded-lg overflow-hidden">
           <table class="w-full text-sm">
             <thead class="bg-gray-50">
@@ -75,83 +88,100 @@ const pageDesc = composite
               {ta && (
                 <tr>
                   <td class="px-4 py-3 font-medium">TripAdvisor</td>
-                  <td class="px-4 py-3 font-bold text-ocean-700">{ta.rating ?? '–'}</td>
-                  <td class="px-4 py-3 text-gray-600">{ta.reviewCount?.toLocaleString() ?? '–'}</td>
-                  <td class="px-4 py-3 text-gray-400">40%</td>
-                  <td class="px-4 py-3">{ta.url ? <a href={ta.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View →</a> : '–'}</td>
+                  <td class="px-4 py-3 font-bold text-ocean-700">{ta.rating ?? '-'}</td>
+                  <td class="px-4 py-3 text-gray-600">{ta.reviewCount?.toLocaleString() ?? '-'}</td>
+                  <td class="px-4 py-3 text-gray-400">50%</td>
+                  <td class="px-4 py-3">{ta.url && <a href={ta.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View</a>}</td>
                 </tr>
               )}
               {google && (
-                <tr class="bg-gray-50/50">
+                <tr class="bg-gray-50">
                   <td class="px-4 py-3 font-medium">Google</td>
-                  <td class="px-4 py-3 font-bold text-ocean-700">{google.rating ?? '–'}</td>
-                  <td class="px-4 py-3 text-gray-600">{google.reviewCount?.toLocaleString() ?? '–'}</td>
-                  <td class="px-4 py-3 text-gray-400">40%</td>
-                  <td class="px-4 py-3">{google.url ? <a href={google.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View →</a> : '–'}</td>
-                </tr>
-              )}
-              {yelp && (
-                <tr>
-                  <td class="px-4 py-3 font-medium">Yelp</td>
-                  <td class="px-4 py-3 font-bold text-ocean-700">{yelp.rating ?? '–'}</td>
-                  <td class="px-4 py-3 text-gray-600">{yelp.reviewCount?.toLocaleString() ?? '–'}</td>
-                  <td class="px-4 py-3 text-gray-400">20%</td>
-                  <td class="px-4 py-3">{yelp.url ? <a href={yelp.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View →</a> : '–'}</td>
+                  <td class="px-4 py-3 font-bold text-ocean-700">{google.rating ?? '-'}</td>
+                  <td class="px-4 py-3 text-gray-600">{google.reviewCount?.toLocaleString() ?? '-'}</td>
+                  <td class="px-4 py-3 text-gray-400">50%</td>
+                  <td class="px-4 py-3">{google.url && <a href={google.url} target="_blank" rel="noopener noreferrer" class="text-ocean-600 hover:underline text-xs">View</a>}</td>
                 </tr>
               )}
               {composite && (
                 <tr class="bg-ocean-50 font-semibold">
                   <td class="px-4 py-3">Composite Score</td>
-                  <td class="px-4 py-3 text-ocean-700 font-bold text-lg">{composite}</td>
-                  <td class="px-4 py-3 text-gray-500 text-xs" colspan="3">Weighted average (TA 40% + Google 40% + Yelp 20%)</td>
+                  <td class="px-4 py-3 text-ocean-700 font-bold text-lg">{composite}/5</td>
+                  <td class="px-4 py-3 text-gray-500 text-xs" colspan="3">TA 50% + Google 50%</td>
                 </tr>
               )}
             </tbody>
           </table>
         </div>
-      ) : (
+      )}
+      {!hasReviews && (
         <div class="border border-dashed border-gray-200 rounded-xl p-8 text-center text-gray-400">
           <div class="text-3xl mb-2">📊</div>
           <p class="text-sm">Review data is being collected.</p>
-          <p class="text-xs mt-1">Check back soon — we aggregate from TripAdvisor, Google & Yelp.</p>
+          <p class="text-xs mt-1">Check back soon — we aggregate from TripAdvisor and Google.</p>
         </div>
       )}
     </section>
 
-    <!-- What reviewers say -->
-    {hasReviews && (() => {
-      const allReviews = [
-        ...(ta?.reviews ?? []).map((r: any) => ({ ...r, source: 'TripAdvisor' })),
-        ...(google?.reviews ?? []).map((r: any) => ({ ...r, source: 'Google' })),
-        ...(yelp?.reviews ?? []).map((r: any) => ({ ...r, source: 'Yelp' })),
-      ].filter(r => r.text).slice(0, 12);
+    <!-- Pros & Cons — derived from review ratings -->
+    {(positiveReviews.length > 0 || negativeReviews.length > 0) && (
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-4">Pros &amp; Cons</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {positiveReviews.length > 0 && (
+            <div>
+              <h3 class="text-sm font-semibold text-green-700 uppercase tracking-wide mb-3">What Guests Love</h3>
+              <ul class="space-y-3">
+                {positiveReviews.map(r => (
+                  <li class="flex gap-3 text-sm text-gray-700">
+                    <span class="text-green-500 mt-0.5 shrink-0">✓</span>
+                    <p class="leading-relaxed">{r.text.slice(0, 220)}{r.text.length > 220 ? '…' : ''}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {negativeReviews.length > 0 && (
+            <div>
+              <h3 class="text-sm font-semibold text-red-700 uppercase tracking-wide mb-3">Common Complaints</h3>
+              <ul class="space-y-3">
+                {negativeReviews.map(r => (
+                  <li class="flex gap-3 text-sm text-gray-700">
+                    <span class="text-red-400 mt-0.5 shrink-0">✗</span>
+                    <p class="leading-relaxed">{r.text.slice(0, 220)}{r.text.length > 220 ? '…' : ''}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+    )}
 
-      return allReviews.length > 0 ? (
-        <section class="mb-10">
-          <h2 class="text-xl font-semibold mb-4">What Reviewers Say</h2>
-          <div class="grid md:grid-cols-2 gap-4">
-            {allReviews.map((r: any) => (
-              <div class="border border-gray-100 rounded-xl p-4 bg-gray-50/50">
-                <div class="flex items-center justify-between mb-2">
-                  <span class="text-xs font-semibold text-gray-400 uppercase tracking-wide">{r.source}</span>
-                  {r.rating && (
-                    <span class="text-sm font-bold text-ocean-700">{'★'.repeat(Math.round(r.rating))}{'☆'.repeat(5 - Math.round(r.rating))}</span>
-                  )}
-                </div>
-                <p class="text-sm text-gray-700 leading-relaxed">{r.text}</p>
-                {(r.author || r.date) && (
-                  <p class="text-xs text-gray-400 mt-2">
-                    {r.author && <span>{r.author}</span>}
-                    {r.author && r.date && <span> · </span>}
-                    {r.date && <span>{r.date}</span>}
-                  </p>
-                )}
+    <!-- What Reviewers Say — all reviews -->
+    {allReviews.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-4">What Reviewers Say</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          {allReviews.map((r) => (
+            <div class="border border-gray-100 rounded-xl p-4 bg-gray-50/50">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wide">{r.source}</span>
+                {r.rating && <span class="text-sm text-yellow-500">{stars(r.rating)}</span>}
               </div>
-            ))}
-          </div>
-        </section>
-      ) : null;
-    })()}
+              <p class="text-sm text-gray-700 leading-relaxed">{r.text}</p>
+              {(r.author || r.date) && (
+                <p class="text-xs text-gray-400 mt-2">
+                  {r.author && <span>{r.author}</span>}
+                  {r.author && r.date && <span> · </span>}
+                  {r.date && <span>{r.date}</span>}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- Pricing -->
     <section class="mb-10">
@@ -178,22 +208,41 @@ const pageDesc = composite
       </div>
     </section>
 
-    <!-- Book CTA -->
-    {operator.fareharbor === 'yes' && (
-      <section id="book" class="bg-sand-50 border border-sand-200 rounded-xl p-6">
-        <h2 class="text-xl font-semibold mb-2">Ready to Book?</h2>
-        <p class="text-gray-600 mb-4 text-sm">
-          {operator.name} uses FareHarbor for booking. Click below to check availability and book.
-        </p>
-        <a href={operator.website} target="_blank" rel="noopener noreferrer"
-          class="inline-block bg-ocean-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-ocean-700 transition-colors">
-          Book {operator.name} →
-        </a>
+    <!-- Book CTA — always show, FareHarbor when approved, operator site as fallback -->
+    <section id="book" class="bg-sand-50 border border-sand-200 rounded-xl p-6 mb-10">
+      <h2 class="text-xl font-semibold mb-2">Ready to Book?</h2>
+      <p class="text-gray-600 mb-4 text-sm">
+        {operator.fareharbor === 'yes'
+          ? `${operator.name} uses FareHarbor for online booking.`
+          : `Book directly through ${operator.name}'s website.`}
+      </p>
+      <a href={operator.website} target="_blank" rel="noopener noreferrer"
+        class="inline-block bg-ocean-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-ocean-700 transition-colors">
+        Book {operator.name} →
+      </a>
+    </section>
+
+    <!-- Compare with similar operators — bidirectional links (ISC-15) -->
+    {compareOps.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-lg font-semibold mb-3">Compare {operator.name} With</h2>
+        <div class="flex flex-wrap gap-2">
+          {compareOps.map(op => (
+            <a href={`/compare/${toSlug(operator.name)}-vs-${toSlug(op.name)}/`}
+              class="text-sm border border-gray-200 rounded-full px-3 py-1.5 hover:border-ocean-400 hover:text-ocean-700 transition-colors">
+              {operator.name} vs {op.name}
+            </a>
+          ))}
+          <a href={`/best/${operator.activity.toLowerCase().replace(/\s+/g,'-')}-${operator.islands[0].toLowerCase().replace(/\s+/g,'-')}/`}
+            class="text-sm border border-ocean-200 text-ocean-700 rounded-full px-3 py-1.5 hover:bg-ocean-50 transition-colors">
+            Best {operator.activity} in {operator.islands[0]} →
+          </a>
+        </div>
       </section>
     )}
 
     {reviews?.updatedAt && (
-      <p class="text-xs text-gray-400 mt-8">
+      <p class="text-xs text-gray-400 mt-4">
         Review data last updated: {new Date(reviews.updatedAt).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
       </p>
     )}
