@@ -1,91 +1,237 @@
 ---
-// Route: /best/[activity]-[island]/ or /best/cheapest-[activity]-[island]/
 import Base from '../../layouts/Base.astro';
-import { operators, getOperatorsByActivity, toSlug, ISLANDS, ACTIVITIES } from '../../lib/operators';
+import { operators, toSlug } from '../../lib/operators';
+import type { Operator } from '../../lib/operators';
+import { getReviews, getAllReviewTexts, stars } from '../../lib/reviews';
+
+const ACTIVITY_LABELS: Record<string, string> = {
+  'Helicopter': 'Helicopter Tours',
+  'Luau':       'Luau Shows',
+  'Snorkeling': 'Snorkeling Tours',
+  'Whale Watch':'Whale Watching Tours',
+  'Cultural':   'Cultural Tours',
+  'Land Tours': 'Land Tours',
+  'Submarine':  'Submarine Tours',
+  'Fishing':    'Fishing Charters',
+  'Surfing':    'Surf Lessons',
+  'Food Tours': 'Food Tours',
+};
 
 export function getStaticPaths() {
-  const paths = [];
-  const islands = ['oahu', 'maui', 'big-island', 'kauai'];
+  type Combo = { activity: string; island: string; ops: Operator[] };
+  const combos = new Map<string, Combo>();
 
-  for (const activity of ACTIVITIES) {
-    const actSlug = activity.toLowerCase().replace(/\s+/g, '-');
-
-    // Best [activity] in [island]
-    for (const island of islands) {
-      const islandLabel = island.replace('-', ' ');
-      paths.push({
-        params: { slug: `${actSlug}-${island}` },
-        props: { activity, island, islandLabel, type: 'best' },
-      });
-
-      // Cheapest [activity] in [island]
-      paths.push({
-        params: { slug: `cheapest-${actSlug}-${island}` },
-        props: { activity, island, islandLabel, type: 'cheapest' },
-      });
+  for (const op of operators) {
+    for (const island of op.islands) {
+      const key = `${toSlug(op.activity)}-${toSlug(island)}`;
+      if (!combos.has(key)) {
+        combos.set(key, { activity: op.activity, island, ops: [] });
+      }
+      combos.get(key)!.ops.push(op);
     }
-
-    // Best [activity] in hawaii (all islands)
-    paths.push({
-      params: { slug: `${actSlug}-hawaii` },
-      props: { activity, island: 'hawaii', islandLabel: 'Hawaii', type: 'best' },
-    });
   }
-  return paths;
+
+  return [...combos.entries()]
+    .filter(([, { ops }]) => ops.length >= 2)
+    .map(([slug, { activity, island, ops }]) => ({
+      params: { slug },
+      props: { activity, island, ops },
+    }));
 }
 
-const { activity, island, islandLabel, type } = Astro.props;
-const matchingOps = operators
-  .filter(op => op.activity === activity && (island === 'hawaii' || op.islands.map(i => i.toLowerCase()).includes(island.toLowerCase().replace('-', ' '))))
-  .sort((a, b) => type === 'cheapest' ? a.price_low - b.price_low : b.price_high - a.price_high);
+const { activity, island, ops } = Astro.props as {
+  activity: string;
+  island: string;
+  ops: Operator[];
+};
 
-const pageTitle = type === 'cheapest'
-  ? `Cheapest ${activity} in ${islandLabel} — Prices From $${matchingOps[0]?.price_low ?? '?'} (2026)`
-  : `Best ${activity} in ${islandLabel} — Top ${matchingOps.length} Ranked (2026)`;
-const pageDesc = `${type === 'cheapest' ? 'Cheapest' : 'Best'} ${activity.toLowerCase()} operators in ${islandLabel}, ranked by aggregated reviews from TripAdvisor, Google & Yelp.`;
+// Rank by composite score desc, price asc as tiebreaker
+const ranked = ops
+  .map(op => ({ op, reviews: getReviews(op) }))
+  .sort((a, b) => {
+    const sa = a.reviews?.composite ?? 0;
+    const sb = b.reviews?.composite ?? 0;
+    if (sb !== sa) return sb - sa;
+    return a.op.price_low - b.op.price_low;
+  });
+
+const cheapestPrice = Math.min(...ops.map(o => o.price_low));
+
+function getBestFor(index: number, op: Operator): string {
+  if (index === 0) return 'Best Overall';
+  if (op.price_low === cheapestPrice && op.price_low < ranked[0].op.price_low) return 'Budget Pick';
+  if (index === 1) return 'Runner-Up';
+  return 'Also Great';
+}
+
+// Comparison pairs from the top 4 operators
+const topOps = ranked.slice(0, 4).map(r => r.op);
+const comparisons: { a: Operator; b: Operator }[] = [];
+for (let i = 0; i < topOps.length; i++) {
+  for (let j = i + 1; j < topOps.length; j++) {
+    comparisons.push({ a: topOps[i], b: topOps[j] });
+  }
+}
+
+const activityLabel = ACTIVITY_LABELS[activity] ?? activity;
+const top = ranked[0];
+const second = ranked[1];
+const minPrice = Math.min(...ops.map(o => o.price_low));
+
+const pageTitle = `Best ${activityLabel} in ${island} — Top ${ranked.length} Ranked (2026)`;
+const pageDesc = top.reviews?.composite != null
+  ? `Best ${activityLabel.toLowerCase()} in ${island} ranked by TripAdvisor + Google reviews. ${top.op.name} leads with ${top.reviews.composite}/5. Compare ${ranked.length} operators from $${minPrice}.`
+  : `Best ${activityLabel.toLowerCase()} in ${island} — ${ranked.length} operators compared by price and reviews. Prices from $${minPrice}.`;
 ---
 <Base title={pageTitle} description={pageDesc}>
   <div class="max-w-4xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold mb-2">{pageTitle.replace(' (2026)', '')}</h1>
-    <p class="text-gray-500 mb-8">{matchingOps.length} operators ranked · Updated 2026</p>
 
-    {matchingOps.length === 0 ? (
-      <p class="text-gray-500">No operators found for this combination yet.</p>
-    ) : (
-      <div class="space-y-6">
-        {matchingOps.map((op, i) => (
-          <div class="border border-gray-200 rounded-xl p-6 hover:border-ocean-300 transition-colors">
-            <div class="flex items-start justify-between gap-4">
-              <div class="flex-1">
-                <div class="text-xs font-bold text-ocean-600 uppercase tracking-wide mb-1">#{i + 1}</div>
-                <h2 class="text-xl font-semibold mb-1">
-                  <a href={`/operators/${toSlug(op.name)}/`} class="hover:text-ocean-700">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-gray-400 mb-6">
+      <a href="/" class="hover:text-ocean-600">Home</a> ›
+      <a href={`/${toSlug(island)}/`} class="hover:text-ocean-600">{island}</a> ›
+      <span>Best {activityLabel}</span>
+    </nav>
+
+    <h1 class="text-3xl font-bold mb-2">{pageTitle}</h1>
+    <p class="text-gray-500 text-sm mb-8">
+      Ranked by aggregated TripAdvisor + Google reviews · Updated April 2026
+    </p>
+
+    <!-- TLDR -->
+    <div class="bg-ocean-50 border border-ocean-200 rounded-xl p-6 mb-8">
+      <div class="text-xs font-bold uppercase tracking-widest text-ocean-700 mb-2">TLDR</div>
+      <p class="text-gray-800">
+        <strong>{top.op.name}</strong> is our top pick for {activityLabel.toLowerCase()} in {island}
+        {top.reviews?.composite != null && <span> — rated {top.reviews.composite}/5 across TripAdvisor and Google</span>}.
+        {second && <span> {second.op.name} is a solid runner-up, starting at ${second.op.price_low}.</span>}
+      </p>
+      <a href={top.op.website} target="_blank" rel="noopener noreferrer"
+        class="inline-block mt-4 bg-ocean-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-ocean-700 transition-colors">
+        Book {top.op.name} — From ${top.op.price_low} →
+      </a>
+    </div>
+
+    <!-- Rankings table (Kemp model) -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Rankings</h2>
+      <div class="border border-gray-200 rounded-lg overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="text-left px-4 py-3 font-medium text-gray-500 w-8">#</th>
+              <th class="text-left px-4 py-3 font-medium text-gray-500">Operator</th>
+              <th class="text-left px-4 py-3 font-medium text-gray-500">Score</th>
+              <th class="text-left px-4 py-3 font-medium text-gray-500">Price</th>
+              <th class="text-left px-4 py-3 font-medium text-gray-500">Best For</th>
+              <th class="text-left px-4 py-3 font-medium text-gray-500">Book</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {ranked.map(({ op, reviews }, i) => (
+              <tr class={i === 0 ? 'bg-ocean-50/40' : i % 2 === 0 ? 'bg-gray-50/30' : ''}>
+                <td class="px-4 py-3 font-bold text-gray-300 text-lg">{i + 1}</td>
+                <td class="px-4 py-3">
+                  <a href={`/operators/${toSlug(op.name)}/`}
+                    class="font-semibold text-gray-900 hover:text-ocean-600 transition-colors">
                     {op.name}
                   </a>
-                </h2>
-                <p class="text-sm text-gray-500 mb-3">{op.islands.join(', ')} · ${op.price_low}–${op.price_high}</p>
-                <p class="text-sm text-gray-700">{op.notes}</p>
-              </div>
-              <div class="text-right shrink-0">
-                <div class="text-2xl font-bold text-gray-800">${op.price_low}</div>
-                <div class="text-xs text-gray-400">starting</div>
-              </div>
+                  {i === 0 && (
+                    <span class="ml-2 text-xs bg-ocean-100 text-ocean-700 px-1.5 py-0.5 rounded-full font-medium">
+                      Top Pick
+                    </span>
+                  )}
+                </td>
+                <td class="px-4 py-3">
+                  {reviews?.composite != null
+                    ? <span class="font-bold text-ocean-700">{reviews.composite}<span class="text-xs text-gray-400 font-normal">/5</span></span>
+                    : <span class="text-gray-400">–</span>}
+                </td>
+                <td class="px-4 py-3 font-medium">${op.price_low}+</td>
+                <td class="px-4 py-3 text-gray-500 text-xs">{getBestFor(i, op)}</td>
+                <td class="px-4 py-3">
+                  <a href={op.website} target="_blank" rel="noopener noreferrer"
+                    class="text-ocean-600 font-semibold hover:underline">→ Book</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Mini-reviews per operator -->
+    <section class="mb-10 divide-y divide-gray-100">
+      {ranked.map(({ op, reviews }, i) => {
+        const excerpts = getAllReviewTexts(reviews, 2);
+        return (
+          <div id={toSlug(op.name)} class="py-8 first:pt-0">
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-3xl font-bold text-gray-100 leading-none select-none">#{i + 1}</span>
+              <h2 class="text-xl font-semibold">{op.name}</h2>
+              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                {getBestFor(i, op)}
+              </span>
             </div>
-            <div class="flex gap-3 mt-4">
-              <a href={`/operators/${toSlug(op.name)}/`}
-                class="text-sm border border-ocean-400 text-ocean-700 px-4 py-1.5 rounded-lg hover:bg-ocean-50 transition-colors">
-                Read Review
-              </a>
-              {op.fareharbor === 'yes' && (
-                <a href={op.website} target="_blank" rel="noopener noreferrer"
-                  class="text-sm bg-ocean-600 text-white px-4 py-1.5 rounded-lg hover:bg-ocean-700 transition-colors">
-                  Book →
-                </a>
+            <p class="text-sm text-gray-500 mb-3">
+              {activityLabel} · {island} · ${op.price_low}–${op.price_high}
+              {reviews?.composite != null && (
+                <span> · <strong class="text-ocean-700">{reviews.composite}/5</strong> composite</span>
               )}
+            </p>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">{op.notes}</p>
+            {excerpts.length > 0 && (
+              <div class="space-y-3 mb-5">
+                {excerpts.map(r => (
+                  <blockquote class="border-l-2 border-ocean-200 pl-4 text-sm text-gray-600 italic">
+                    &ldquo;{r.text.slice(0, 240)}{r.text.length > 240 ? '…' : ''}&rdquo;
+                    <span class="not-italic text-xs text-gray-400 ml-2 font-medium">
+                      — {r.source}{r.rating != null && <span> · {stars(r.rating)}</span>}
+                    </span>
+                  </blockquote>
+                ))}
+              </div>
+            )}
+            <div class="flex gap-3 flex-wrap">
+              <a href={op.website} target="_blank" rel="noopener noreferrer"
+                class="bg-ocean-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-ocean-700 transition-colors">
+                Book {op.name} →
+              </a>
+              <a href={`/operators/${toSlug(op.name)}/`}
+                class="border border-ocean-300 text-ocean-700 px-5 py-2 rounded-lg text-sm font-medium hover:bg-ocean-50 transition-colors">
+                Read Full Review
+              </a>
             </div>
           </div>
-        ))}
-      </div>
+        );
+      })}
+    </section>
+
+    <!-- Methodology -->
+    <section class="mb-10 bg-gray-50 rounded-xl p-6 border border-gray-200 text-sm text-gray-600">
+      <h2 class="text-base font-semibold text-gray-800 mb-2">How We Ranked These</h2>
+      <p>
+        Rankings are based on composite scores aggregated from TripAdvisor and Google reviews,
+        weighted equally (50/50). Operators within 0.1 points are considered tied and ranked by
+        starting price. Operators without published review data are listed last.
+        We update scores monthly from live API data.
+      </p>
+    </section>
+
+    <!-- Head-to-head comparison links -->
+    {comparisons.length > 0 && (
+      <section>
+        <h2 class="text-lg font-semibold mb-3">Head-to-Head Comparisons</h2>
+        <div class="flex flex-wrap gap-2">
+          {comparisons.map(({ a, b }) => (
+            <a href={`/compare/${toSlug(a.name)}-vs-${toSlug(b.name)}/`}
+              class="text-sm border border-gray-200 rounded-full px-3 py-1.5 hover:border-ocean-400 hover:text-ocean-700 transition-colors">
+              {a.name} vs {b.name}
+            </a>
+          ))}
+        </div>
+      </section>
     )}
+
   </div>
 </Base>
