@@ -25,9 +25,13 @@ export function getStaticPaths() {
 
 const { question, island, answer, links } = Astro.props as FAQ;
 const islandLabel = { oahu: 'Oahu', maui: 'Maui', 'big-island': 'Big Island', kauai: 'Kauai', lanai: 'Lanai', molokai: 'Molokai' }[island] ?? island;
+// SEO title ≤60 chars — truncate long questions at word boundary
+const seoTitle = question.length <= 60
+  ? question
+  : question.slice(0, 57).replace(/\s\S*$/, '') + '…';
 ---
 <Base
-  title={question}
+  title={seoTitle}
   description={answer.slice(0, 155) + (answer.length > 155 ? '…' : '')}
 >
   <div class="max-w-2xl mx-auto px-4 py-10">
