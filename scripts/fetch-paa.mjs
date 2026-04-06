@@ -154,6 +154,59 @@ const KEYWORDS = [
   { keyword: 'helicopter tour hawaii tips', island: 'oahu' },
   { keyword: 'hawaii travel tips first time', island: 'oahu' },
 
+  // Fourth batch — operator-targeted keywords for ISC-21
+  // Helicopter
+  { keyword: 'rainbow helicopters oahu review', island: 'oahu' },
+  { keyword: 'rainbow helicopters oahu worth it', island: 'oahu' },
+  { keyword: 'air maui helicopters review', island: 'maui' },
+  { keyword: 'mauna loa helicopters big island', island: 'big-island' },
+  // Luau
+  { keyword: 'luau kalamaku kauai review', island: 'kauai' },
+  { keyword: 'smiths family garden luau kauai', island: 'kauai' },
+  { keyword: 'best luau kauai', island: 'kauai' },
+  { keyword: 'luau big island hawaii', island: 'big-island' },
+  { keyword: 'voyagers of the pacific luau review', island: 'big-island' },
+  // Snorkeling
+  { keyword: 'trilogy excursions maui snorkeling', island: 'maui' },
+  { keyword: 'captain andys snorkeling kauai review', island: 'kauai' },
+  { keyword: 'blue dolphin charters kauai review', island: 'kauai' },
+  // Whale watch
+  { keyword: 'ultimate whale watch maui review', island: 'maui' },
+  { keyword: 'calypso maui whale watching review', island: 'maui' },
+  { keyword: 'body glove kona whale watching', island: 'big-island' },
+  { keyword: 'star of honolulu sunset cruise oahu', island: 'oahu' },
+  // Cultural / Land tours
+  { keyword: 'discover hawaii tours oahu review', island: 'oahu' },
+  { keyword: 'polynesian adventure tours oahu', island: 'oahu' },
+  { keyword: 'kohala zipline big island review', island: 'big-island' },
+  { keyword: 'kipu ranch kauai review', island: 'kauai' },
+  { keyword: 'kailani tours big island review', island: 'big-island' },
+  // Submarine
+  { keyword: 'atlantis submarine kona big island', island: 'big-island' },
+  { keyword: 'island water sports hawaii submarine', island: 'oahu' },
+  // Fishing
+  { keyword: 'deep sea fishing oahu review', island: 'oahu' },
+  { keyword: 'sport fishing maui review', island: 'maui' },
+  { keyword: 'fishing charters big island kona', island: 'big-island' },
+  { keyword: 'fishing charters kauai review', island: 'kauai' },
+  { keyword: 'is deep sea fishing worth it hawaii', island: 'oahu' },
+  { keyword: 'best fishing charter hawaii', island: 'oahu' },
+  // Surfing
+  { keyword: 'jamie obrien surf school oahu', island: 'oahu' },
+  { keyword: 'surf lessons maui review', island: 'maui' },
+  { keyword: 'best surf school maui', island: 'maui' },
+  // Food tours
+  { keyword: 'food tour honolulu oahu review', island: 'oahu' },
+  { keyword: 'best food tour hawaii oahu', island: 'oahu' },
+  { keyword: 'stardust hawaii food tour maui', island: 'maui' },
+  { keyword: 'tasting kauai food tour review', island: 'kauai' },
+  { keyword: 'kona coffee food tour big island', island: 'big-island' },
+  { keyword: 'hawaii food tour worth it', island: 'oahu' },
+  // Additional whale watch / ocean
+  { keyword: 'oahu whale watching tour', island: 'oahu' },
+  { keyword: 'best whale watching oahu', island: 'oahu' },
+  { keyword: 'big island whale watching kona', island: 'big-island' },
+
   // Third batch — closing ISC-18
   { keyword: 'maui snorkeling tour review', island: 'maui' },
   { keyword: 'sail maui reviews', island: 'maui' },
