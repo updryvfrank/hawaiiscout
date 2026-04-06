@@ -44,12 +44,23 @@ const mauiOps = operators.filter(o => o.islands.includes('Maui')).slice(0, 3);
     <div class="max-w-6xl mx-auto">
       <h2 class="text-2xl font-bold mb-8">Browse by Activity</h2>
       <div class="flex flex-wrap gap-3">
-        {ACTIVITIES.map(activity => (
+        {([
+          { label: 'Helicopter',  href: '/best/helicopter-oahu/' },
+          { label: 'Luau',        href: '/best/luau-oahu/' },
+          { label: 'Snorkeling',  href: '/best/snorkeling-maui/' },
+          { label: 'Whale Watch', href: '/best/whale-watch-maui/' },
+          { label: 'Cultural',    href: '/best/cultural-oahu/' },
+          { label: 'Land Tours',  href: '/best/land-tours-oahu/' },
+          { label: 'Submarine',   href: '/best/submarine-oahu/' },
+          { label: 'Fishing',     href: '/best/fishing-oahu/' },
+          { label: 'Surfing',     href: '/best/surfing-oahu/' },
+          { label: 'Food Tours',  href: '/best/food-tours-oahu/' },
+        ] as const).map(({ label, href }) => (
           <a
-            href={`/best/${activity.toLowerCase().replace(/\s+/g, '-')}-hawaii/`}
+            href={href}
             class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:border-ocean-400 hover:text-ocean-700 transition-all"
           >
-            {activity}
+            {label}
           </a>
         ))}
       </div>
