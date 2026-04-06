@@ -153,6 +153,22 @@ const KEYWORDS = [
   { keyword: 'hawaii snorkeling tips', island: 'maui' },
   { keyword: 'helicopter tour hawaii tips', island: 'oahu' },
   { keyword: 'hawaii travel tips first time', island: 'oahu' },
+
+  // Third batch — closing ISC-18
+  { keyword: 'maui snorkeling tour review', island: 'maui' },
+  { keyword: 'sail maui reviews', island: 'maui' },
+  { keyword: 'trilogy excursions maui review', island: 'maui' },
+  { keyword: 'blue hawaiian helicopters review', island: 'oahu' },
+  { keyword: 'maverick helicopters maui review', island: 'maui' },
+  { keyword: 'fair wind snorkel kona review', island: 'big-island' },
+  { keyword: 'body glove kona review', island: 'big-island' },
+  { keyword: 'captain andys kauai review', island: 'kauai' },
+  { keyword: 'blue dolphin kauai review', island: 'kauai' },
+  { keyword: 'hans hedemann surf school review', island: 'oahu' },
+  { keyword: 'best food tour oahu', island: 'oahu' },
+  { keyword: 'best food tour maui', island: 'maui' },
+  { keyword: 'kona tasting tours review', island: 'big-island' },
+  { keyword: 'tasting kauai food tour', island: 'kauai' },
 ];
 
 function toSlug(text) {
