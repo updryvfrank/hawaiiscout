@@ -31,24 +31,33 @@ export function getStaticPaths() {
     }
   }
 
-  return [...combos.entries()]
-    .filter(([, { ops }]) => ops.length >= 2)
-    .map(([slug, { activity, island, ops }]) => ({
+  const validCombos = [...combos.entries()].filter(([, { ops }]) => ops.length >= 2);
+
+  // "best-*" ranked by score + "cheapest-*" ranked by price
+  return [
+    ...validCombos.map(([slug, { activity, island, ops }]) => ({
       params: { slug },
-      props: { activity, island, ops },
-    }));
+      props: { activity, island, ops, mode: 'best' as const },
+    })),
+    ...validCombos.map(([slug, { activity, island, ops }]) => ({
+      params: { slug: `cheapest-${slug}` },
+      props: { activity, island, ops, mode: 'cheapest' as const },
+    })),
+  ];
 }
 
-const { activity, island, ops } = Astro.props as {
+const { activity, island, ops, mode } = Astro.props as {
   activity: string;
   island: string;
   ops: Operator[];
+  mode: 'best' | 'cheapest';
 };
 
-// Rank by composite score desc, price asc as tiebreaker
+// Rank by composite score (best) or price_low (cheapest)
 const ranked = ops
   .map(op => ({ op, reviews: getReviews(op) }))
   .sort((a, b) => {
+    if (mode === 'cheapest') return a.op.price_low - b.op.price_low;
     const sa = a.reviews?.composite ?? 0;
     const sb = b.reviews?.composite ?? 0;
     if (sb !== sa) return sb - sa;
@@ -78,11 +87,15 @@ const top = ranked[0];
 const second = ranked[1];
 const minPrice = Math.min(...ops.map(o => o.price_low));
 
-// No brand name per Quaid Rule #1 — use same string for title tag and H1
-const pageTitle = `Best ${activityLabel} in ${island} — Top ${ranked.length} Ranked (2026)`;
-const pageDesc = top.reviews?.composite != null
-  ? `Best ${activityLabel.toLowerCase()} in ${island} ranked by reviews. ${top.op.name} leads with ${top.reviews.composite}/5. Compare ${ranked.length} operators from $${minPrice}.`
-  : `Best ${activityLabel.toLowerCase()} in ${island} — ${ranked.length} operators compared by price and reviews. From $${minPrice}.`;
+// No brand name per Quaid Rule #1
+const pageTitle = mode === 'cheapest'
+  ? `Cheapest ${activityLabel} in ${island} — Prices From $${minPrice} (2026)`
+  : `Best ${activityLabel} in ${island} — Top ${ranked.length} Ranked (2026)`;
+const pageDesc = mode === 'cheapest'
+  ? `Cheapest ${activityLabel.toLowerCase()} in ${island}. ${ranked.length} operators compared by price — from $${minPrice}. Find the best value without sacrificing quality.`
+  : top.reviews?.composite != null
+    ? `Best ${activityLabel.toLowerCase()} in ${island} ranked by reviews. ${top.op.name} leads with ${top.reviews.composite}/5. Compare ${ranked.length} operators from $${minPrice}.`
+    : `Best ${activityLabel.toLowerCase()} in ${island} — ${ranked.length} operators compared by price and reviews. From $${minPrice}.`;
 ---
 <Base title={pageTitle} description={pageDesc}>
   <div class="max-w-4xl mx-auto px-4 py-10">

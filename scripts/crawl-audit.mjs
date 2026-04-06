@@ -32,8 +32,9 @@ async function getSitemapUrls() {
 
 function extract(html, url) {
   const title = html.match(/<title[^>]*>(.*?)<\/title>/si)?.[1]?.replace(/\s+/g, " ").trim() ?? null;
-  const metaDesc = html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i)?.[1]
-    ?? html.match(/<meta[^>]+content=["']([^"']*)["'][^>]+name=["']description["']/i)?.[1]
+  // Use [^"]* not [^"']* — apostrophes in content must not terminate match
+  const metaDesc = html.match(/<meta[^>]+name="description"[^>]+content="([^"]*)"/i)?.[1]
+    ?? html.match(/<meta[^>]+content="([^"]*)"[^>]+name="description"/i)?.[1]
     ?? null;
   const canonical = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']*)["']/i)?.[1]
     ?? html.match(/<link[^>]+href=["']([^"']*)["'][^>]+rel=["']canonical["']/i)?.[1]

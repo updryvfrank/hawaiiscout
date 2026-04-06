@@ -1,0 +1,59 @@
+---
+// Route: /guides/[slug]/ — audience buying guides (ISC-14)
+import Base from '../../layouts/Base.astro';
+import guidesData from '../../data/audience-guides.json';
+
+interface Guide {
+  slug: string;
+  title: string;
+  description: string;
+  island: string;
+  answer: string;
+  links: { text: string; href: string }[];
+}
+
+const guides = guidesData as Guide[];
+
+export function getStaticPaths() {
+  return (guidesData as Guide[]).map(guide => ({
+    params: { slug: guide.slug },
+    props: guide,
+  }));
+}
+
+const { title, description, island, answer, links } = Astro.props as Guide;
+const islandLabel = { oahu: 'Oahu', maui: 'Maui', 'big-island': 'Big Island', kauai: 'Kauai' }[island] ?? island;
+const islandSlug = island;
+---
+<Base title={title} description={description}>
+  <div class="max-w-2xl mx-auto px-4 py-10">
+
+    <nav class="text-xs text-gray-400 mb-6">
+      <a href="/" class="hover:text-ocean-600">Home</a> ›
+      <a href={`/${islandSlug}/`} class="hover:text-ocean-600">{islandLabel}</a> ›
+      <span>Buying Guide</span>
+    </nav>
+
+    <h1 class="text-2xl font-bold mb-3">{title}</h1>
+    <p class="text-gray-500 text-sm mb-8">{description}</p>
+
+    <p class="text-gray-800 leading-relaxed mb-8">{answer}</p>
+
+    <!-- BOTF internal links -->
+    {links && links.length > 0 && (
+      <div class="border-t border-gray-100 pt-6">
+        <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Our Top Picks</div>
+        <ul class="space-y-2">
+          {links.map(link => (
+            <li>
+              <a href={link.href} class="text-ocean-700 hover:underline text-sm font-medium">
+                → {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+  </div>
+</Base>

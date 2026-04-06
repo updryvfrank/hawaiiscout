@@ -406,8 +406,8 @@ Homepage → Island Hubs (/oahu/, /maui/, /big-island/, /kauai/) → Activity Hu
 - [x] ISC-7: Comparison table template built (Kemp model) | DEPS: ISC-1 | DONE WHEN: Astro component renders, mobile responsive
 - [x] ISC-8: 25+ head-to-head comparison pages published | DEPS: ISC-7, ISC-5, ISC-6 | DONE WHEN: 25+ pages indexed, FareHarbor on all
 - [x] ISC-9: 25+ operator review pages published | DEPS: ISC-4, ISC-6 | DONE WHEN: 25+ pages with multi-platform scores + FareHarbor
-- [ ] ISC-10: Internal linking: comparisons ↔ reviews bidirectional | DEPS: ISC-8, ISC-9 | DONE WHEN: All comparison+review pages interlinked
-- [ ] ISC-11: Zero brand names in any page title | DEPS: ISC-8, ISC-9 | DONE WHEN: Audit confirms zero
+- [x] ISC-10: Internal linking: comparisons ↔ reviews bidirectional | DEPS: ISC-8, ISC-9 | DONE WHEN: All comparison+review pages interlinked
+- [x] ISC-11: Zero brand names in any page title | DEPS: ISC-8, ISC-9 | DONE WHEN: Audit confirms zero
 
 **Step 3: Ranked Lists + Price Pages**
 - [x] ISC-12: 15+ "best [activity] in [island]" ranked lists published | DEPS: ISC-9 | DONE WHEN: 15+ pages with 5+ operators each
@@ -417,9 +417,9 @@ Homepage → Island Hubs (/oahu/, /maui/, /big-island/, /kauai/) → Activity Hu
 - [ ] ISC-16: Hub pages link to all BOTF per cluster | DEPS: ISC-8, ISC-9, ISC-12 | DONE WHEN: Hub pages complete
 
 **Step 4: Authority Support Layer**
-- [ ] ISC-17: 50+ PAA screenshots cataloged | DEPS: ISC-8, ISC-9 | DONE WHEN: Screenshots organized by cluster
-- [ ] ISC-18: 100+ FAQ pages published (120 words each) | DEPS: ISC-17 | DONE WHEN: 100+ FAQs with 2-3 BOTF links each
-- [ ] ISC-19: FAQs organized in /[island]-faq/ subfolders | DEPS: ISC-18 | DONE WHEN: All FAQs in correct subfolder
+- [x] ISC-17: 50+ PAA screenshots cataloged | DEPS: ISC-8, ISC-9 | DONE WHEN: Screenshots organized by cluster
+- [x] ISC-18: 100+ FAQ pages published (120 words each) | DEPS: ISC-17 | DONE WHEN: 100+ FAQs with 2-3 BOTF links each
+- [x] ISC-19: FAQs organized in /[island]-faq/ subfolders | DEPS: ISC-18 | DONE WHEN: All FAQs in correct subfolder
 - [ ] ISC-20: FAQ hub pages created with BOTF links above | DEPS: ISC-19 | DONE WHEN: Hub per subfolder
 - [ ] ISC-21: Every BOTF page has 3+ FAQ inlinks | DEPS: ISC-18 | DONE WHEN: Internal linking audit passes
 
