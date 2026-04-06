@@ -24,7 +24,8 @@ const islandOps = operators.filter(op =>
   op.islands.map(i => i.toLowerCase()).includes(islandName.toLowerCase())
 );
 
-const pageTitle = `Best ${label} Tours & Activities — Top Operators Ranked (2026)`;
+// SEO title ≤60 chars; H1 is hardcoded below so pageTitle only used for <Base>
+const pageTitle = `Best ${label} Tours & Activities | Hawaii Scout`;
 const pageDesc = `Best tours in ${label}, Hawaii. Ranked by aggregated reviews from TripAdvisor, Google & Yelp. ${description}`;
 ---
 <Base title={pageTitle} description={pageDesc}>

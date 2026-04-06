@@ -78,12 +78,14 @@ const top = ranked[0];
 const second = ranked[1];
 const minPrice = Math.min(...ops.map(o => o.price_low));
 
-const pageTitle = `Best ${activityLabel} in ${island} — Top ${ranked.length} Ranked (2026)`;
+// seoTitle ≤60 chars for <title> tag; pageTitle used for H1
+const seoTitle = `Best ${activityLabel} in ${island} | Hawaii Scout`;
+const pageTitle = `Best ${activityLabel} in ${island} — Top ${ranked.length} Ranked`;
 const pageDesc = top.reviews?.composite != null
-  ? `Best ${activityLabel.toLowerCase()} in ${island} ranked by TripAdvisor + Google reviews. ${top.op.name} leads with ${top.reviews.composite}/5. Compare ${ranked.length} operators from $${minPrice}.`
-  : `Best ${activityLabel.toLowerCase()} in ${island} — ${ranked.length} operators compared by price and reviews. Prices from $${minPrice}.`;
+  ? `Best ${activityLabel.toLowerCase()} in ${island} ranked by reviews. ${top.op.name} leads with ${top.reviews.composite}/5. Compare ${ranked.length} operators from $${minPrice}.`
+  : `Best ${activityLabel.toLowerCase()} in ${island} — ${ranked.length} operators compared by price and reviews. From $${minPrice}.`;
 ---
-<Base title={pageTitle} description={pageDesc}>
+<Base title={seoTitle} description={pageDesc}>
   <div class="max-w-4xl mx-auto px-4 py-10">
 
     <!-- Breadcrumb -->

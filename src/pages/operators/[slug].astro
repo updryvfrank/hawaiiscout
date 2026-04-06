@@ -29,10 +29,14 @@ const compareOps = operators.filter(op =>
 ).slice(0, 5);
 const hasReviews = !!(ta || google);
 
-const pageTitle = `${operator.name} Reviews — What Reviewers Say (2026)`;
+// SEO title: ≤60 chars
+const pageTitle = `${operator.name} Reviews | Hawaii Scout`;
+
+// Meta desc: 120-155 chars — cap notes at 80 chars to stay in range
+const _notes = operator.notes?.length > 80 ? operator.notes.slice(0, 77) + '…' : operator.notes;
 const pageDesc = composite
-  ? `${operator.name} rated ${composite}/5 across TripAdvisor and Google. Prices from $${operator.price_low}. ${operator.notes}`
-  : `${operator.name} reviews aggregated from TripAdvisor and Google. Prices from $${operator.price_low}. ${operator.notes}`;
+  ? `${operator.name} rated ${composite}/5 on TripAdvisor & Google. From $${operator.price_low}. ${_notes}`
+  : `${operator.name} reviews from TripAdvisor & Google. From $${operator.price_low}. ${_notes}`;
 ---
 <Base title={pageTitle} description={pageDesc}>
   <div class="max-w-4xl mx-auto px-4 py-10">

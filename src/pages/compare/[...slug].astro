@@ -31,12 +31,20 @@ const winner = getWinner(revA, revB);
 const reviewsA = getAllReviewTexts(revA, 4);
 const reviewsB = getAllReviewTexts(revB, 4);
 
-// Page title — NO brand names per Quaid Rule #1
-const pageTitle = `${opA.name} vs ${opB.name} — Which ${opA.activity} Is Better? (2026)`;
+// SEO title: ≤60 chars. Add brand suffix only if it fits; otherwise use bare vs line.
+const _vsBase = `${opA.name} vs ${opB.name}`;
+const _vsSuffix = ' | Hawaii Scout';
+const pageTitle = (_vsBase.length + _vsSuffix.length) <= 60
+  ? _vsBase + _vsSuffix
+  : _vsBase.length <= 60
+    ? _vsBase
+    : _vsBase.slice(0, 57).replace(/\s\S*$/, '') + '…';
+
+// Meta desc: 120-155 chars
 const pageDesc = winner === 'A'
-  ? `${opA.name} vs ${opB.name} compared. ${opA.name} wins with a ${revA?.composite}/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.`
+  ? `${opA.name} vs ${opB.name}: ${opA.name} wins with ${revA?.composite}/5. Compare prices, reviews & ratings side-by-side.`
   : winner === 'B'
-  ? `${opA.name} vs ${opB.name} compared. ${opB.name} wins with a ${revB?.composite}/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.`
+  ? `${opA.name} vs ${opB.name}: ${opB.name} wins with ${revB?.composite}/5. Compare prices, reviews & ratings side-by-side.`
   : `${opA.name} vs ${opB.name} — side-by-side ${opA.activity.toLowerCase()} comparison in ${sharedIsland}. Prices, reviews, and verdict.`;
 ---
 <Base title={pageTitle} description={pageDesc}>
