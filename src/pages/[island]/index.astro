@@ -25,9 +25,9 @@ const islandOps = operators.filter(op =>
   op.islands.map(i => i.toLowerCase()).includes(islandName.toLowerCase())
 );
 
-// Activities with ranked list pages on this island
+// Activities with ranked list pages on this island — requires ≥2 operators (same gate as best/[slug].astro)
 const activeActivities = ACTIVITIES.filter(activity =>
-  islandOps.some(op => op.activity === activity || (op.activities_secondary || []).includes(activity))
+  islandOps.filter(op => op.activity === activity).length >= 2
 );
 
 // Top comparisons: pairs of same-activity operators sharing this island
