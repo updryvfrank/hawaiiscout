@@ -1,0 +1,3504 @@
+{
+  "crawledAt": "2026-04-06T21:22:33.369Z",
+  "totalUrls": 203,
+  "indexableCount": 155,
+  "nonIndexableCount": 48,
+  "issueCounts": {
+    "title_too_long": 85,
+    "meta_desc_too_long": 64,
+    "status_404": 48,
+    "meta_desc_too_short": 9
+  },
+  "results": [
+    {
+      "url": "https://hawaiiscout.com/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Hawaii Tours &amp; Activities — Unbiased Reviews &amp; Comparisons",
+      "titleLength": 66,
+      "metaDesc": "Compare Hawaii tour operators side-by-side. Aggregated ratings from TripAdvisor, Google &#38; Yelp. Independent reviews for snorkeling, helicopter, luau &#38; more.",
+      "metaDescLength": 164,
+      "h1": "Find the Best Hawaii Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/best/cultural-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Cultural Tours in Maui — Top 2 Ranked (2026)",
+      "titleLength": 49,
+      "metaDesc": "Best cultural tours in Maui ranked by TripAdvisor + Google reviews. Go Tours Hawaii leads with 4.9/5. Compare 2 operators from $49.",
+      "metaDescLength": 131,
+      "h1": "Best Cultural Tours in Maui — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/cultural-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/food-tours-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Food Tours in Oahu — Top 2 Ranked (2026)",
+      "titleLength": 45,
+      "metaDesc": "Best food tours in Oahu ranked by TripAdvisor + Google reviews. Secret Food Tours Honolulu leads with 5/5. Compare 2 operators from $100.",
+      "metaDescLength": 137,
+      "h1": "Best Food Tours in Oahu — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/food-tours-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/fishing-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Fishing Charters in Kauai — Top 2 Ranked (2026)",
+      "titleLength": 52,
+      "metaDesc": "Best fishing charters in Kauai ranked by TripAdvisor + Google reviews. Ohana Fishing Charters leads with 4.9/5. Compare 2 operators from $155.",
+      "metaDescLength": 142,
+      "h1": "Best Fishing Charters in Kauai — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/fishing-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/helicopter-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Helicopter Tours in Kauai — Top 4 Ranked (2026)",
+      "titleLength": 52,
+      "metaDesc": "Best helicopter tours in Kauai ranked by TripAdvisor + Google reviews. Mauna Loa Helicopter Tours leads with 5/5. Compare 4 operators from $169.",
+      "metaDescLength": 144,
+      "h1": "Best Helicopter Tours in Kauai — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/helicopter-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/cultural-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Cultural Tours in Oahu — Top 4 Ranked (2026)",
+      "titleLength": 49,
+      "metaDesc": "Best cultural tours in Oahu ranked by TripAdvisor + Google reviews. E Noa Tours leads with 5/5. Compare 4 operators from $49.",
+      "metaDescLength": 125,
+      "h1": "Best Cultural Tours in Oahu — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/cultural-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/fishing-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Fishing Charters in Oahu — Top 2 Ranked (2026)",
+      "titleLength": 51,
+      "metaDesc": "Best fishing charters in Oahu ranked by TripAdvisor + Google reviews. Magic Sportfishing leads with 4.6/5. Compare 2 operators from $250.",
+      "metaDescLength": 137,
+      "h1": "Best Fishing Charters in Oahu — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/fishing-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/fishing-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Fishing Charters in Maui — Top 2 Ranked (2026)",
+      "titleLength": 51,
+      "metaDesc": "Best fishing charters in Maui ranked by TripAdvisor + Google reviews. Strike Zone Maui leads with 4/5. Compare 2 operators from $174.",
+      "metaDescLength": 133,
+      "h1": "Best Fishing Charters in Maui — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/fishing-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/helicopter-big-island/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Helicopter Tours in Big Island — Top 3 Ranked (2026)",
+      "titleLength": 57,
+      "metaDesc": "Best helicopter tours in Big Island ranked by TripAdvisor + Google reviews. Mauna Loa Helicopter Tours leads with 5/5. Compare 3 operators from $229.",
+      "metaDescLength": 149,
+      "h1": "Best Helicopter Tours in Big Island — Top 3 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/helicopter-big-island/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/fishing-big-island/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Fishing Charters in Big Island — Top 2 Ranked (2026)",
+      "titleLength": 57,
+      "metaDesc": "Best fishing charters in Big Island ranked by TripAdvisor + Google reviews. Humdinger Sportfishing leads with 4.7/5. Compare 2 operators from $500.",
+      "metaDescLength": 147,
+      "h1": "Best Fishing Charters in Big Island — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/fishing-big-island/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/luau-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Luau Shows in Kauai — Top 2 Ranked (2026)",
+      "titleLength": 46,
+      "metaDesc": "Best luau shows in Kauai ranked by TripAdvisor + Google reviews. Smith",
+      "metaDescLength": 70,
+      "h1": "Best Luau Shows in Kauai — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/luau-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/helicopter-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Helicopter Tours in Maui — Top 3 Ranked (2026)",
+      "titleLength": 51,
+      "metaDesc": "Best helicopter tours in Maui ranked by TripAdvisor + Google reviews. Maverick Helicopters leads with 4.8/5. Compare 3 operators from $229.",
+      "metaDescLength": 139,
+      "h1": "Best Helicopter Tours in Maui — Top 3 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/helicopter-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/land-tours-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Land Tours in Oahu — Top 4 Ranked (2026)",
+      "titleLength": 45,
+      "metaDesc": "Best land tours in Oahu ranked by TripAdvisor + Google reviews. Coral Crater Adventure Park leads with 4.9/5. Compare 4 operators from $50.",
+      "metaDescLength": 139,
+      "h1": "Best Land Tours in Oahu — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/land-tours-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/land-tours-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Land Tours in Kauai — Top 4 Ranked (2026)",
+      "titleLength": 46,
+      "metaDesc": "Best land tours in Kauai ranked by TripAdvisor + Google reviews. Kipu Ranch Adventures leads with 5/5. Compare 4 operators from $50.",
+      "metaDescLength": 132,
+      "h1": "Best Land Tours in Kauai — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/land-tours-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/land-tours-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Land Tours in Maui — Top 4 Ranked (2026)",
+      "titleLength": 45,
+      "metaDesc": "Best land tours in Maui ranked by TripAdvisor + Google reviews. Temptation Tours leads with 4.9/5. Compare 4 operators from $50.",
+      "metaDescLength": 128,
+      "h1": "Best Land Tours in Maui — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/land-tours-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/luau-big-island/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Luau Shows in Big Island — Top 2 Ranked (2026)",
+      "titleLength": 51,
+      "metaDesc": "Best luau shows in Big Island ranked by TripAdvisor + Google reviews. Hawaiiloa Luau leads with 4.6/5. Compare 2 operators from $169.",
+      "metaDescLength": 133,
+      "h1": "Best Luau Shows in Big Island — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/luau-big-island/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/luau-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Luau Shows in Oahu — Top 2 Ranked (2026)",
+      "titleLength": 45,
+      "metaDesc": "Best luau shows in Oahu ranked by TripAdvisor + Google reviews. Polynesian Cultural Center leads with 4.9/5. Compare 2 operators from $95.",
+      "metaDescLength": 138,
+      "h1": "Best Luau Shows in Oahu — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/luau-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/helicopter-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Helicopter Tours in Oahu — Top 4 Ranked (2026)",
+      "titleLength": 51,
+      "metaDesc": "Best helicopter tours in Oahu ranked by TripAdvisor + Google reviews. Mauna Loa Helicopter Tours leads with 5/5. Compare 4 operators from $229.",
+      "metaDescLength": 143,
+      "h1": "Best Helicopter Tours in Oahu — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/helicopter-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/land-tours-big-island/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Land Tours in Big Island — Top 4 Ranked (2026)",
+      "titleLength": 51,
+      "metaDesc": "Best land tours in Big Island ranked by TripAdvisor + Google reviews. Kohala Zipline leads with 5/5. Compare 4 operators from $50.",
+      "metaDescLength": 130,
+      "h1": "Best Land Tours in Big Island — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/land-tours-big-island/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/snorkeling-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Snorkeling Tours in Kauai — Top 2 Ranked (2026)",
+      "titleLength": 52,
+      "metaDesc": "Best snorkeling tours in Kauai ranked by TripAdvisor + Google reviews. Blue Dolphin Charters leads with 4.9/5. Compare 2 operators from $85.",
+      "metaDescLength": 140,
+      "h1": "Best Snorkeling Tours in Kauai — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/snorkeling-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/snorkeling-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Snorkeling Tours in Maui — Top 4 Ranked (2026)",
+      "titleLength": 51,
+      "metaDesc": "Best snorkeling tours in Maui ranked by TripAdvisor + Google reviews. Sail Maui leads with 4.9/5. Compare 4 operators from $80.",
+      "metaDescLength": 127,
+      "h1": "Best Snorkeling Tours in Maui — Top 4 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/snorkeling-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/submarine-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Submarine Tours in Oahu — Top 2 Ranked (2026)",
+      "titleLength": 50,
+      "metaDesc": "Best submarine tours in Oahu ranked by TripAdvisor + Google reviews. Island Water Sports Hawaii leads with 4.8/5. Compare 2 operators from $75.",
+      "metaDescLength": 143,
+      "h1": "Best Submarine Tours in Oahu — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/submarine-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/whale-watch-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Whale Watching Tours in Maui — Top 3 Ranked (2026)",
+      "titleLength": 55,
+      "metaDesc": "Best whale watching tours in Maui ranked by TripAdvisor + Google reviews. Ultimate Whale Watch leads with 4.9/5. Compare 3 operators from $55.",
+      "metaDescLength": 142,
+      "h1": "Best Whale Watching Tours in Maui — Top 3 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/whale-watch-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/how-much-is-a-helicopter-tour-on-the-big-island/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/are-helicopter-rides-safe-during-pregnancy/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/is-the-big-island-helicopter-tour-worth-it/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/how-many-days-do-you-need-on-the-big-island/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/best/surfing-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Surf Lessons in Maui — Top 2 Ranked (2026)",
+      "titleLength": 47,
+      "metaDesc": "Best surf lessons in Maui ranked by TripAdvisor + Google reviews. Surf Club Maui leads with 5/5. Compare 2 operators from $55.",
+      "metaDescLength": 126,
+      "h1": "Best Surf Lessons in Maui — Top 2 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/surfing-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/best/surfing-oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Surf Lessons in Oahu — Top 3 Ranked (2026)",
+      "titleLength": 47,
+      "metaDesc": "Best surf lessons in Oahu ranked by TripAdvisor + Google reviews. Jamie O",
+      "metaDescLength": 73,
+      "h1": "Best Surf Lessons in Oahu — Top 3 Ranked (2026)",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/best/surfing-oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/what-are-the-two-forbidden-islands-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/what-is-the-best-helicopter-tour-on-the-big-island/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/what-is-the-big-island-best-known-for/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island-faq/what-not-to-miss-on-the-big-island-of-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-air-maui-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Hawaiian Helicopters vs Air Maui Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 86,
+      "metaDesc": "Blue Hawaiian Helicopters vs Air Maui Helicopters — side-by-side helicopter comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 125,
+      "h1": "Blue Hawaiian Helicopters vs Air Maui Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-air-maui-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-magnum-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Hawaiian Helicopters vs Magnum Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 84,
+      "metaDesc": "Blue Hawaiian Helicopters vs Magnum Helicopters compared. Magnum Helicopters wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 176,
+      "h1": "Blue Hawaiian Helicopters vs Magnum Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-magnum-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/atlantis-adventures-waikiki-vs-island-water-sports-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Atlantis Adventures (Waikiki) vs Island Water Sports Hawaii — Which Submarine Is Better? (2026)",
+      "titleLength": 95,
+      "metaDesc": "Atlantis Adventures (Waikiki) vs Island Water Sports Hawaii — side-by-side submarine comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 134,
+      "h1": "Atlantis Adventures (Waikiki) vs Island Water Sports Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/atlantis-adventures-waikiki-vs-island-water-sports-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-maverick-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Hawaiian Helicopters vs Maverick Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 86,
+      "metaDesc": "Blue Hawaiian Helicopters vs Maverick Helicopters — side-by-side helicopter comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 125,
+      "h1": "Blue Hawaiian Helicopters vs Maverick Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-maverick-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-jack-harter-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Hawaiian Helicopters vs Jack Harter Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 89,
+      "metaDesc": "Blue Hawaiian Helicopters vs Jack Harter Helicopters — side-by-side helicopter comparison in Kauai. Prices, reviews, and verdict.",
+      "metaDescLength": 129,
+      "h1": "Blue Hawaiian Helicopters vs Jack Harter Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-jack-harter-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-mauna-loa-helicopter-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Hawaiian Helicopters vs Mauna Loa Helicopter Tours — Which Helicopter Is Better? (2026)",
+      "titleLength": 92,
+      "metaDesc": "Blue Hawaiian Helicopters vs Mauna Loa Helicopter Tours compared. Mauna Loa Helicopter Tours wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 190,
+      "h1": "Blue Hawaiian Helicopters vs Mauna Loa Helicopter Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-mauna-loa-helicopter-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-rainbow-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Hawaiian Helicopters vs Rainbow Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 85,
+      "metaDesc": "Blue Hawaiian Helicopters vs Rainbow Helicopters compared. Blue Hawaiian Helicopters wins with a 4.8/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 184,
+      "h1": "Blue Hawaiian Helicopters vs Rainbow Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/blue-hawaiian-helicopters-vs-rainbow-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/capt-andys-sailing-adventures-vs-blue-dolphin-charters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Capt Andy&#39;s Sailing Adventures vs Blue Dolphin Charters — Which Snorkeling Is Better? (2026)",
+      "titleLength": 96,
+      "metaDesc": "Capt Andy",
+      "metaDescLength": 9,
+      "h1": "Capt Andy&#39;s Sailing Adventures vs Blue Dolphin Charters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/capt-andys-sailing-adventures-vs-blue-dolphin-charters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/chiefs-luau-vs-polynesian-cultural-center/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Chief&#39;s Luau vs Polynesian Cultural Center — Which Luau Is Better? (2026)",
+      "titleLength": 77,
+      "metaDesc": "Chief",
+      "metaDescLength": 5,
+      "h1": "Chief&#39;s Luau vs Polynesian Cultural Center",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/chiefs-luau-vs-polynesian-cultural-center/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/discover-hawaii-tours-vs-go-tours-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Discover Hawaii Tours vs Go Tours Hawaii — Which Cultural Is Better? (2026)",
+      "titleLength": 75,
+      "metaDesc": "Discover Hawaii Tours vs Go Tours Hawaii compared. Go Tours Hawaii wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 166,
+      "h1": "Discover Hawaii Tours vs Go Tours Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/discover-hawaii-tours-vs-go-tours-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/coral-crater-adventure-park-vs-polynesian-adventure-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Coral Crater Adventure Park vs Polynesian Adventure Tours — Which Land Tours Is Better? (2026)",
+      "titleLength": 94,
+      "metaDesc": "Coral Crater Adventure Park vs Polynesian Adventure Tours compared. Coral Crater Adventure Park wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 195,
+      "h1": "Coral Crater Adventure Park vs Polynesian Adventure Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/coral-crater-adventure-park-vs-polynesian-adventure-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/coral-crater-adventure-park-vs-roberts-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Coral Crater Adventure Park vs Roberts Hawaii — Which Land Tours Is Better? (2026)",
+      "titleLength": 82,
+      "metaDesc": "Coral Crater Adventure Park vs Roberts Hawaii compared. Coral Crater Adventure Park wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 183,
+      "h1": "Coral Crater Adventure Park vs Roberts Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/coral-crater-adventure-park-vs-roberts-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/e-noa-tours-vs-discover-hawaii-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "E Noa Tours vs Discover Hawaii Tours — Which Cultural Is Better? (2026)",
+      "titleLength": 71,
+      "metaDesc": "E Noa Tours vs Discover Hawaii Tours compared. E Noa Tours wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 156,
+      "h1": "E Noa Tours vs Discover Hawaii Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/e-noa-tours-vs-discover-hawaii-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/e-noa-tours-vs-go-tours-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "E Noa Tours vs Go Tours Hawaii — Which Cultural Is Better? (2026)",
+      "titleLength": 65,
+      "metaDesc": "E Noa Tours vs Go Tours Hawaii — side-by-side cultural comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 104,
+      "h1": "E Noa Tours vs Go Tours Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/e-noa-tours-vs-go-tours-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/e-noa-tours-vs-royal-star-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "E Noa Tours vs Royal Star Hawaii — Which Cultural Is Better? (2026)",
+      "titleLength": 67,
+      "metaDesc": "E Noa Tours vs Royal Star Hawaii — side-by-side cultural comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 106,
+      "h1": "E Noa Tours vs Royal Star Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/e-noa-tours-vs-royal-star-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/four-winds-maui-vs-sail-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Four Winds Maui vs Sail Maui — Which Snorkeling Is Better? (2026)",
+      "titleLength": 65,
+      "metaDesc": "Four Winds Maui vs Sail Maui compared. Sail Maui wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 148,
+      "h1": "Four Winds Maui vs Sail Maui",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/four-winds-maui-vs-sail-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/four-winds-maui-vs-trilogy-excursions/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Four Winds Maui vs Trilogy Excursions — Which Snorkeling Is Better? (2026)",
+      "titleLength": 74,
+      "metaDesc": "Four Winds Maui vs Trilogy Excursions compared. Trilogy Excursions wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 166,
+      "h1": "Four Winds Maui vs Trilogy Excursions",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/four-winds-maui-vs-trilogy-excursions/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/hans-hedemann-surf-school-vs-jamie-obrien-school-of-surf/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Hans Hedemann Surf School vs Jamie O&#39;Brien School of Surf — Which Surfing Is Better? (2026)",
+      "titleLength": 95,
+      "metaDesc": "Hans Hedemann Surf School vs Jamie O",
+      "metaDescLength": 36,
+      "h1": "Hans Hedemann Surf School vs Jamie O&#39;Brien School of Surf",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/hans-hedemann-surf-school-vs-jamie-obrien-school-of-surf/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/big-island/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Big Island Tours &amp; Activities — Top Operators Ranked (2026)",
+      "titleLength": 68,
+      "metaDesc": "Best tours in Big Island, Hawaii. Ranked by aggregated reviews from TripAdvisor, Google &#38; Yelp. The Big Island — volcano tours, manta rays, Kona fishing.",
+      "metaDescLength": 157,
+      "h1": "Best Big Island Tours & Activities",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/big-island/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/humdinger-sportfishing-vs-high-noon-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Humdinger Sportfishing vs High Noon Sportfishing — Which Fishing Is Better? (2026)",
+      "titleLength": 82,
+      "metaDesc": "Humdinger Sportfishing vs High Noon Sportfishing compared. Humdinger Sportfishing wins with a 4.7/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 181,
+      "h1": "Humdinger Sportfishing vs High Noon Sportfishing",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/humdinger-sportfishing-vs-high-noon-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/jack-harter-helicopters-vs-mauna-loa-helicopter-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Jack Harter Helicopters vs Mauna Loa Helicopter Tours — Which Helicopter Is Better? (2026)",
+      "titleLength": 90,
+      "metaDesc": "Jack Harter Helicopters vs Mauna Loa Helicopter Tours compared. Mauna Loa Helicopter Tours wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 188,
+      "h1": "Jack Harter Helicopters vs Mauna Loa Helicopter Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/jack-harter-helicopters-vs-mauna-loa-helicopter-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/jamie-obrien-school-of-surf-vs-north-shore-oahu-surf-school/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Jamie O&#39;Brien School of Surf vs North Shore Oahu Surf School — Which Surfing Is Better? (2026)",
+      "titleLength": 98,
+      "metaDesc": "Jamie O",
+      "metaDescLength": 7,
+      "h1": "Jamie O&#39;Brien School of Surf vs North Shore Oahu Surf School",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/jamie-obrien-school-of-surf-vs-north-shore-oahu-surf-school/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/hans-hedemann-surf-school-vs-north-shore-oahu-surf-school/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Hans Hedemann Surf School vs North Shore Oahu Surf School — Which Surfing Is Better? (2026)",
+      "titleLength": 91,
+      "metaDesc": "Hans Hedemann Surf School vs North Shore Oahu Surf School — side-by-side surfing comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 130,
+      "h1": "Hans Hedemann Surf School vs North Shore Oahu Surf School",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/hans-hedemann-surf-school-vs-north-shore-oahu-surf-school/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/kailani-tours-hawaii-vs-kohala-zipline/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kailani Tours Hawaii vs Kohala Zipline — Which Land Tours Is Better? (2026)",
+      "titleLength": 75,
+      "metaDesc": "Kailani Tours Hawaii vs Kohala Zipline — side-by-side land tours comparison in Big Island. Prices, reviews, and verdict.",
+      "metaDescLength": 120,
+      "h1": "Kailani Tours Hawaii vs Kohala Zipline",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/kailani-tours-hawaii-vs-kohala-zipline/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/kualoa-ranch-vs-coral-crater-adventure-park/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kualoa Ranch vs Coral Crater Adventure Park — Which Land Tours Is Better? (2026)",
+      "titleLength": 80,
+      "metaDesc": "Kualoa Ranch vs Coral Crater Adventure Park compared. Coral Crater Adventure Park wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 181,
+      "h1": "Kualoa Ranch vs Coral Crater Adventure Park",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/kualoa-ranch-vs-coral-crater-adventure-park/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/kualoa-ranch-vs-polynesian-adventure-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kualoa Ranch vs Polynesian Adventure Tours — Which Land Tours Is Better? (2026)",
+      "titleLength": 79,
+      "metaDesc": "Kualoa Ranch vs Polynesian Adventure Tours — side-by-side land tours comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 118,
+      "h1": "Kualoa Ranch vs Polynesian Adventure Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/kualoa-ranch-vs-polynesian-adventure-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/kualoa-ranch-vs-roberts-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kualoa Ranch vs Roberts Hawaii — Which Land Tours Is Better? (2026)",
+      "titleLength": 67,
+      "metaDesc": "Kualoa Ranch vs Roberts Hawaii — side-by-side land tours comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 106,
+      "h1": "Kualoa Ranch vs Roberts Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/kualoa-ranch-vs-roberts-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/luau-kalamaku-vs-smiths-family-garden-luau/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Luau Kalamaku vs Smith&#39;s Family Garden Luau — Which Luau Is Better? (2026)",
+      "titleLength": 78,
+      "metaDesc": "Luau Kalamaku vs Smith",
+      "metaDescLength": 22,
+      "h1": "Luau Kalamaku vs Smith&#39;s Family Garden Luau",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/luau-kalamaku-vs-smiths-family-garden-luau/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/kipu-ranch-adventures-vs-kauai-tour-guy/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kipu Ranch Adventures vs Kauai Tour Guy — Which Land Tours Is Better? (2026)",
+      "titleLength": 76,
+      "metaDesc": "Kipu Ranch Adventures vs Kauai Tour Guy — side-by-side land tours comparison in Kauai. Prices, reviews, and verdict.",
+      "metaDescLength": 116,
+      "h1": "Kipu Ranch Adventures vs Kauai Tour Guy",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/kipu-ranch-adventures-vs-kauai-tour-guy/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/magic-sportfishing-vs-boom-boom-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Magic Sportfishing vs Boom Boom Sportfishing — Which Fishing Is Better? (2026)",
+      "titleLength": 78,
+      "metaDesc": "Magic Sportfishing vs Boom Boom Sportfishing compared. Magic Sportfishing wins with a 4.6/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 173,
+      "h1": "Magic Sportfishing vs Boom Boom Sportfishing",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/magic-sportfishing-vs-boom-boom-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/mauna-loa-helicopter-tours-vs-magnum-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Mauna Loa Helicopter Tours vs Magnum Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 85,
+      "metaDesc": "Mauna Loa Helicopter Tours vs Magnum Helicopters — side-by-side helicopter comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 124,
+      "h1": "Mauna Loa Helicopter Tours vs Magnum Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/mauna-loa-helicopter-tours-vs-magnum-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/maverick-helicopters-vs-jack-harter-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Maverick Helicopters vs Jack Harter Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 84,
+      "metaDesc": "Maverick Helicopters vs Jack Harter Helicopters — side-by-side helicopter comparison in Kauai. Prices, reviews, and verdict.",
+      "metaDescLength": 124,
+      "h1": "Maverick Helicopters vs Jack Harter Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/maverick-helicopters-vs-jack-harter-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/mauna-loa-helicopter-tours-vs-rainbow-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Mauna Loa Helicopter Tours vs Rainbow Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 86,
+      "metaDesc": "Mauna Loa Helicopter Tours vs Rainbow Helicopters compared. Mauna Loa Helicopter Tours wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 184,
+      "h1": "Mauna Loa Helicopter Tours vs Rainbow Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/mauna-loa-helicopter-tours-vs-rainbow-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/ohana-fishing-charters-vs-go-fish-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Ohana Fishing Charters vs Go Fish Kauai — Which Fishing Is Better? (2026)",
+      "titleLength": 73,
+      "metaDesc": "Ohana Fishing Charters vs Go Fish Kauai compared. Ohana Fishing Charters wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 172,
+      "h1": "Ohana Fishing Charters vs Go Fish Kauai",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/ohana-fishing-charters-vs-go-fish-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/pacific-whale-foundation-vs-calypso-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Pacific Whale Foundation vs Calypso Maui — Which Whale Watch Is Better? (2026)",
+      "titleLength": 78,
+      "metaDesc": "Pacific Whale Foundation vs Calypso Maui — side-by-side whale watch comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 117,
+      "h1": "Pacific Whale Foundation vs Calypso Maui",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/pacific-whale-foundation-vs-calypso-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/maverick-helicopters-vs-mauna-loa-helicopter-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Maverick Helicopters vs Mauna Loa Helicopter Tours — Which Helicopter Is Better? (2026)",
+      "titleLength": 87,
+      "metaDesc": "Maverick Helicopters vs Mauna Loa Helicopter Tours compared. Mauna Loa Helicopter Tours wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 185,
+      "h1": "Maverick Helicopters vs Mauna Loa Helicopter Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/maverick-helicopters-vs-mauna-loa-helicopter-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/maverick-helicopters-vs-air-maui-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Maverick Helicopters vs Air Maui Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 81,
+      "metaDesc": "Maverick Helicopters vs Air Maui Helicopters — side-by-side helicopter comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 120,
+      "h1": "Maverick Helicopters vs Air Maui Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/maverick-helicopters-vs-air-maui-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/pacific-whale-foundation-vs-ultimate-whale-watch/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Pacific Whale Foundation vs Ultimate Whale Watch — Which Whale Watch Is Better? (2026)",
+      "titleLength": 86,
+      "metaDesc": "Pacific Whale Foundation vs Ultimate Whale Watch compared. Ultimate Whale Watch wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 179,
+      "h1": "Pacific Whale Foundation vs Ultimate Whale Watch",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/pacific-whale-foundation-vs-ultimate-whale-watch/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kipu-ranch-adventures/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Adventure Tours vs Kipu Ranch Adventures — Which Land Tours Is Better? (2026)",
+      "titleLength": 88,
+      "metaDesc": "Polynesian Adventure Tours vs Kipu Ranch Adventures compared. Kipu Ranch Adventures wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 181,
+      "h1": "Polynesian Adventure Tours vs Kipu Ranch Adventures",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kipu-ranch-adventures/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-temptation-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Adventure Tours vs Temptation Tours — Which Land Tours Is Better? (2026)",
+      "titleLength": 83,
+      "metaDesc": "Polynesian Adventure Tours vs Temptation Tours compared. Temptation Tours wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 173,
+      "h1": "Polynesian Adventure Tours vs Temptation Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-temptation-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kailani-tours-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Adventure Tours vs Kailani Tours Hawaii — Which Land Tours Is Better? (2026)",
+      "titleLength": 87,
+      "metaDesc": "Polynesian Adventure Tours vs Kailani Tours Hawaii compared. Kailani Tours Hawaii wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 181,
+      "h1": "Polynesian Adventure Tours vs Kailani Tours Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kailani-tours-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kauai-tour-guy/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Adventure Tours vs Kauai Tour Guy — Which Land Tours Is Better? (2026)",
+      "titleLength": 81,
+      "metaDesc": "Polynesian Adventure Tours vs Kauai Tour Guy compared. Kauai Tour Guy wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 169,
+      "h1": "Polynesian Adventure Tours vs Kauai Tour Guy",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kauai-tour-guy/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kohala-zipline/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Adventure Tours vs Kohala Zipline — Which Land Tours Is Better? (2026)",
+      "titleLength": 81,
+      "metaDesc": "Polynesian Adventure Tours vs Kohala Zipline compared. Kohala Zipline wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 167,
+      "h1": "Polynesian Adventure Tours vs Kohala Zipline",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-kohala-zipline/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-valley-isle-excursions/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Adventure Tours vs Valley Isle Excursions — Which Land Tours Is Better? (2026)",
+      "titleLength": 89,
+      "metaDesc": "Polynesian Adventure Tours vs Valley Isle Excursions compared. Valley Isle Excursions wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 185,
+      "h1": "Polynesian Adventure Tours vs Valley Isle Excursions",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/polynesian-adventure-tours-vs-valley-isle-excursions/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/pride-of-maui-vs-sail-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Pride of Maui vs Sail Maui — Which Snorkeling Is Better? (2026)",
+      "titleLength": 63,
+      "metaDesc": "Pride of Maui vs Sail Maui compared. Sail Maui wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 146,
+      "h1": "Pride of Maui vs Sail Maui",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/pride-of-maui-vs-sail-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/pride-of-maui-vs-four-winds-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Pride of Maui vs Four Winds Maui — Which Snorkeling Is Better? (2026)",
+      "titleLength": 69,
+      "metaDesc": "Pride of Maui vs Four Winds Maui — side-by-side snorkeling comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 108,
+      "h1": "Pride of Maui vs Four Winds Maui",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/pride-of-maui-vs-four-winds-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/pride-of-maui-vs-trilogy-excursions/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Pride of Maui vs Trilogy Excursions — Which Snorkeling Is Better? (2026)",
+      "titleLength": 72,
+      "metaDesc": "Pride of Maui vs Trilogy Excursions compared. Trilogy Excursions wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 164,
+      "h1": "Pride of Maui vs Trilogy Excursions",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/pride-of-maui-vs-trilogy-excursions/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/rainbow-helicopters-vs-magnum-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Rainbow Helicopters vs Magnum Helicopters — Which Helicopter Is Better? (2026)",
+      "titleLength": 78,
+      "metaDesc": "Rainbow Helicopters vs Magnum Helicopters compared. Magnum Helicopters wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 170,
+      "h1": "Rainbow Helicopters vs Magnum Helicopters",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/rainbow-helicopters-vs-magnum-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kipu-ranch-adventures/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii vs Kipu Ranch Adventures — Which Land Tours Is Better? (2026)",
+      "titleLength": 76,
+      "metaDesc": "Roberts Hawaii vs Kipu Ranch Adventures compared. Kipu Ranch Adventures wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 169,
+      "h1": "Roberts Hawaii vs Kipu Ranch Adventures",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kipu-ranch-adventures/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kailani-tours-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii vs Kailani Tours Hawaii — Which Land Tours Is Better? (2026)",
+      "titleLength": 75,
+      "metaDesc": "Roberts Hawaii vs Kailani Tours Hawaii compared. Kailani Tours Hawaii wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 169,
+      "h1": "Roberts Hawaii vs Kailani Tours Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kailani-tours-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kauai-tour-guy/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii vs Kauai Tour Guy — Which Land Tours Is Better? (2026)",
+      "titleLength": 69,
+      "metaDesc": "Roberts Hawaii vs Kauai Tour Guy compared. Kauai Tour Guy wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 157,
+      "h1": "Roberts Hawaii vs Kauai Tour Guy",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kauai-tour-guy/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/roberts-hawaii-vs-polynesian-adventure-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii vs Polynesian Adventure Tours — Which Land Tours Is Better? (2026)",
+      "titleLength": 81,
+      "metaDesc": "Roberts Hawaii vs Polynesian Adventure Tours — side-by-side land tours comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 120,
+      "h1": "Roberts Hawaii vs Polynesian Adventure Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/roberts-hawaii-vs-polynesian-adventure-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kohala-zipline/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii vs Kohala Zipline — Which Land Tours Is Better? (2026)",
+      "titleLength": 69,
+      "metaDesc": "Roberts Hawaii vs Kohala Zipline compared. Kohala Zipline wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 155,
+      "h1": "Roberts Hawaii vs Kohala Zipline",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/roberts-hawaii-vs-kohala-zipline/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/roberts-hawaii-vs-valley-isle-excursions/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii vs Valley Isle Excursions — Which Land Tours Is Better? (2026)",
+      "titleLength": 77,
+      "metaDesc": "Roberts Hawaii vs Valley Isle Excursions compared. Valley Isle Excursions wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 173,
+      "h1": "Roberts Hawaii vs Valley Isle Excursions",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/roberts-hawaii-vs-valley-isle-excursions/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/royal-star-hawaii-vs-go-tours-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Royal Star Hawaii vs Go Tours Hawaii — Which Cultural Is Better? (2026)",
+      "titleLength": 71,
+      "metaDesc": "Royal Star Hawaii vs Go Tours Hawaii — side-by-side cultural comparison in Oahu. Prices, reviews, and verdict.",
+      "metaDescLength": 110,
+      "h1": "Royal Star Hawaii vs Go Tours Hawaii",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/royal-star-hawaii-vs-go-tours-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/royal-hawaiian-surf-academy-vs-surf-club-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Royal Hawaiian Surf Academy vs Surf Club Maui — Which Surfing Is Better? (2026)",
+      "titleLength": 79,
+      "metaDesc": "Royal Hawaiian Surf Academy vs Surf Club Maui — side-by-side surfing comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 118,
+      "h1": "Royal Hawaiian Surf Academy vs Surf Club Maui",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/royal-hawaiian-surf-academy-vs-surf-club-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/roberts-hawaii-vs-temptation-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii vs Temptation Tours — Which Land Tours Is Better? (2026)",
+      "titleLength": 71,
+      "metaDesc": "Roberts Hawaii vs Temptation Tours compared. Temptation Tours wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 161,
+      "h1": "Roberts Hawaii vs Temptation Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/roberts-hawaii-vs-temptation-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/royal-star-hawaii-vs-discover-hawaii-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Royal Star Hawaii vs Discover Hawaii Tours — Which Cultural Is Better? (2026)",
+      "titleLength": 77,
+      "metaDesc": "Royal Star Hawaii vs Discover Hawaii Tours compared. Royal Star Hawaii wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 170,
+      "h1": "Royal Star Hawaii vs Discover Hawaii Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/royal-star-hawaii-vs-discover-hawaii-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/secret-food-tours-honolulu-vs-hawaii-food-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Secret Food Tours Honolulu vs Hawaii Food Tours — Which Food Tours Is Better? (2026)",
+      "titleLength": 84,
+      "metaDesc": "Secret Food Tours Honolulu vs Hawaii Food Tours compared. Secret Food Tours Honolulu wins with a 5/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 182,
+      "h1": "Secret Food Tours Honolulu vs Hawaii Food Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/secret-food-tours-honolulu-vs-hawaii-food-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/strike-zone-maui-vs-finest-kind-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Strike Zone Maui vs Finest Kind Sportfishing — Which Fishing Is Better? (2026)",
+      "titleLength": 78,
+      "metaDesc": "Strike Zone Maui vs Finest Kind Sportfishing compared. Strike Zone Maui wins with a 4/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 169,
+      "h1": "Strike Zone Maui vs Finest Kind Sportfishing",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/strike-zone-maui-vs-finest-kind-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/trilogy-excursions-vs-sail-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Trilogy Excursions vs Sail Maui — Which Snorkeling Is Better? (2026)",
+      "titleLength": 68,
+      "metaDesc": "Trilogy Excursions vs Sail Maui — side-by-side snorkeling comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 107,
+      "h1": "Trilogy Excursions vs Sail Maui",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/trilogy-excursions-vs-sail-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/ultimate-whale-watch-vs-calypso-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Ultimate Whale Watch vs Calypso Maui — Which Whale Watch Is Better? (2026)",
+      "titleLength": 74,
+      "metaDesc": "Ultimate Whale Watch vs Calypso Maui compared. Ultimate Whale Watch wins with a 4.9/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 167,
+      "h1": "Ultimate Whale Watch vs Calypso Maui",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/ultimate-whale-watch-vs-calypso-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/valley-isle-excursions-vs-temptation-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Valley Isle Excursions vs Temptation Tours — Which Land Tours Is Better? (2026)",
+      "titleLength": 79,
+      "metaDesc": "Valley Isle Excursions vs Temptation Tours — side-by-side land tours comparison in Maui. Prices, reviews, and verdict.",
+      "metaDescLength": 118,
+      "h1": "Valley Isle Excursions vs Temptation Tours",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/valley-isle-excursions-vs-temptation-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/is-kayaking-in-kauai-worth-it/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/how-to-spend-4-days-in-kauai/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/is-3-days-in-kauai-enough/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/compare/voyagers-of-the-pacific-luau-vs-hawaiiloa-luau/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Voyagers of the Pacific Luau vs Hawaiiloa Luau — Which Luau Is Better? (2026)",
+      "titleLength": 77,
+      "metaDesc": "Voyagers of the Pacific Luau vs Hawaiiloa Luau compared. Hawaiiloa Luau wins with a 4.6/5 composite score from TripAdvisor and Google reviews. Full side-by-side breakdown.",
+      "metaDescLength": 171,
+      "h1": "Voyagers of the Pacific Luau vs Hawaiiloa Luau",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/compare/voyagers-of-the-pacific-luau-vs-hawaiiloa-luau/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/is-the-secret-falls-kauai-worth-it/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/what-are-the-three-rules-of-kayaking/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/what-are-must-dos-in-kauai/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/what-is-kauai-best-known-for/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Kauai Tours &amp; Activities — Top Operators Ranked (2026)",
+      "titleLength": 63,
+      "metaDesc": "Best tours in Kauai, Hawaii. Ranked by aggregated reviews from TripAdvisor, Google &#38; Yelp. The Garden Isle — Na Pali Coast, ziplines, kayaking.",
+      "metaDescLength": 147,
+      "h1": "Best Kauai Tours & Activities",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/lanai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Lanai Tours &amp; Activities — Top Operators Ranked (2026)",
+      "titleLength": 63,
+      "metaDesc": "Best tours in Lanai, Hawaii. Ranked by aggregated reviews from TripAdvisor, Google &#38; Yelp. Secluded island — snorkeling, Hulopo",
+      "metaDescLength": 131,
+      "h1": "Best Lanai Tours & Activities",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/lanai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/can-you-see-orcas-in-maui/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/how-long-does-it-take-to-do-the-road-to-hana-tour/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/is-it-better-to-drive-the-road-to-hana-yourself-or-take-a-tour/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/kauai-faq/what-is-the-best-kayak-company-in-kauai/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/is-may-a-good-time-for-whale-watching-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/is-the-road-to-hana-excursion-worth-it/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/what-is-one-thing-not-to-miss-on-maui/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/what-is-the-1-luau-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/which-is-the-best-road-to-hana-tour/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/whats-the-best-whale-watching-in-maui/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/what-month-is-best-for-whale-watching-in-maui/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/where-does-woody-harrelson-hang-out-in-maui/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui-faq/which-one-is-the-best-luau-in-maui/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Maui Tours &amp; Activities — Top Operators Ranked (2026)",
+      "titleLength": 62,
+      "metaDesc": "Best tours in Maui, Hawaii. Ranked by aggregated reviews from TripAdvisor, Google &#38; Yelp. The Valley Isle — snorkeling, helicopters, Road to Hana.",
+      "metaDescLength": 150,
+      "h1": "Best Maui Tours & Activities",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/can-you-snorkel-from-the-shore-in-oahu/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/how-much-is-100-worth-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/is-2000-enough-for-a-week-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/is-1000-enough-for-a-week-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/what-is-the-number-one-thing-to-do-in-oahu/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/what-is-the-best-tour-company-for-seniors/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/is-sharks-cove-better-than-hanauma-bay-for-snorkeling/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/what-not-to-miss-on-the-island-of-oahu/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/what-should-you-not-miss-on-oahu/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/what-to-do-in-oahu-with-older-adults/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/whats-the-cheapest-month-to-go-to-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/where-is-the-best-place-to-snorkel-on-oahu/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/where-to-snorkel-on-your-own-in-oahu/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/which-is-the-least-expensive-hawaiian-island-to-visit/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/which-is-the-best-travel-company-for-senior-citizens/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/which-island-is-flooding-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/which-luau-did-they-film-lilo-and-stitch/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/what-age-is-considered-senior-citizen-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/what-is-the-1-luau-in-hawaii/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu-faq/is-the-luau-at-aulani-worth-it/",
+      "statusCode": 404,
+      "redirectTo": null,
+      "indexable": false,
+      "issues": [
+        "status_404"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/air-maui-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Air Maui Helicopters Reviews — What Reviewers Say (2026)",
+      "titleLength": 56,
+      "metaDesc": "Air Maui Helicopters rated 4.8/5 across TripAdvisor and Google. Prices from $330. Only company offering doors-off helicopter tours on Maui. Replacement for closed Sunshine.",
+      "metaDescLength": 172,
+      "h1": "Air Maui Helicopters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/air-maui-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/oahu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Best Oahu Tours &amp; Activities — Top Operators Ranked (2026)",
+      "titleLength": 62,
+      "metaDesc": "Best tours in Oahu, Hawaii. Ranked by aggregated reviews from TripAdvisor, Google &#38; Yelp. The Gathering Place — tours, luaus, Pearl Harbor and more.",
+      "metaDescLength": 152,
+      "h1": "Best Oahu Tours & Activities",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/oahu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/atlantis-adventures-kona/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Atlantis Adventures (Kona) Reviews — What Reviewers Say (2026)",
+      "titleLength": 62,
+      "metaDesc": "Atlantis Adventures (Kona) rated 4.7/5 across TripAdvisor and Google. Prices from $75. Same brand as Waikiki. 48-passenger sub explores 25-acre coral reef. From King Kamehameha Hotel.",
+      "metaDescLength": 183,
+      "h1": "Atlantis Adventures (Kona) Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/atlantis-adventures-kona/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/atlantis-adventures-waikiki/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Atlantis Adventures (Waikiki) Reviews — What Reviewers Say (2026)",
+      "titleLength": 65,
+      "metaDesc": "Atlantis Adventures (Waikiki) rated 4.7/5 across TripAdvisor and Google. Prices from $75. Hawaii",
+      "metaDescLength": 96,
+      "h1": "Atlantis Adventures (Waikiki) Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/atlantis-adventures-waikiki/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/blue-dolphin-charters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Dolphin Charters Reviews — What Reviewers Say (2026)",
+      "titleLength": 57,
+      "metaDesc": "Blue Dolphin Charters rated 4.9/5 across TripAdvisor and Google. Prices from $85. Two largest catamarans on Kauai (65-ft). Niihau + Na Pali Coast. Also whale watch (Dec-Mar).",
+      "metaDescLength": 174,
+      "h1": "Blue Dolphin Charters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/blue-dolphin-charters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/body-glove-cruises/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Body Glove Cruises Reviews — What Reviewers Say (2026)",
+      "titleLength": 54,
+      "metaDesc": "Body Glove Cruises rated 4.8/5 across TripAdvisor and Google. Prices from $99. 2.5hr Kona whale watch with hydrophone. Also known for snorkeling/diving.",
+      "metaDescLength": 152,
+      "h1": "Body Glove Cruises Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/body-glove-cruises/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/boom-boom-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Boom Boom Sportfishing Reviews — What Reviewers Say (2026)",
+      "titleLength": 58,
+      "metaDesc": "Boom Boom Sportfishing rated 4/5 across TripAdvisor and Google. Prices from $250. 50ft luxury sportfisher. Shared 4hr $250, private up to 12hr $2,100. Waianae Boat Harbor.",
+      "metaDescLength": 171,
+      "h1": "Boom Boom Sportfishing Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/boom-boom-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/blue-hawaiian-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Blue Hawaiian Helicopters Reviews — What Reviewers Say (2026)",
+      "titleLength": 61,
+      "metaDesc": "Blue Hawaiian Helicopters rated 4.8/5 across TripAdvisor and Google. Prices from $379. Largest Hawaii helicopter operator since 1985. Only company on all 4 islands. Airbus EC130 T2 fleet. Custom booking system.",
+      "metaDescLength": 210,
+      "h1": "Blue Hawaiian Helicopters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/blue-hawaiian-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/capt-andys-sailing-adventures/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Capt Andy&#39;s Sailing Adventures Reviews — What Reviewers Say (2026)",
+      "titleLength": 70,
+      "metaDesc": "Capt Andy",
+      "metaDescLength": 9,
+      "h1": "Capt Andy&#39;s Sailing Adventures Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/capt-andys-sailing-adventures/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/calypso-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Calypso Maui Reviews — What Reviewers Say (2026)",
+      "titleLength": 48,
+      "metaDesc": "Calypso Maui rated 4.8/5 across TripAdvisor and Google. Prices from $55. Maui",
+      "metaDescLength": 77,
+      "h1": "Calypso Maui Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/calypso-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/fair-wind-cruises/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Fair Wind Cruises Reviews — What Reviewers Say (2026)",
+      "titleLength": 53,
+      "metaDesc": "Fair Wind Cruises rated 4.9/5 across TripAdvisor and Google. Prices from $117. 50+ years in Kona. Kealakekua Bay (Captain Cook Monument). Also manta ray night snorkel.",
+      "metaDescLength": 167,
+      "h1": "Fair Wind Cruises Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/fair-wind-cruises/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/chiefs-luau/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Chief&#39;s Luau Reviews — What Reviewers Say (2026)",
+      "titleLength": 52,
+      "metaDesc": "Chief",
+      "metaDescLength": 5,
+      "h1": "Chief&#39;s Luau Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/chiefs-luau/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/coral-crater-adventure-park/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Coral Crater Adventure Park Reviews — What Reviewers Say (2026)",
+      "titleLength": 63,
+      "metaDesc": "Coral Crater Adventure Park rated 4.9/5 across TripAdvisor and Google. Prices from $50. Zipline, ATV, free-fall jump, climbing wall. Near Ko Olina on Oahu",
+      "metaDescLength": 154,
+      "h1": "Coral Crater Adventure Park Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/coral-crater-adventure-park/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/e-noa-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "E Noa Tours Reviews — What Reviewers Say (2026)",
+      "titleLength": 47,
+      "metaDesc": "E Noa Tours rated 5/5 across TripAdvisor and Google. Prices from $57. Oahu",
+      "metaDescLength": 74,
+      "h1": "E Noa Tours Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/e-noa-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/discover-hawaii-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Discover Hawaii Tours Reviews — What Reviewers Say (2026)",
+      "titleLength": 57,
+      "metaDesc": "Discover Hawaii Tours rated 3.5/5 across TripAdvisor and Google. Prices from $49. Locally owned since 1995. 50+ daily Pearl Harbor departures. Multi-island day-trip packages.",
+      "metaDescLength": 174,
+      "h1": "Discover Hawaii Tours Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/discover-hawaii-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/finest-kind-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Finest Kind Sportfishing Reviews — What Reviewers Say (2026)",
+      "titleLength": 60,
+      "metaDesc": "Finest Kind Sportfishing rated 3.8/5 across TripAdvisor and Google. Prices from $250. Operating since 1972. 3 boats. Relocated to Maalaea post-Lahaina fire.",
+      "metaDescLength": 156,
+      "h1": "Finest Kind Sportfishing Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/finest-kind-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/four-winds-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Four Winds Maui Reviews — What Reviewers Say (2026)",
+      "titleLength": 51,
+      "metaDesc": "Four Winds Maui rated 4.8/5 across TripAdvisor and Google. Prices from $80. Only Maui vessel with glass-bottom viewing room. Morning Molokini + afternoon Coral Gardens.",
+      "metaDescLength": 168,
+      "h1": "Four Winds Maui Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/four-winds-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/hans-hedemann-surf-school/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Hans Hedemann Surf School Reviews — What Reviewers Say (2026)",
+      "titleLength": 61,
+      "metaDesc": "Hans Hedemann Surf School rated 4.9/5 across TripAdvisor and Google. Prices from $75. Established Waikiki school. Locations in Waikiki, Kahala, North Shore. Private with Hans $400.",
+      "metaDescLength": 180,
+      "h1": "Hans Hedemann Surf School Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/hans-hedemann-surf-school/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/go-tours-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Go Tours Hawaii Reviews — What Reviewers Say (2026)",
+      "titleLength": 51,
+      "metaDesc": "Go Tours Hawaii rated 4.9/5 across TripAdvisor and Google. Prices from $99. 100% locally-owned. Hidden Gems of Oahu cultural tours. Strong cultural storytelling.",
+      "metaDescLength": 161,
+      "h1": "Go Tours Hawaii Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/go-tours-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/hawaii-food-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Hawaii Food Tours Reviews — What Reviewers Say (2026)",
+      "titleLength": 53,
+      "metaDesc": "Hawaii Food Tours rated 4.7/5 across TripAdvisor and Google. Prices from $129. Led by Matthew Gray. ",
+      "metaDescLength": 100,
+      "h1": "Hawaii Food Tours Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/hawaii-food-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/humdinger-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Humdinger Sportfishing Reviews — What Reviewers Say (2026)",
+      "titleLength": 58,
+      "metaDesc": "Humdinger Sportfishing rated 4.7/5 across TripAdvisor and Google. Prices from $699. 50+ years in Kona. Custom Rybovich tournament boat. Honokohau Harbor.",
+      "metaDescLength": 153,
+      "h1": "Humdinger Sportfishing Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/humdinger-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/hawaiiloa-luau/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Hawaiiloa Luau Reviews — What Reviewers Say (2026)",
+      "titleLength": 50,
+      "metaDesc": "Hawaiiloa Luau rated 4.6/5 across TripAdvisor and Google. Prices from $205. At Fairmont Orchid, Kohala Coast. Every Saturday. Produced by Island Breeze Productions.",
+      "metaDescLength": 164,
+      "h1": "Hawaiiloa Luau Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/hawaiiloa-luau/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/high-noon-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "High Noon Sportfishing Reviews — What Reviewers Say (2026)",
+      "titleLength": 58,
+      "metaDesc": "High Noon Sportfishing rated 4.6/5 across TripAdvisor and Google. Prices from $500. TripAdvisor Hall of Fame 10 consecutive years. Kona.",
+      "metaDescLength": 136,
+      "h1": "High Noon Sportfishing Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/high-noon-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/hawaii-nautical/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Hawaii Nautical Reviews — What Reviewers Say (2026)",
+      "titleLength": 51,
+      "metaDesc": "Hawaii Nautical rated 4.8/5 across TripAdvisor and Google. Prices from $80. Hawaii",
+      "metaDescLength": 82,
+      "h1": "Hawaii Nautical Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/hawaii-nautical/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/go-fish-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Go Fish Kauai Reviews — What Reviewers Say (2026)",
+      "titleLength": 49,
+      "metaDesc": "Go Fish Kauai rated 4.8/5 across TripAdvisor and Google. Prices from $183. Bertram 38 Convertible (41ft). Nawiliwili Harbor, Lihue.",
+      "metaDescLength": 131,
+      "h1": "Go Fish Kauai Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/go-fish-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/island-water-sports-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Island Water Sports Hawaii Reviews — What Reviewers Say (2026)",
+      "titleLength": 62,
+      "metaDesc": "Island Water Sports Hawaii rated 4.8/5 across TripAdvisor and Google. Prices from $95. Submarine scooter (self-propelled electric underwater scooter), not traditional sub. Maunalua Bay.",
+      "metaDescLength": 185,
+      "h1": "Island Water Sports Hawaii Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/island-water-sports-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/jack-harter-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Jack Harter Helicopters Reviews — What Reviewers Say (2026)",
+      "titleLength": 59,
+      "metaDesc": "Jack Harter Helicopters rated 4.8/5 across TripAdvisor and Google. Prices from $169. Originator of Kauai helicopter tours since 1962. Doors-off from $364-399.",
+      "metaDescLength": 158,
+      "h1": "Jack Harter Helicopters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/jack-harter-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/jamie-obrien-school-of-surf/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Jamie O&#39;Brien School of Surf Reviews — What Reviewers Say (2026)",
+      "titleLength": 68,
+      "metaDesc": "Jamie O",
+      "metaDescLength": 7,
+      "h1": "Jamie O&#39;Brien School of Surf Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/jamie-obrien-school-of-surf/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/kailani-tours-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kailani Tours Hawaii Reviews — What Reviewers Say (2026)",
+      "titleLength": 56,
+      "metaDesc": "Kailani Tours Hawaii rated 4.9/5 across TripAdvisor and Google. Prices from $199. Big Island volcano specialist. National Park-certified guides. Kilauea, Black Sand Beach, Kona coffee.",
+      "metaDescLength": 184,
+      "h1": "Kailani Tours Hawaii Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/kailani-tours-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/kipu-ranch-adventures/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kipu Ranch Adventures Reviews — What Reviewers Say (2026)",
+      "titleLength": 57,
+      "metaDesc": "Kipu Ranch Adventures rated 5/5 across TripAdvisor and Google. Prices from $190. Premier Kauai ATV/UTV operator. Jurassic Park filming locations. Operates Tue-Fri.",
+      "metaDescLength": 163,
+      "h1": "Kipu Ranch Adventures Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/kipu-ranch-adventures/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/kona-tasting-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kona Tasting Tours Reviews — What Reviewers Say (2026)",
+      "titleLength": 54,
+      "metaDesc": "Kona Tasting Tours rated 4.8/5 across TripAdvisor and Google. Prices from $129. 2.5hr walking tour on Ali",
+      "metaDescLength": 105,
+      "h1": "Kona Tasting Tours Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/kona-tasting-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/kualoa-ranch/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kualoa Ranch Reviews — What Reviewers Say (2026)",
+      "titleLength": 48,
+      "metaDesc": "Kualoa Ranch rated 4.6/5 across TripAdvisor and Google. Prices from $50. Jurassic Park filming location. ATV, horseback, zip, movie site tours. 4,000 acre ranch.",
+      "metaDescLength": 161,
+      "h1": "Kualoa Ranch Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/kualoa-ranch/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/kauai-tour-guy/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kauai Tour Guy Reviews — What Reviewers Say (2026)",
+      "titleLength": 50,
+      "metaDesc": "Kauai Tour Guy rated 4.9/5 across TripAdvisor and Google. Prices from $95. Private-only Waimea Canyon and South/West Side tours. Your group only.",
+      "metaDescLength": 145,
+      "h1": "Kauai Tour Guy Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/kauai-tour-guy/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/luau-kalamaku/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Luau Kalamaku Reviews — What Reviewers Say (2026)",
+      "titleLength": 49,
+      "metaDesc": "Luau Kalamaku rated 4.5/5 across TripAdvisor and Google. Prices from $171. At Kilohana Plantation, Lihue. Theatrical story-driven show (Tahitian voyaging narrative).",
+      "metaDescLength": 165,
+      "h1": "Luau Kalamaku Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/luau-kalamaku/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/kohala-zipline/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Kohala Zipline Reviews — What Reviewers Say (2026)",
+      "titleLength": 50,
+      "metaDesc": "Kohala Zipline rated 5/5 across TripAdvisor and Google. Prices from $220. Only full canopy zipline on Hawaii Island. 8 lines, 6 sky bridges, rappel. Zip &#38; Dip includes waterfall.",
+      "metaDescLength": 182,
+      "h1": "Kohala Zipline Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/kohala-zipline/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/magic-sportfishing/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Magic Sportfishing Reviews — What Reviewers Say (2026)",
+      "titleLength": 54,
+      "metaDesc": "Magic Sportfishing rated 4.6/5 across TripAdvisor and Google. Prices from $250. 50ft Pacifica sport-fisher yacht. Private + shared charters. Kewalo Basin, Honolulu.",
+      "metaDescLength": 164,
+      "h1": "Magic Sportfishing Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/magic-sportfishing/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/maverick-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Maverick Helicopters Reviews — What Reviewers Say (2026)",
+      "titleLength": 56,
+      "metaDesc": "Maverick Helicopters rated 4.8/5 across TripAdvisor and Google. Prices from $229. ECO-Star helicopters. Maui + Kauai. Hana Rainforest includes 30-min landing.",
+      "metaDescLength": 158,
+      "h1": "Maverick Helicopters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/maverick-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/mauna-loa-helicopter-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Mauna Loa Helicopter Tours Reviews — What Reviewers Say (2026)",
+      "titleLength": 62,
+      "metaDesc": "Mauna Loa Helicopter Tours rated 5/5 across TripAdvisor and Google. Prices from $229. Only Big Island operator flying exclusively private tours. Doors on/off at no extra cost.",
+      "metaDescLength": 175,
+      "h1": "Mauna Loa Helicopter Tours Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/mauna-loa-helicopter-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/magnum-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Magnum Helicopters Reviews — What Reviewers Say (2026)",
+      "titleLength": 54,
+      "metaDesc": "Magnum Helicopters rated 4.9/5 across TripAdvisor and Google. Prices from $380. Oahu",
+      "metaDescLength": 84,
+      "h1": "Magnum Helicopters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/magnum-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/north-shore-oahu-surf-school/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "North Shore Oahu Surf School Reviews — What Reviewers Say (2026)",
+      "titleLength": 64,
+      "metaDesc": "North Shore Oahu Surf School rated 5/5 across TripAdvisor and Google. Prices from $100. North Shore at Chun",
+      "metaDescLength": 107,
+      "h1": "North Shore Oahu Surf School Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/north-shore-oahu-surf-school/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/ohana-fishing-charters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Ohana Fishing Charters Reviews — What Reviewers Say (2026)",
+      "titleLength": 58,
+      "metaDesc": "Ohana Fishing Charters rated 4.9/5 across TripAdvisor and Google. Prices from $155. Family-owned since 2005. Shared and private 4-8hr charters.",
+      "metaDescLength": 143,
+      "h1": "Ohana Fishing Charters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/ohana-fishing-charters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/pacific-whale-foundation/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Pacific Whale Foundation Reviews — What Reviewers Say (2026)",
+      "titleLength": 60,
+      "metaDesc": "Pacific Whale Foundation rated 4.7/5 across TripAdvisor and Google. Prices from $90. Nonprofit research org. 97% sighting rate, whale guarantee. Also snorkeling ecotours.",
+      "metaDescLength": 170,
+      "h1": "Pacific Whale Foundation Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/pacific-whale-foundation/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/polynesian-adventure-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Adventure Tours Reviews — What Reviewers Say (2026)",
+      "titleLength": 62,
+      "metaDesc": "Polynesian Adventure Tours rated 4.6/5 across TripAdvisor and Google. Prices from $50. Multi-island circle island and half-day tours. Budget-friendly.",
+      "metaDescLength": 150,
+      "h1": "Polynesian Adventure Tours Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/polynesian-adventure-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/old-lahaina-luau/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Old Lahaina Luau Reviews — What Reviewers Say (2026)",
+      "titleLength": 52,
+      "metaDesc": "Old Lahaina Luau rated 4.7/5 across TripAdvisor and Google. Prices from $230. ~$230/adult. Sells out months in advance. Lei greeting, premium open bar, 4-course dinner.",
+      "metaDescLength": 168,
+      "h1": "Old Lahaina Luau Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/old-lahaina-luau/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/polynesian-cultural-center/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Polynesian Cultural Center Reviews — What Reviewers Say (2026)",
+      "titleLength": 62,
+      "metaDesc": "Polynesian Cultural Center rated 4.9/5 across TripAdvisor and Google. Prices from $95. Full-day cultural experience + Ali",
+      "metaDescLength": 121,
+      "h1": "Polynesian Cultural Center Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/polynesian-cultural-center/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/pride-of-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Pride of Maui Reviews — What Reviewers Say (2026)",
+      "titleLength": 49,
+      "metaDesc": "Pride of Maui rated 4.8/5 across TripAdvisor and Google. Prices from $115. 65-ft catamaran. Molokini Crater + Turtle Town. Waterslide, BBQ lunch, optional SNUBA.",
+      "metaDescLength": 161,
+      "h1": "Pride of Maui Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/pride-of-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/rainbow-helicopters/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Rainbow Helicopters Reviews — What Reviewers Say (2026)",
+      "titleLength": 55,
+      "metaDesc": "Rainbow Helicopters rated 4.6/5 across TripAdvisor and Google. Prices from $305. Doors-off standard on every tour. Oahu + Kona. Up to 105-min Kilauea tour.",
+      "metaDescLength": 155,
+      "h1": "Rainbow Helicopters Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/rainbow-helicopters/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/royal-hawaiian-surf-academy/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Royal Hawaiian Surf Academy Reviews — What Reviewers Say (2026)",
+      "titleLength": 63,
+      "metaDesc": "Royal Hawaiian Surf Academy rated 4.9/5 across TripAdvisor and Google. Prices from $125. Hawaiian-owned, since 1998. ",
+      "metaDescLength": 117,
+      "h1": "Royal Hawaiian Surf Academy Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/royal-hawaiian-surf-academy/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/roberts-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Roberts Hawaii Reviews — What Reviewers Say (2026)",
+      "titleLength": 50,
+      "metaDesc": "Roberts Hawaii rated 4.6/5 across TripAdvisor and Google. Prices from $50. Oldest tour company in Hawaii. Multi-island. Also airport shuttles and group transport.",
+      "metaDescLength": 162,
+      "h1": "Roberts Hawaii Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/roberts-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/secret-food-tours-honolulu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Secret Food Tours Honolulu Reviews — What Reviewers Say (2026)",
+      "titleLength": 62,
+      "metaDesc": "Secret Food Tours Honolulu rated 5/5 across TripAdvisor and Google. Prices from $100. International brand. 3-3.5hr Waikiki walking tour, 12 max. Malasadas, poke, shave ice.",
+      "metaDescLength": 172,
+      "h1": "Secret Food Tours Honolulu Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/secret-food-tours-honolulu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/royal-star-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Royal Star Hawaii Reviews — What Reviewers Say (2026)",
+      "titleLength": 53,
+      "metaDesc": "Royal Star Hawaii rated 4.9/5 across TripAdvisor and Google. Prices from $99. Pearl Harbor specialist. Standard ($99), Deluxe ($124), Ultimate ($158). Free Waikiki transport.",
+      "metaDescLength": 174,
+      "h1": "Royal Star Hawaii Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/royal-star-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/sail-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Sail Maui Reviews — What Reviewers Say (2026)",
+      "titleLength": 45,
+      "metaDesc": "Sail Maui rated 4.9/5 across TripAdvisor and Google. Prices from $90. Performance sailing catamarans (Paragon fleet). Snorkeling + whale watch (Dec-Mar).",
+      "metaDescLength": 153,
+      "h1": "Sail Maui Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/sail-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/smiths-family-garden-luau/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Smith&#39;s Family Garden Luau Reviews — What Reviewers Say (2026)",
+      "titleLength": 66,
+      "metaDesc": "Smith",
+      "metaDescLength": 5,
+      "h1": "Smith&#39;s Family Garden Luau Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/smiths-family-garden-luau/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_short"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/star-of-honolulu/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Star of Honolulu Reviews — What Reviewers Say (2026)",
+      "titleLength": 52,
+      "metaDesc": "Star of Honolulu rated 4.6/5 across TripAdvisor and Google. Prices from $99. Hawaii",
+      "metaDescLength": 83,
+      "h1": "Star of Honolulu Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/star-of-honolulu/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/stardust-hawaii/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Stardust Hawaii Reviews — What Reviewers Say (2026)",
+      "titleLength": 51,
+      "metaDesc": "Stardust Hawaii rated 4.9/5 across TripAdvisor and Google. Prices from $190. Most popular food tour on Maui. Progressive meal, off-the-beaten-path spots. Hotel pickup.",
+      "metaDescLength": 167,
+      "h1": "Stardust Hawaii Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/stardust-hawaii/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/strike-zone-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Strike Zone Maui Reviews — What Reviewers Say (2026)",
+      "titleLength": 52,
+      "metaDesc": "Strike Zone Maui rated 4/5 across TripAdvisor and Google. Prices from $174. 100+ years combined crew experience. Shared bottom fish + combo trips. Maalaea Harbor.",
+      "metaDescLength": 162,
+      "h1": "Strike Zone Maui Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/strike-zone-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/surf-club-maui/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Surf Club Maui Reviews — What Reviewers Say (2026)",
+      "titleLength": 50,
+      "metaDesc": "Surf Club Maui rated 5/5 across TripAdvisor and Google. Prices from $55. Family-run in Kihei, 30+ years. Also SUP and kids camps.",
+      "metaDescLength": 129,
+      "h1": "Surf Club Maui Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/surf-club-maui/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/tasting-kauai/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Tasting Kauai Reviews — What Reviewers Say (2026)",
+      "titleLength": 49,
+      "metaDesc": "Tasting Kauai rated 4.7/5 across TripAdvisor and Google. Prices from $114. 7 walking food tours across Kauai regions. All $114, 2.5-3hrs. FareHarbor confirmed.",
+      "metaDescLength": 159,
+      "h1": "Tasting Kauai Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/tasting-kauai/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/temptation-tours/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Temptation Tours Reviews — What Reviewers Say (2026)",
+      "titleLength": 52,
+      "metaDesc": "Temptation Tours rated 4.9/5 across TripAdvisor and Google. Prices from $212. Luxury Road to Hana. Limo-van fleet, max 8 guests. 30+ years. Breakfast + 3-course lunch.",
+      "metaDescLength": 167,
+      "h1": "Temptation Tours Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/temptation-tours/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/trilogy-excursions/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Trilogy Excursions Reviews — What Reviewers Say (2026)",
+      "titleLength": 54,
+      "metaDesc": "Trilogy Excursions rated 4.9/5 across TripAdvisor and Google. Prices from $160. Family-owned 50+ years. Exclusive Hulopo",
+      "metaDescLength": 120,
+      "h1": "Trilogy Excursions Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/trilogy-excursions/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": []
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/valley-isle-excursions/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Valley Isle Excursions Reviews — What Reviewers Say (2026)",
+      "titleLength": 58,
+      "metaDesc": "Valley Isle Excursions rated 4.9/5 across TripAdvisor and Google. Prices from $216. Premier Road to Hana and Haleakala Sunrise operator. Includes Waianapanapa State Park admission.",
+      "metaDescLength": 180,
+      "h1": "Valley Isle Excursions Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/valley-isle-excursions/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/voyagers-of-the-pacific-luau/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Voyagers of the Pacific Luau Reviews — What Reviewers Say (2026)",
+      "titleLength": 64,
+      "metaDesc": "Voyagers of the Pacific Luau rated 4.2/5 across TripAdvisor and Google. Prices from $169. At Royal Kona Resort, Kailua-Kona. Oceanfront. Samoan fire dance finale.",
+      "metaDescLength": 162,
+      "h1": "Voyagers of the Pacific Luau Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/voyagers-of-the-pacific-luau/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "title_too_long",
+        "meta_desc_too_long"
+      ]
+    },
+    {
+      "url": "https://hawaiiscout.com/operators/ultimate-whale-watch/",
+      "statusCode": 200,
+      "redirectTo": null,
+      "title": "Ultimate Whale Watch Reviews — What Reviewers Say (2026)",
+      "titleLength": 56,
+      "metaDesc": "Ultimate Whale Watch rated 4.9/5 across TripAdvisor and Google. Prices from $77. Since 1982, ranked #1 Maui whale watch. Raft-style low-to-water vessels. Hydrophone.",
+      "metaDescLength": 165,
+      "h1": "Ultimate Whale Watch Reviews",
+      "h1Count": 1,
+      "canonical": "https://hawaiiscout.com/operators/ultimate-whale-watch/",
+      "canonicalSelf": true,
+      "robotsMeta": null,
+      "noindex": false,
+      "nofollow": false,
+      "indexable": true,
+      "issues": [
+        "meta_desc_too_long"
+      ]
+    }
+  ]
+}

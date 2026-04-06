@@ -8,9 +8,11 @@
     "preview": "astro preview",
     "astro": "astro",
     "indexnow": "node scripts/indexnow.mjs",
-    "reviews": "node scripts/fetch-reviews.mjs"
+    "reviews": "node scripts/fetch-reviews.mjs",
+    "clarity": "node scripts/clarity.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "apify-client": "^2.22.3",
     "astro": "^4.16.0",

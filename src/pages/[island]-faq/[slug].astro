@@ -1,48 +1,64 @@
 ---
 // Route: /[island]-faq/[question-slug]/
-// FAQ pages — 120 words, 2-3 BOTF internal links each (Quaid Rule: authority fuel)
-// These pages do NOT have affiliate CTAs — they exist to funnel PageRank to BOTF money pages.
+// FAQ pages — 120 words, 2-3 BOTF internal links (Quaid Rule #7: authority fuel)
+// No affiliate CTAs — these pages funnel PageRank to BOTF money pages only.
 import Base from '../../layouts/Base.astro';
+import faqsData from '../../data/faqs.json';
 
-// FAQ pages will be populated from PAA (People Also Ask) research in Phase 1, Step 4.
-// This template is the structure; content comes from a future FAQs data file.
+interface FAQ {
+  question: string;
+  island: string;
+  slug: string;
+  answer: string;
+  links: { text: string; href: string }[];
+}
+
+const faqs = faqsData as FAQ[];
 
 export function getStaticPaths() {
-  // Placeholder — real FAQs added in ISC-17 (PAA screenshot catalog) + ISC-18 (100+ FAQ pages)
-  const placeholders = [
-    { island: 'maui', slug: 'best-time-to-visit-maui', question: 'What is the best time to visit Maui?', answer: 'Placeholder — will be replaced with real 120-word answer from PAA research.' },
-    { island: 'oahu', slug: 'is-pearl-harbor-worth-it', question: 'Is Pearl Harbor worth visiting?', answer: 'Placeholder — will be replaced with real 120-word answer from PAA research.' },
-    { island: 'kauai', slug: 'best-snorkeling-kauai', question: 'Where is the best snorkeling in Kauai?', answer: 'Placeholder — will be replaced with real 120-word answer from PAA research.' },
-  ];
-  return placeholders.map(faq => ({
+  const data = faqsData as FAQ[];
+  return data.map(faq => ({
     params: { island: faq.island, slug: faq.slug },
     props: faq,
   }));
 }
 
-const { island, slug, question, answer } = Astro.props;
-const islandLabel = island.charAt(0).toUpperCase() + island.slice(1);
+const { question, island, answer, links } = Astro.props as FAQ;
+const islandLabel = { oahu: 'Oahu', maui: 'Maui', 'big-island': 'Big Island', kauai: 'Kauai', lanai: 'Lanai', molokai: 'Molokai' }[island] ?? island;
 ---
 <Base
   title={question}
-  description={answer.slice(0, 155) + '...'}
+  description={answer.slice(0, 155) + (answer.length > 155 ? '…' : '')}
 >
   <div class="max-w-2xl mx-auto px-4 py-10">
-    <!-- No brand in title — just the exact PAA question (Quaid Rule #4) -->
+
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-gray-400 mb-6">
+      <a href="/" class="hover:text-ocean-600">Home</a> ›
+      <a href={`/${island}/`} class="hover:text-ocean-600">{islandLabel}</a> ›
+      <span>FAQ</span>
+    </nav>
+
+    <!-- Title = exact PAA question (no brand — Quaid Rule #1) -->
     <h1 class="text-2xl font-bold mb-6">{question}</h1>
 
-    <div class="prose prose-gray max-w-none">
-      <p>{answer}</p>
-    </div>
+    <p class="text-gray-800 leading-relaxed mb-8">{answer}</p>
 
-    <!-- Authority funnel — 2-3 BOTF internal links (Quaid Rule #7) -->
-    <div class="mt-8 pt-6 border-t border-gray-100">
-      <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Our Top Picks</div>
-      <p class="text-sm text-gray-600">
-        Browse <a href={`/${island}/`} class="text-ocean-700 hover:underline">all {islandLabel} tours</a> or
-        compare operators directly:
-      </p>
-      <!-- Dynamic BOTF links will be added when real FAQ content is authored in ISC-18 -->
-    </div>
+    <!-- Our Top Picks — 2-3 BOTF links (authority funnel, Quaid Rule #7) -->
+    {links && links.length > 0 && (
+      <div class="border-t border-gray-100 pt-6">
+        <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Our Top Picks</div>
+        <ul class="space-y-2">
+          {links.map(link => (
+            <li>
+              <a href={link.href} class="text-ocean-700 hover:underline text-sm font-medium">
+                → {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
   </div>
 </Base>

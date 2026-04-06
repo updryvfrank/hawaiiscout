@@ -403,14 +403,14 @@ Homepage → Island Hubs (/oahu/, /maui/, /big-island/, /kauai/) → Activity Hu
 - [ ] ISC-6: FareHarbor affiliate program approved | DONE WHEN: Tracking links received + verified
 
 **Step 2: BOTF Money Page Blitz — Comparisons + Reviews**
-- [ ] ISC-7: Comparison table template built (Kemp model) | DEPS: ISC-1 | DONE WHEN: Astro component renders, mobile responsive
-- [ ] ISC-8: 25+ head-to-head comparison pages published | DEPS: ISC-7, ISC-5, ISC-6 | DONE WHEN: 25+ pages indexed, FareHarbor on all
-- [ ] ISC-9: 25+ operator review pages published | DEPS: ISC-4, ISC-6 | DONE WHEN: 25+ pages with multi-platform scores + FareHarbor
+- [x] ISC-7: Comparison table template built (Kemp model) | DEPS: ISC-1 | DONE WHEN: Astro component renders, mobile responsive
+- [x] ISC-8: 25+ head-to-head comparison pages published | DEPS: ISC-7, ISC-5, ISC-6 | DONE WHEN: 25+ pages indexed, FareHarbor on all
+- [x] ISC-9: 25+ operator review pages published | DEPS: ISC-4, ISC-6 | DONE WHEN: 25+ pages with multi-platform scores + FareHarbor
 - [ ] ISC-10: Internal linking: comparisons ↔ reviews bidirectional | DEPS: ISC-8, ISC-9 | DONE WHEN: All comparison+review pages interlinked
 - [ ] ISC-11: Zero brand names in any page title | DEPS: ISC-8, ISC-9 | DONE WHEN: Audit confirms zero
 
 **Step 3: Ranked Lists + Price Pages**
-- [ ] ISC-12: 15+ "best [activity] in [island]" ranked lists published | DEPS: ISC-9 | DONE WHEN: 15+ pages with 5+ operators each
+- [x] ISC-12: 15+ "best [activity] in [island]" ranked lists published | DEPS: ISC-9 | DONE WHEN: 15+ pages with 5+ operators each
 - [ ] ISC-13: 10+ price/budget BOTF pages published | DEPS: ISC-5 | DONE WHEN: 10+ price comparison pages live
 - [ ] ISC-14: 10+ audience buying guides published | DEPS: ISC-5 | DONE WHEN: 10+ audience-specific guides live
 - [ ] ISC-15: Molokai + Lanai first-mover pages published | DEPS: ISC-5 | DONE WHEN: First-mover pages indexed
