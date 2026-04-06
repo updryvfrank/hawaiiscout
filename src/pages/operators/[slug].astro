@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { operators, toSlug } from '../../lib/operators';
+import { operators, toSlug, toCompareSlug } from '../../lib/operators';
 import { getReviews, getAllReviewTexts, stars } from '../../lib/reviews';
 
 export function getStaticPaths() {
@@ -232,7 +232,7 @@ const pageDesc = composite
         <h2 class="text-lg font-semibold mb-3">Compare {operator.name} With</h2>
         <div class="flex flex-wrap gap-2">
           {compareOps.map(op => (
-            <a href={`/compare/${toSlug(operator.name)}-vs-${toSlug(op.name)}/`}
+            <a href={`/compare/${toCompareSlug(operator, op)}/`}
               class="text-sm border border-gray-200 rounded-full px-3 py-1.5 hover:border-ocean-400 hover:text-ocean-700 transition-colors">
               {operator.name} vs {op.name}
             </a>

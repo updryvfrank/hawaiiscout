@@ -42,6 +42,15 @@ export function toSlug(name: string): string {
     .trim();
 }
 
+// Always returns the canonical compare slug (lower-index operator first),
+// matching the order used by getStaticPaths in compare/[...slug].astro.
+export function toCompareSlug(a: Operator, b: Operator): string {
+  const idxA = operators.indexOf(a);
+  const idxB = operators.indexOf(b);
+  const [first, second] = idxA <= idxB ? [a, b] : [b, a];
+  return `${toSlug(first.name)}-vs-${toSlug(second.name)}`;
+}
+
 export const ISLANDS = ['oahu', 'maui', 'big-island', 'kauai', 'lanai', 'molokai'] as const;
 export const ACTIVITIES = [
   'Helicopter', 'Luau', 'Snorkeling', 'Whale Watch', 'Cultural',

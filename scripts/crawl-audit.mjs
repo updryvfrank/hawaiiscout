@@ -22,9 +22,8 @@ const CONCURRENCY = 10;
 // ── Parse sitemap ────────────────────────────────────────────────────────────
 
 async function getSitemapUrls() {
-  // Read from local dist build (sitemap not yet deployed)
-  const localSitemap = join(__dirname, "../dist/sitemap-0.xml");
-  const xml = readFileSync(localSitemap, "utf-8");
+  const res = await fetch("https://hawaiiscout.com/sitemap-0.xml");
+  const xml = await res.text();
   const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1].trim());
   return urls;
 }
