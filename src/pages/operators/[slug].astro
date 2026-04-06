@@ -29,8 +29,8 @@ const compareOps = operators.filter(op =>
 ).slice(0, 5);
 const hasReviews = !!(ta || google);
 
-// SEO title: ≤60 chars
-const pageTitle = `${operator.name} Reviews | Hawaii Scout`;
+// SEO title — no brand name per Quaid Rule #1
+const pageTitle = `${operator.name} Reviews — What Reviewers Say (2026)`;
 
 // Meta desc: 120-155 chars — cap notes at 80 chars to stay in range
 const _notes = operator.notes?.length > 80 ? operator.notes.slice(0, 77) + '…' : operator.notes;

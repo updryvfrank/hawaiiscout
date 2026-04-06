@@ -31,14 +31,8 @@ const winner = getWinner(revA, revB);
 const reviewsA = getAllReviewTexts(revA, 4);
 const reviewsB = getAllReviewTexts(revB, 4);
 
-// SEO title: ≤60 chars. Add brand suffix only if it fits; otherwise use bare vs line.
-const _vsBase = `${opA.name} vs ${opB.name}`;
-const _vsSuffix = ' | Hawaii Scout';
-const pageTitle = (_vsBase.length + _vsSuffix.length) <= 60
-  ? _vsBase + _vsSuffix
-  : _vsBase.length <= 60
-    ? _vsBase
-    : _vsBase.slice(0, 57).replace(/\s\S*$/, '') + '…';
+// SEO title — no brand name per Quaid Rule #1
+const pageTitle = `${opA.name} vs ${opB.name} — Which ${opA.activity} Is Better? (2026)`;
 
 // Meta desc: 120-155 chars
 const pageDesc = winner === 'A'
